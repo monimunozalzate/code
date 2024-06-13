@@ -1,0 +1,367 @@
+<style>
+  * {
+    margin: 0%;
+    font-family: Roboto, sans-serif;
+  }
+  .faq-contain {
+    max-width: 1300px !important;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+  }
+  .frequentQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .frequentQ-arrow {
+    width: 32px;
+    height: 32px !important;
+    margin: 8px;
+    text-align: right !important;
+  }
+  .questionFaq {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-open.svg");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: 90% center;
+    height: 52px;
+    background-color: transparent;
+    padding: 1rem 0;
+    color: #7d8284 !important;
+  }
+  hr {
+    border-top: 1px solid #bcbcbc;
+    width: 100%;
+  }
+  /* .questionFaq:active {
+    background-image: url("https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-close.svg");
+  } */
+  .open-element {
+    background-image: url("https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-close.svg");
+    border-bottom: 1px solid #bcbcbc;
+    color: #191c1d !important;
+  }
+  .questionFaq p {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    width: 100%;
+    padding-left: 111px;
+  }
+  .answerFaq {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0 1rem 166px;
+    max-width: 706px;
+  }
+
+  .answerFaq p {
+    margin: 0;
+    font-size: 18px;
+    color: #191c1d;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .button {
+    background-color: #f46c16;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    padding: 17px 38px;
+    border-radius: 27px;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .d-none {
+    display: none;
+  }
+  @media (max-width: 900px) {
+    .questionFaq p{
+      padding-left: 0;
+      padding-right: 5rem;
+    }
+    .answerFaq{
+      padding-left: 0;
+    }
+  }
+</style>
+<div class="faq-contain" id="principal-container">
+  <div class="frequentQ">
+    <div class="questionFaq open-element">
+      <p>What is the hiring process like at One8?</p>
+    </div>
+
+    <div class="answerFaq d-flex" id="answerFaq1">
+      <p>
+        It’s actually really simple, the only thing you need to do in order to
+        get started is to fill out the online application form, wait 24 hours
+        for your approval, and then take part in the in-person orientation
+        session.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What are the minimum requirements to become a driver at One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq2">
+      <p>
+        The only requirements we have are the following: Be over 23 years of age
+        Have more than 12 months of driving experience Have a truck that is
+        compliant with the ELD Do not have any drug or alcohol violations for
+        the last 5 years
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What is the company culture like at One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq3">
+      <p>
+        Our most important asset is being a driver-friendly company, our culture
+        focuses on truckers and their needs. We also have our operators as the
+        top priority, always going above and beyond to meet their needs and
+        expectations.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Where is One8 located?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq4">
+      <p>
+        We currently have two terminals. One in El Paso, TX and in Batavia, IL.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How many days does the One8 orientation last?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq5">
+      <p>It could take a day or two.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How often can I expect One8 to pay me?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq6">
+      <p>Every Friday morning through direct bank deposit</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What type of freight does One8 haul?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq7">
+      <p>We focus on food grade and light industrial hauls.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Where does One8 run?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq8">
+      <p>
+        Primarily on the Southwest and Midwest, but there are other routes
+        available.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What kind of equipment does One8 run?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq9">
+      <p>The majority of the equipment is 53’ refrigerated and dry vans.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How does One8 optimize drivers' income potential?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq10">
+      <p>
+        We try to pre-plan as many loads as possible in order to reduce waiting
+        times for drivers.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What is the average length of a haul at One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq11">
+      <p>Our average length of haul is 1,000 miles</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What equipment do I need to get started on One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq12">
+      <p>
+        Nothing besides your truck, we provide everything else you may need.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Do I need my own trailer in order to work at One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq13">
+      <p>No. We provide the trailers</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Do I need my own insurance in order to work at One8?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq14">
+      <p>No. We provide insurance options if you don’t have one.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What type of freight does One8 haul?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq15">
+      <p>We focus on food grade and light industrial hauls.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How often can I expect One8 to pay me?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq16">
+      <p>Every Friday morning through direct bank deposit</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What type of freight does One8 haul?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq17">
+      <p>We focus on food grade and light industrial hauls.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How often can I expect One8 to pay me?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq18">
+      <p>Every Friday morning through direct bank deposit</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What type of freight does One8 haul?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq19">
+      <p>We focus on food grade and light industrial hauls.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How often can I expect One8 to pay me?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq20">
+      <p>Every Friday morning through direct bank deposit</p>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What type of freight does One8 haul?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq21">
+      <p>We focus on food grade and light industrial hauls.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  let container = document.querySelector("#principal-container");
+
+  container.addEventListener("click", (e) => {
+    // console.log(e.target.parentElement.nextElementSibling)
+    console.log(e.target.parentElement);
+    if (
+      e.target.parentElement.classList.contains("open-element") &&
+      e.target.parentElement.classList.contains("questionFaq") &&
+      e.target.parentElement.nextElementSibling.classList.contains("d-flex")
+    ) {
+      e.target.parentElement.classList.remove("open-element");
+      e.target.parentElement.nextElementSibling.classList.remove("d-flex");
+      e.target.parentElement.nextElementSibling.classList.add("d-none");
+    } else if (
+      e.target.parentElement.classList.contains("questionFaq") &&
+      !e.target.parentElement.classList.contains("open-element") &&
+      !e.target.parentElement.nextElementSibling.classList.contains("d-flex")
+    ) {
+      e.target.parentElement.classList.add("open-element");
+      e.target.parentElement.nextElementSibling.classList.remove("d-none");
+      e.target.parentElement.nextElementSibling.classList.add("d-flex");
+    }
+  });
+</script>
+

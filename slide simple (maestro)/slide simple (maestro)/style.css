@@ -1,0 +1,110 @@
+
+
+.xxx-main{
+    /* usar si va contitulo el slide */
+  /* display: flex;
+  justify-content: space-between; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* .xxx-title-content{
+  color: white;
+  padding-left: 15%;
+  padding-top: 46px;
+} */
+/* .xxx-title{
+    font-size: 35px;
+    line-height: 38px;
+}
+.xxx-subtitle{
+    font-size: 35px;
+    line-height: 38px;
+} */
+/* .xxx-sliders-container{
+    width: 45%;
+    height: 748px;
+  }  */
+  .xxx-slider1{
+    background-image: url(https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fd4d412b0-aa49-4792-8980-5bb80f089939%2Fb51adfcd-h-m-images-01_10au0cp000000000000028.png?w=390&h=457&png8=true);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* controla las medidas de la tarjeta     */
+    padding-top:412px ; 
+    padding-bottom: 34px;
+  }
+  .xxx-slider2{
+    background-image: url(https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F99fca47c-3a10-4223-973f-3c543897bcfd%2Fa1a75aff-h-m-images-02_10us101000000000000028.png?w=1108&h=1297&png8=true%22);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* controla las medidas de la tarjeta     */
+    padding-top:412px ; 
+    padding-bottom: 34px;
+  }
+  .xxx-slider3{
+  background-image: url(https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F9d66647b-ef02-4c70-b325-a0e0e7f34cff%2F6bb8e3b1-h-m-images-03_10q10ui000000000000028.png?w=937&h=1098&png8=true%22);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* controla las medidas de la tarjeta     */
+    padding-top:412px ; 
+    padding-bottom: 34px;
+  }
+  .xxx-card-text{
+    color: white;
+    padding-left: 53px;  
+  }
+  .xxx-card-title{
+    width: 448px;
+    font-size: 45px;
+    line-height: 55px;
+    margin: 0px;
+    margin-bottom: 11px;
+  }
+  .xxx-card-subtitle{
+    margin: 0px;
+    width: 429px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .xxx-controls{
+    width: 154px;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+  }
+  .prev, .next{
+    width: 50px;
+    background-color: transparent;
+    height: 57px;
+    border: none;
+  }
+  .next{
+    background-image: url(https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Ff426c022-8287-46e8-9079-8ee94d713f66%2F9b4b34fa-grupo-1700_1000000000000000000028.png?png8=true);
+    background-repeat: no-repeat;
+  }
+  .prev{
+    background-image: url(https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fed16da9b-1a4a-4e15-905e-c969d86ffead%2F274c6b97-grupo-1701_1000000000000000000028.png?png8=true);
+    background-repeat: no-repeat;
+  }
+
+
+  @media (max-width: 600px){
+    /* para slide con titulo */
+    /* .xxx-main{
+      flex-direction: column;
+    } */
+    .xxx-slider1, .xxx-slider2, .xxx-slider3{
+        padding-top: 240px;
+    }
+    .xxx-card-text{
+        padding-left: 30px;  
+      }
+    .xxx-card-title{
+        width: 278px;
+        font-size: 28px;
+        line-height: 31px;
+      }
+      .xxx-card-subtitle{
+        width: 298px;
+        font-size: 19px;
+        line-height: 24px;
+      }
+  }

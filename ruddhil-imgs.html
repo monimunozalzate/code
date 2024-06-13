@@ -1,0 +1,218 @@
+<style>
+  #big-contain {
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: auto;
+  }
+  #box {
+    position: relative;
+    max-width: 317px;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+  #box img {
+    width: 100%;
+    height: auto;
+  }
+
+  #contact a {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  #name {
+    width: 317px;
+  }
+  #name h4 {
+    color: #154978;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    padding: 16px 0 0;
+    margin: 0;
+  }
+  #name p {
+    color: #154978;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+  #contact {
+    display: none;
+    bottom: 0%;
+  }
+  #contact img {
+    width: 26px;
+    height: 26px;
+  }
+  #box:hover #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 0 0 18px 13px;
+    animation-name: backward;
+    animation-duration: 0.3s;
+    bottom: 3%;
+  }
+  @keyframes backward {
+    from {
+      bottom: 0%;
+    }
+    to {
+      bottom: 3%;
+    }
+  }
+  #contact p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 11px 0 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 98%;
+    background-color: #111;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  #box:hover .color-overlay {
+    opacity: 0.3;
+  }
+
+  @media (max-width: 350px) {
+    .color-overlay {
+      height: 98%;
+    }
+  }
+  @media (max-width: 800px) {
+    #big-contain {
+      gap: 17px !important;
+      flex-wrap: wrap;
+    }
+    .color-overlay {
+      height: 98%;
+    }
+  }
+  @media (max-width: 600px) {
+    #big-contain {
+      flex-direction: column;
+    }
+    .color-overlay {
+      height: 98%;
+    }
+  }
+  @media (max-width: 350px) {
+    .color-overlay {
+      height: 98%;
+    }
+  }
+</style>
+<section id="big-contain">
+  <article id="box">
+    <img
+      id="box-img"
+      src="https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-our-team-alex-rivera.webp"
+      alt="Alex Raul Rivera"
+    />
+    <div class="color-overlay"></div>
+    <div id="contact">
+      <a href="tel:+1678-878-3888">
+        <img
+          src="https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-tel.png"
+          alt="call"
+        />678-878-3888
+      </a>
+      <a href="mailto:Alexraul@rudhil.com">
+        <img
+          src="https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-email.png"
+          alt="email"
+        />Alexraul@rudhil.com
+      </a>
+    </div>
+  </article>
+  <div id="name">
+    <h4>Alex Raul Rivera</h4>
+    <p>Chief of Staff</p>
+  </div>
+</section>
+<style>
+  #bg-section {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(247, 247, 247, 1) 50%
+    );
+  }
+  @media (max-width: 600px) {
+    #bg-section {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(247, 247, 247, 1) 50%
+      );
+    }
+  }
+  #fondo {
+    background: rgb(247, 247, 247);
+    background: linear-gradient(
+      90deg,
+      rgba(247, 247, 247, 1) 50%,
+      rgba(255, 255, 255, 1) 50%
+    );
+  }
+  @media (max-width: 600px) {
+    #fondo {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(247, 247, 247, 1) 50%
+      );
+    }
+  }
+</style>
+
+<!-- <div style="max-width:900px; background-color:#1C4B7B; color:#FFF; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align: center; margin: auto; font-family: poppins;">
+    <h4 style="padding: 0; margin: 0; font-size: 25px; font-weight: 700;">ALEX RAUL RIVERA</h4>
+    <p style="padding: 0; margin: 0; font-size: 15px; font-weight: 300;">Chief of Staff</p>
+    <p id="bio" style="font-size: 14px; font-weight: 400;">
+      Alex Raul embodies the perfect combination of charm, etiquette, and
+      professionalism. With over 30 successful years in Corporate America
+      holding several leadership positions, Alex Raul has coached and
+      mentored over 100 business leaders. His well-known involvement in the
+      community has created admiration, attracted, and inspired new leaders
+      and partnerships around the world.<br /><br />
+      Throughout the years, he has been an ambassador for several
+      organizations in Georgia. Such as the American Red Cross, Children’s
+      Healthcare of Atlanta, March of Dimes, Junior Achievement, Habitat for
+      Humanity, Partnership Against Domestic Violence and other
+      organizations. His passion to serve the community is undeniable and he
+      believes that helping others is the secret to living a life that is
+      not only happier but also healthier and meaningful. Alex Raul is very
+      proud to be part of RudHil Companies’ Leadership Team.
+    </p>
+  </div> -->

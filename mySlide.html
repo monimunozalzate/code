@@ -1,0 +1,125 @@
+<style>
+    * {
+        box-sizing: border-box
+    }
+
+    .slideshow-container {
+        width: 100%;
+        height: 136px;
+        position: relative;
+        background-color: #EFEFEF;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+        margin: auto;
+    }
+
+    .mySlides img {
+        margin: auto;
+        max-height: 100px;
+        max-width: 110px;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+    }
+</style>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F83906bfd-1432-4b4c-9fe7-2f02034cdd0e%2F5acd7912-brauns-law-bbb_1000000000000000000028.png?png8=true"
+            alt="bbb">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F29a1b235-00a4-48f1-b3bb-11e956a95927%2Fb3b32394-statebar_1000000000000000000028.png?png8=true"
+            alt="statebar">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F15d81f33-b303-4150-84fa-032a6d2ea82d%2F79627536-expertise_104y04f04y04c000000028.png?w=178&h=159&cropW=178&cropH=156&cropX=0&cropY=0&png8=true"
+            alt="expertise">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fb451fe57-8d5e-4f26-9988-1d3b9c129344%2F7fc35d50-superlawyers_100000004w04a004000028.png?cropW=176&cropH=154&cropX=4&cropY=0&png8=true"
+            alt="super-laywers">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F22c4084c-eedb-447e-8291-0d6b7ddf7c9a%2F62fb2733-national_104n02o000000000000028.png?w=167&h=96&png8=true"
+            alt="national-trial">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Ffd5e23ba-29ac-4ced-9f80-62df212b7bf6%2F15ba75ab-av-preeminent_107c02y000000000000028.png?w=264&h=106&png8=true"
+            alt="preeminent">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F45413942-a189-4e2b-bc48-8a641e3e09c3%2F36920e69-bestofgwinnett_100000002s04y00f00f028.png?cropW=100&cropH=178&cropX=15&cropY=15&png8=true"
+            alt="best-gwinnett">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)"><img
+            src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fde57a5fc-16bd-4cd0-8ea3-383a7144db24%2F4ac7e19b-brauns-law-left_1000000000000000000028.png?png8=true"
+            alt="left"></a>
+    <a class="next" onclick="plusSlides(1)"><img
+            src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F724fbca8-0607-4288-b7e3-156fef3063e2%2Ff5af1646-brauns-law-right_1000000000000000000028.png?png8=true"
+            alt="right"></a>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    // Automatic slideshow - change slide every 3 seconds (adjust the interval as needed)
+    setInterval(function () {
+        plusSlides(1);
+    }, 3000);
+</script>

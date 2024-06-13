@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- links que tengo que llevar -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+</head>
+<style>
+    section {
+        max-width: 927px;
+        height: 349px;
+        background-color: #FFFFFF;
+        border-radius: 14px;
+        /* margin: auto; */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .card-title {
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #292929;
+        max-width: 631px;
+        margin: 83px 148px 0;
+    }
+
+    .card-subtitle {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 58px;
+        color: #003462;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 700px;
+        position: absolute;
+        top: 15%;
+        left: 6.5%;
+        background-color: transparent;
+    }
+
+    .controls .prev {
+        background-image: url("https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fc86f25b3-2410-4c7c-818f-0379cb0dccc0%2F7e7aa49d-brauns-law-left_1000000000000000000028.png?png8=true");
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-position: center;
+        padding: 0;
+    }
+
+    .controls .next {
+        background-image: url("https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F7d2dad87-0d27-4a92-a017-cfcfb00555f5%2Fbe4be79d-brauns-law-right_1000000000000000000028.png?png8=true");
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-position: center;
+        padding: 0;
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+    @media (max-width: 600px) {
+        section {
+            height: 100%;           
+        }
+        .card-title{
+            margin: 50px 50px 0;
+        }
+        .controls{
+            gap: 280px;
+            top: 20%;
+        }
+
+    }
+</style>
+
+<body style="background-color: #F0F0F0; ">
+
+    <section class="sliders-container">
+        <article class="slider1">
+            <div class="card-text">
+                <p class="card-title">I was recently in a car accident, and Braun’s Law was extremely helpful during
+                    this time. The professionalism and dedicated staff made this a hands-off experience for me, and
+                    helped me come out on top — stress free. I would certainly recommend this firm to anyone.</p>
+                <p class="card-subtitle"> Claudia Bradley</p>
+            </div>
+        </article>
+        <article class="slider2">
+            <div class="card-text">
+                <p class="card-title">My experience with Brauns law has been exceptional I give them 5 stars anytime I
+                    have had a question or needed any information with regards to my case they have responded
+                    immediately. If anyone asks I would definitely recommend Brauns law to anyone who needs an attorney
+                    for representation. </p>
+                <p class="card-subtitle"> Jeffrey Cohn.</p>
+            </div>
+        </article>
+        <article class="slider3">
+            <div class="card-text">
+                <p class="card-title">I'm so thankful I was referred to Brauns Law after my accident. My case manager
+                    did an amazing job keeping me updated. She is very knowledgeable and explained every aspect of my
+                    case to me. I would recommend the services of Brauns law without any hesitation.
+                </p>
+                <p class="card-subtitle"> Kala Watring.</p>
+            </div>
+        </article>
+    </section>
+    <div class="controls">
+        <button class="prev"></button>
+        <button class="next"></button>
+    </div>
+
+
+
+    <!-- scrips para exportar -->
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- cdn slider -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.sliders-container').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+        })
+    </script>
+
+</body>
+
+</html>

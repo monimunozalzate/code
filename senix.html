@@ -1,0 +1,590 @@
+{% include 'breadcrumb-dealer' %}
+
+<h1>CONVIÉRTETE EN DISTRIBUIDOR</h1>
+<p class="senix--dealer-paragraph">
+  Únete la marca de herramientas eléctricas de más rápido crecimiento del
+  mercado. Conviértete en un socio autorizado de SENIX tools llenando uno de los
+  formularios a continuación. Un representante de SENIX se pondrá en contacto
+  contigo en breve para darte más detalles.
+</p>
+<div class="iframe-container">
+  <iframe
+    style="border: none"
+    src="https://netlify-klaviyo-staging.netlify.app/"
+  ></iframe>
+</div>
+
+{% comment %}
+<div class="tab-container">
+  <div class="tab-buttons">
+    <button class="tab-button active" onclick="showTab(0)">
+      Formulario para distribuidores
+    </button>
+    <button class="tab-button" onclick="showTab(1)">
+      Formulario para comerciantes
+    </button>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p class="tab-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+      </p>
+      <form
+        id="dealerForm"
+        class="senix--form"
+        onsubmit="return validateCheckboxes()"
+      >
+        <div class="senix--form-group">
+          <label for="dealer_name" class="senix--form-label"
+            ><span class="senix--required">*</span> Nombre de la
+            empresa/distribuidor:
+          </label>
+          <input
+            type="text"
+            id="dealer_name"
+            class="senix--form-input"
+            name="dealer_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="dealer_address" class="senix--form-label">
+            <span class="senix--required">*</span> Dirección de la empresa:
+          </label>
+          <input
+            type="text"
+            id="dealer_address"
+            class="senix--form-input"
+            name="dealer_address"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_name" class="senix--form-label">
+            <span class="senix--required">*</span> Nombre del contacto:
+          </label>
+          <input
+            type="text"
+            id="contact_name"
+            class="senix--form-input"
+            name="contact_first_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_name" class="senix--form-label">
+            <span class="senix--required">*</span> Apellido del contacto:
+          </label>
+          <input
+            type="text"
+            id="contact_name"
+            class="senix--form-input"
+            name="contact_last_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_phone" class="senix--form-label">
+            <span class="senix--required">*</span> Número de teléfono:
+          </label>
+          <input
+            type="tel"
+            id="contact_phone"
+            class="senix--form-input"
+            name="contact_phone"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_email" class="senix--form-label">
+            <span class="senix--required">*</span> Correo electrónico:
+          </label>
+          <input
+            type="email"
+            id="contact_email"
+            class="senix--form-input"
+            name="contact_email"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group flex-grow">
+          <label class="senix--form-label">
+            <span class="senix--required">*</span> Productos en los que estás
+            interesado: (Selecciona 1 o más)
+          </label>
+          <br />
+          <div class="senix--grid-flex">
+            <div>
+              <input type="checkbox" id="product_1" name="product" />
+              <label for="product">4QL Handheld</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_2" name="product" />
+              <label for="product">Podadoras a gasolina</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_3" name="product" />
+              <label for="product">Herramientas eléctricas X2 20V</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_4" name="product" />
+              <label for="product">20V OPE</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_5" name="product" />
+              <label for="product">X5 58V</label>
+            </div>
+          </div>
+        </div>
+
+        <input class="senix--button-submit" type="submit" value="ENVIAR" />
+      </form>
+    </div>
+
+    <div class="tab-pane" id="tab2">
+      <p class="tab-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+      </p>
+
+      <form
+        id="distributorForm"
+        action="https://netlify-klaviyo-staging.netlify.app"
+        method="POST"
+        class="senix--form"
+        onsubmit="return validateCheckboxes()"
+      >
+        <div class="senix--form-group">
+          <label for="dealer_name" class="senix--form-label"
+            ><span class="senix--required">*</span> Distributor Name:</label
+          >
+          <input
+            type="text"
+            id="dealer_name"
+            class="senix--form-input"
+            name="distributor_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="dealer_address" class="senix--form-label">
+            <span class="senix--required">*</span> Distributor Address:
+          </label>
+          <input
+            type="text"
+            id="dealer_address"
+            class="senix--form-input"
+            name="distributor_address"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_name" class="senix--form-label">
+            <span class="senix--required">*</span> Contact First Name:
+          </label>
+          <input
+            type="text"
+            id="contact_first_name"
+            class="senix--form-input"
+            name="contact_first_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_name" class="senix--form-label">
+            <span class="senix--required">*</span> Contact Last Name:
+          </label>
+          <input
+            type="text"
+            id="contact_last_name"
+            class="senix--form-input"
+            name="contact_last_name"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_phone" class="senix--form-label">
+            <span class="senix--required">*</span> Contact Phone Number:
+          </label>
+          <input
+            type="tel"
+            id="contact_phone"
+            class="senix--form-input"
+            name="contact_phone"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group">
+          <label for="contact_email" class="senix--form-label">
+            <span class="senix--required">*</span> Contact Email Address:
+          </label>
+          <input
+            type="email"
+            id="contact_email"
+            class="senix--form-input"
+            name="contact_email"
+            required
+          />
+        </div>
+
+        <div class="senix--form-group flex-grow">
+          <label class="senix--form-label">
+            <span class="senix--required">*</span> Products Interested In
+            (Select one or more)
+          </label>
+          <br />
+          <div class="senix--grid-flex">
+            <div>
+              <input type="checkbox" id="product_1" name="product" />
+              <label for="product">4QL Handheld</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_2" name="product" />
+              <label for="product">Gas Mowers</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_3" name="product" />
+              <label for="product">X2 20V Power Tools</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_4" name="product" />
+              <label for="product">20V OPE</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="product_5" name="product" />
+              <label for="product">X5 58V</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="senix--form-group">
+          <label class="senix--form-label">
+            <span class="senix--required">*</span>States Interested In Providing
+            Coverage In:
+          </label>
+          <div class="senix--multi-select-dropdown" tabindex="0">
+            <div class="senix--multi-select-dropdown-header">
+              Select States
+              <span class="chevron">
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 1.45964L4.5 5.04761L4.43888e-08 1.45964L0.79875 0.822773L4.5 3.77388L8.20125 0.822773L9 1.45964Z"
+                    fill="#575A5D"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div
+              id="senix--multi-select-dropdown-content-1"
+              class="senix--multi-select-dropdown-content"
+            >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Aguascalientes"
+                />Aguascalientes</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Baja California"
+                />Baja California</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Baja California Sur"
+                />Baja California Sur</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Campeche"
+                />Campeche</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Coahuila"
+                />Coahuila</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Colima"
+                />Colima</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Chiapas"
+                />Chiapas</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Chihuahua"
+                />Chihuahua</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Durango"
+                />Durango</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Distrito Federal"
+                />Distrito Federal</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Guanajuato"
+                />Guanajuato</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Guerrero"
+                />Guerrero</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Hidalgo"
+                />Hidalgo</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Jalisco"
+                />Jalisco</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="México"
+                />México</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Michoacán"
+                />Michoacán</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Morelos"
+                />Morelos</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Nayarit"
+                />Nayarit</label
+              >
+              <label
+                ><input type="checkbox" name="state" value="Nuevo León" />Nuevo
+                León</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Oaxaca"
+                />Oaxaca</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Puebla"
+                />Puebla</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Querétaro"
+                />Querétaro</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Quintana Roo"
+                />Quintana Roo</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="San Luis Potosí"
+                />San Luis Potosí</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Sinaloa"
+                />Sinaloa</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Sonora"
+                />Sonora</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Tabasco"
+                />Tabasco</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Tamaulipas"
+                />Tamaulipas</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Tlaxcala"
+                />Tlaxcala</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Veracruz"
+                />Veracruz</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Yucatán"
+                />Yucatán</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="state"
+                  value="Zacatecas"
+                />Zacatecas</label
+              >
+            </div>
+
+            <input type="hidden" name="selected_states" />
+          </div>
+        </div>
+
+        <div class="senix--form-group">
+          <label class="senix--form-label"
+            >Categorías que distribuyes actualmente:
+          </label>
+          <div class="senix--multi-select-dropdown" tabindex="0">
+            <div class="senix--multi-select-dropdown-header">
+              Select Categories
+              <span class="chevron">
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 1.45964L4.5 5.04761L4.43888e-08 1.45964L0.79875 0.822773L4.5 3.77388L8.20125 0.822773L9 1.45964Z"
+                    fill="#575A5D"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div
+              id="senix--multi-select-dropdown-content-2"
+              class="senix--multi-select-dropdown-content"
+            >
+              <label>
+                <input
+                  type="checkbox"
+                  name="category"
+                  value="Herramientas para exterior (OPE)"
+                />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="category"
+                  value="Herramientas eléctricas"
+                />
+                Herramientas eléctricas
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="Todos" />
+                Todos
+              </label>
+            </div>
+
+            <input type="hidden" name="selected_categories" />
+          </div>
+        </div>
+        <input class="senix--button-submit" type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endcomment %} {% stylesheet %} .iframe-container { margin-top: 49px;
+position: relative; width: 100%; height: 620px; } {% endstylesheet %}

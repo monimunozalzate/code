@@ -1,0 +1,281 @@
+<style>
+  * {
+    margin: 0%;
+    font-family: Poppins, sans-serif;
+  }
+  .faq-contain {
+    max-width: 1088px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #101926;
+  }
+  .frequentQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .frequentQ-arrow {
+    width: 28px;
+    height: 28px !important;
+    margin: 8px;
+    text-align: right !important;
+  }
+  .questionFaq {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url("https://user-assets-unbounce-com.s3.amazonaws.com/0a28f5c7-4f1f-43f1-9929-96a442fe9e6e/31a0bd3a-49d7-465f-9ab7-a10a6dc35c0d/group-2045.original.svg");
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 99% center;
+    min-height: 28px;
+    background-color: transparent;
+    padding: 18.5px 0;
+    color: #ffffff !important;
+  }
+  hr {
+    border-top: 2px solid #fa8517;
+    width: 100%;
+  }
+
+  .questionFaq p {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    width: 100%;
+  }
+  .answerFaq {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    width: 90%;
+    border-top: 2px solid #fa8517;
+  }
+
+  .answerFaq p {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+  .d-none {
+    display: none;
+  }
+  .answerFaq a {
+    color: #fa8517;
+    margin-top: 1.5rem;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    text-decoration: underline !important;
+  }
+
+  @media (max-width: 900px) {
+    .questionFaq p {
+      padding-left: 0;
+      padding-right: 5rem;
+    }
+    .answerFaq {
+      padding-left: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .questionFaq p {
+      max-width: 88%;
+    }
+  }
+</style>
+<div class="faq-contain" id="principal-container">
+  <div class="frequentQ">
+    <div class="questionFaq open-element">
+      <p>How safe are vaccines?</p>
+    </div>
+
+    <div class="answerFaq d-flex" id="answerFaq1">
+      <p>
+        According to the U.S. Department of Health, vaccines go through stages
+        to approve their safety for the public. It’s been tested in labs for
+        years to make sure that it has the proper safety and dosages.
+        <br /><br />
+        The FDA licenses the vaccine while the CDC decides whether to approve
+        the recommendation for people. Once the CDC Director approves the
+        recommendation, it becomes the official CDC public health guidance for
+        safe use of the vaccine in the United States.
+
+        <br /><br />
+        Before getting any vaccine, it’s important to speak with your medical
+        provider about which vaccines to take to avoid the risk of allergy or
+        unnecessary dosages.
+      </p>
+      <a target="_blank" href="https://www.cdc.gov/vaccinesafety/index.html"
+        >Click here for more information on vaccine safety
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Do I even need vaccines?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq2">
+      <p>
+        Although the choice is ultimately your own, there are many reasons to
+        get vaccinated. Vaccines keep people healthy and safe from preventable
+        diseases. They can mean the difference between life and death. The CDC
+        recommends the use of vaccines for protection against infections
+        throughout life. <br /><br />
+        Though vaccines may not eliminate diseases entirely, they provide
+        powerful protection against illness and decrease the risk of outbreaks
+        within our community.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.nfid.org/immunization/10-reasons-to-get-vaccinated/"
+        >Click here for more reasons to get a vaccine
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>What are some side effects of vaccines?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq3">
+      <p>
+        The most common side effect someone can get from a vaccine would be a
+        sore arm or leg or a low fever.<br /><br />
+        However, each vaccine has different symptoms specific to it. Follow the
+        link below to find out more.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/vac-gen/side-effects.htm"
+        >Click here for more information on vaccine side effects</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>How do vaccines work?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq4">
+      <p>
+        Vaccines help people protect themselves from preventable diseases. The
+        way vaccines works are by creating an imitation of the actual infection,
+        which will allow the body to learn how to create immunity. So if a
+        person were to be exposed to a certain illness, their body will already
+        have immunity against that disease or virus, thanks to the vaccine. For
+        more information on how vaccines work, click on the link.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/hcp/conversations/understanding-vacc-work.html"
+        >Click here for more information on how vaccines work</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Why do some vaccines need multiple doses like a booster shot?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq5">
+      <p>
+        Just like a vaccine booster, a second or third dose of a vaccine
+        establishes a firmer hold of the body’s ability to protect itself
+        against a disease or virus. However, some vaccines weaken over time,
+        causing the need for another dosage.
+        <br /><br />Other times, like the flu vaccine, there is a different
+        variant of the disease or virus which can infect people, causing the
+        need for another shot.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/hcp/conversations/understanding-vacc-work.html#:~:text=COVID%2D19%20vaccine.-,Vaccines%20Require%20More%20Than%20One%20Dose,previous%20years%2C%20they%20should%20get%202%20doses%20during%20the%20current%20year.,-The%20Bottom%20Line"
+        >Click here for more information on vaccine doses</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>Can I be infected with COVID-19 and influenza at the same time?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq6">
+      <p>
+        Yes, it's possible to be infected with both COVID-19 and the flu at the
+        same time. However, the most effective way to prevent hospitalization
+        and severe illness is by receiving vaccines for both.<br /><br />
+        Additionally, wearing a facemask when you're sick, maintaining physical
+        distance, avoiding crowded and poorly ventilated spaces, opening windows
+        and doors to ensure proper ventilation, and practicing frequent hand
+        hygiene can help protect you from getting sick and others as well.
+      </p>
+      <a target="_blank" href="http://vaccines.gov"
+        >Click here to know where you can get vaccinated</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequentQ">
+    <div class="questionFaq">
+      <p>When is the flu season?</p>
+    </div>
+
+    <div class="answerFaq" id="answerFaq7">
+      <p>
+        According to the CDC, flu activity starts to increase in October. But
+        the flu season spikes between December and February, and can last as
+        late as May.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/flu/about/season/index.html#:~:text=The%20exact%20timing%20and%20duration,last%20as%20late%20as%20May."
+        >Click here to learn more about the flu season</a
+      >
+    </div>
+  </div>
+  <hr />
+</div>
+
+<script>
+  let container = document.querySelector("#principal-container");
+
+  container.addEventListener("click", (e) => {
+    const clickedQuestion = e.target.parentElement;
+
+    if (!clickedQuestion.classList.contains("open-element")) {
+      const openQuestions = document.querySelectorAll(".open-element");
+      openQuestions.forEach((question) => {
+        question.classList.remove("open-element");
+        question.nextElementSibling.classList.remove("d-flex");
+        question.nextElementSibling.classList.add("d-none");
+      });
+
+      clickedQuestion.classList.add("open-element");
+      clickedQuestion.nextElementSibling.classList.remove("d-none");
+      clickedQuestion.nextElementSibling.classList.add("d-flex");
+    }
+  });
+</script>

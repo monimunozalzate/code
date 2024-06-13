@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        border: none;
+        font-family: Montserrat, Sans-Serif;
+        
+      }
+      .tab-container {
+        max-width: 1300px;
+        width: 100%;
+        display: flex;
+        gap: 51px;
+        background-color: #f2f2f2;
+      }
+
+      .tab-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        max-width: 35%;
+      }
+
+      .tab-button {
+        cursor: pointer;
+        border: none;
+        border-radius: 33px;
+        max-width: 388px;
+        background-color: #ffffff;
+        color: #064471;
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 16px 27px;
+        text-align: left;
+        background-image: url("https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Ffe8f2b05-eca7-4f06-a908-34d3e9e2379f%2F86bbfa29-global-arrow_1000000000000000000028.png?png8=true");
+        background-repeat: no-repeat;
+        background-size: 34px;
+        background-position: 95% center;
+      }
+
+      .tab {
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .tab.active {
+        display: flex;
+      }
+      .tab.active .tab-button {
+        background-image: url("https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F6ffaa3d7-516c-47ff-ac20-cf76352063ae%2Feee5e1d7-global-open-arrow_1000000000000000000028.png?png8=true") !important;
+      }
+
+      .tab p {
+        color: #081838;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 33px;
+        max-width: 595px;
+        margin: 0;
+      }
+
+      .tab a {
+        text-decoration: none;
+        background-color: #f46c16;
+        color: #fff;
+        border: none;
+        border-radius: 27px;
+        padding: 17px 28px;
+        width: 313px;
+      }
+      @media (max-width: 600px) {
+        .tab-container {
+          flex-direction: column;
+        }
+        .tab-buttons, .tab-content {
+            width: 100%;
+            max-width: 100%;
+        }
+        .tab {
+          align-items: center;
+        }
+        .tab a {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab(event, 'tab1')">
+          Industrial Electronic Repair
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'tab2')">
+          Servo Motor Repair
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'tab3')">
+          AC & DC Motor Repair
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'tab4')">
+          Hydraulic & Pneumatic Repair
+        </button>
+      </div>
+      <div class="tab-content">
+        <div id="tab1" class="tab active">
+          <!-- Content for Tab 1 -->
+          <p>
+            Our expertise lies in repairing and testing industrial electronics
+            for automation and precision on the factory floor. From AC and DC
+            drives to CNC controls, counters, timers, power supplies, circuit
+            boards, robotics, and more. We’re ready to get your production
+            processes running smoothly.
+          </p>
+          <a href="tel=2772491701">Call to Request Your Quote</a>
+        </div>
+        <div id="tab2" class="tab">
+          <!-- Content for Tab 2 -->
+          <p>
+            Compact and powerful, servo motors offer precise control and
+            feedback in closed system loops. However, these are complex
+            machines. That is why if you have any breakdowns, trust us as your
+            reliable repair source for servo motors in machine tools, robotics,
+            encoders, resolvers, and more to prevent costly downtime.
+          </p>
+          <a href="tel=2772491701">Call to Request Your Quote</a>
+        </div>
+
+        <div id="tab3" class="tab">
+          <!-- Content for Tab 3 -->
+          <p>
+            In a production process, AC and DC motors are the backbones of your
+            machines. Sadly, motors will fail. Therefore, if your motor breaks
+            down or you require maintenance, let our experienced professionals
+            get them up and running to keep your business running smoothly.
+          </p>
+          <a href="tel=2772491701">Call to Request Your Quote</a>
+        </div>
+        <div id="tab4" class="tab">
+          <!-- Content for Tab 4 -->
+          <p>
+            When your hydraulic and pneumatic breaks down, you can count on our
+            swift in-house maintenance, and repair services to restore your
+            units to optimal condition.
+          </p>
+          <a href="tel=2772491701">Call to Request Your Quote</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function openTab(event, tabId) {
+      const tabs = document.getElementsByClassName("tab");
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+
+      const tabButtons = document.getElementsByClassName("tab-button");
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].style.backgroundImage = "";
+      }
+
+      const tab = document.getElementById(tabId);
+      tab.classList.add("active");
+      event.target.style.backgroundImage =
+        'url("https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F6ffaa3d7-516c-47ff-ac20-cf76352063ae%2Feee5e1d7-global-open-arrow_1000000000000000000028.png?png8=true")';
+    }
+  </script>
+</html>

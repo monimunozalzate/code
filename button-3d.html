@@ -1,0 +1,47 @@
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1C3B4D 0%, #2A5260 100%);
+    margin: 0;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 40px; /* Adjust padding as needed */
+    background-color: #FA580D; /* Orange color */
+    color: #FFFFFF; /* White text */
+    font-family: 'Poppins', sans-serif; /* Similar font family */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    position: relative;
+    border: none;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+}
+
+.custom-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FA580D;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, -10px 100%);
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Light shadow */
+}
+
+.custom-button:hover {
+    background-color: #E44D0A; /* Slightly darker orange on hover */
+}
+
+</style>
+<body>
+    <button class="custom-button">compra</button>
+</body>

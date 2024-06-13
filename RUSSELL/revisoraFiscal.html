@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+</head>
+<style>
+    /* hidding the slider´s buttons */
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+    .slick-list {
+        padding: 0 50px 0 0 !important;
+    }
+</style>
+
+<body class="m-auto bg-white">
+
+    <header class="max-w-[1300px] m-auto h-[83px] flex flex-row justify-between items-center px-4 lg:px-0 md:px-8 ">
+        <img src="" alt="russell bedford logo">
+
+        <nav class="hidden lg:flex flex-row gap-7">
+            <a href="*" class="text-[#ED8B00] font-['Lato'] text-base  font-semibold">Revisora Fiscal</a>
+            <a href="*" class="text-[#ED8B00] font-['Lato'] text-base  font-semibold">BPO para empresas</a>
+            <a href="*" class="text-[#ED8B00] font-['Lato'] text-base  font-semibold">Servicios Contables</a>
+            <a href="*" class="text-[#ED8B00] font-['Lato'] text-base  font-semibold">Servicios Legales</a>
+            <a href="*" class="text-[#ED8B00] font-['Lato'] text-base  font-semibold">Consultoría Tributaria</a>
+        </nav>
+
+
+        <div class="lg:hidden">
+            <button class="navbar-burger flex items-center text-black">
+                <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="navbar-menu relative z-50 hidden">
+            <nav
+                class="fixed top-0 left-0 bottom-0 flex flex-col w-screen p-8 bg-[#212121] opacity-90 overflow-y-auto ">
+                <div class="flex items-center justify-between mb-8">
+                    <img src="" alt="russell logo">
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-white cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="my-[63px] ">
+                    <ul class="font-['Lato'] text-[37px] font-normal text-white leading-[45px]">
+                        <li class="mb-[27px]">
+                            <a href="#">Revisora Fiscal</a>
+                        </li>
+                        <li class="mb-[27px]">
+                            <a href="#">Business Process Outsourcing</a>
+                        </li>
+                        <li class="mb-[27px]">
+                            <a href="#">Servicios Contables</a>
+                        </li>
+                        <li class="mb-[27px]">
+                            <a href="#">Servicios Legales</a>
+                        </li>
+                        <li class="mb-[27px]">
+                            <a href="#">Consultoría Tributaria</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 mt-auto">
+                    <a href="mailto:info@rbcol.co"
+                        class="font-['Lato'] text-[21px] font-semibold text-white leading-[25px]">info@rbcol.co</a>
+                    <a href="tel:+573185325447"
+                        class="font-['Lato'] text-[21px] font-semibold text-white leading-[25px]">+57 318 532 5447</a>
+                    <div class="flex flex-row justify-between ">
+                        <a href="*"><img src="" alt="linkedin"></a>
+                        <a href="*"><img src="" alt="instagram"></a>
+                        <a href="*"><img src="" alt="facebook"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-[#ED8B00] m-auto">
+            <article
+                class="max-w-[1300px] m-auto w-full lg:h-[784px] flex flex-col items-center gap-8 md:flex-row p-8 lg:p-0">
+                <div class="h-1/2 w-full md:w-1/2 flex flex-col justify-center">
+                    <h1
+                        class="max-w-[444px] text-[#F2F2F3] font-['Lato'] text-[63px] font-bold leading-[68px] text-center md:text-left">
+                        Revisoría
+                        Fiscal para
+                        Empresas</h1>
+                </div>
+                <div class=" h-1/2 w-full md:w-1/2 flex flex-col items-center justify-center">
+                    <div class="max-w-[460px]">
+                        <h2
+                            class="font-['Lato'] text-[39px] leading-[46px] font-bold text-white mb-[14px] text-center md:text-left">
+                            ¡Contáctanos!
+                        </h2>
+                        <p
+                            class="font-['Lato'] text-[24px] font-normal text-white leading-[29px] text-center md:text-left">
+                            Completa el
+                            formulario y
+                            uno de nuestros
+                            asesores expertos se pondrá en contacto en el menor tiempo posible.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="flex flex-row">
+            <div class="bg-[#ED8B00] w-1/5 h-[18px]"></div>
+            <div class="bg-[#49A6CA] w-1/5 h-[18px]"></div>
+            <div class="bg-[#6A2867] w-1/5 h-[18px]"></div>
+            <div class="bg-[#252B53] w-1/5 h-[18px]"></div>
+            <div class="bg-[#00BFB3] w-1/5 h-[18px]"></div>
+        </section>
+
+        <section class="bg-[#F2F2F3] m-auto">
+            <article class="max-w-[1300px] p-8 lg:p-0 lg:py-[146px] m-auto w-full flex flex-col md:flex-row gap-4">
+                <div class="md:w-1/2 h-full flex flex-col items-center justify-center">
+                    <h2
+                        class="max-w-[478px] h-[464px] font-['Lato'] text-[63px] leading-[68px] font-semibold text-[#ED8B00] text-center md:text-left">
+                        ¿Cómo el revisor fiscal aporta al crecimiento de tu negocio?</h2>
+                </div>
+                <div class="md:w-1/2 h-full flex flex-col items-center justify-center">
+                    <p
+                        class="max-w-[368px] font-['Lato'] text-[24px] font-normal text-[#252B53] leading-[29px] text-center md:text-left">
+                        En
+                        Russell Bedford <b>entendemos el rol del Revisor Fiscal y su impacto en la sostenibilidad de tu
+                            negocio.</b><br><br> Como especialistas <b>nos enfocamos en brindar soluciones que generan
+                            confianza y aseguran
+                            la transparencia de tu información financiera,</b> auditada de manera veraz. <b><br><br>Es
+                            la opinión
+                            independiente de un profesional externo a tu organización con criterio sustentado en la
+                            normatividad contable actual.</b></p>
+                </div>
+            </article>
+        </section>
+
+        <section class="bg-white">
+            <!-- <article class="max-w-[1300px]">
+                <video src=""></video>
+            </article> -->
+
+            <article
+                class="max-w-[1300px] m-auto mt-[49px] flex flex-col md:flex-row gap-[16px] justify-center md:items-center md:p-8 lg:p-0">
+                <div
+                    class="max-w-[540px] mx-8 md:mx-0 md:w-1/2 h-full p-8 lg:pt-[103px] lg:pl-[80px] lg:pb-[105px] flex flex-col items-center justify-center bg-[#F2F2F3] rounded-[20px] ">
+                    <h3
+                        class=" font-['Lato'] text-[63px] leading-[68px] font-semibold text-[#252B53] mb-[50px] text-center md:text-left">
+                        Razones para elegir <span class="text-[#ED8B00]">a Russell Bedford</span></h3>
+                    <ul
+                        class="w-full m-auto font-['Lato'] text-[24px] leading-[29px] font-bold text-[#252B53] flex flex-col gap-[26px]">
+                        <li class="flex flex-row justify-between gap-[32px]"><img src="" alt="presencia global">
+                            <p class="max-w-[318px]">Nuestra presencia global y enfoque personalizado en cada cliente.
+                            </p>
+                        </li>
+                        <li class="flex flex-row justify-between gap-[32px]"><img src="" alt="alta calidad">
+                            <p class="max-w-[318px]">Nuestra alta calidad y enfoque integral en la revisoría fiscal.
+                            </p>
+                        </li>
+                        <li class="flex flex-row justify-between gap-[32px]"><img src="" alt="enfoque proactivo">
+                            <p class="max-w-[318px]">Enfoque proactivo en la identificación de riesgos y oportunidades.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="max-w-[540px] mx-8 md:mx-0 md:w-1/2 h-full p-8 lg:pt-[118px] lg:pb-[76px] lg:pl-[76px] flex flex-col justify-center gap-[30px] bg-[#F2F2F3] rounded-[20px] md:p-8">
+                    <p
+                        class="max-w-[413px] font-['Lato'] text-[39px] leading-[46px] font-semibold text-[#ED8B00] text-center md:text-left">
+                        Si
+                        buscas una firma de Revisoría Fiscal que <span class="text-[#252B53]"> respaldo, calidad,
+                            experiencia y a<br> su vez un enfoque personalizado,</span> Russell Bedford es la opción
+                        ideal.
+                    </p>
+                    <a href="*"
+                        class="bg-[#00BFB3] rounded-[10px] py-[15px] px-[35px] w-full lg:w-3/5  md:text-center font-['Lato'] text-[24px] leading-[29px] font-semibold text-white text-center md:text-left">Solicitar
+                        Una Cotización</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="m-auto mt-[63px]"
+            style="background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(242,242,243,1) 50%);">
+            <article class="w-3/4 max-w-[1088px] m-auto h-auto lg:h-[413px] p-8 bg-[#ED8B00] rounded-[20px] ">
+                <div class="flex flex-col items-center justify-around h-full gap-8 lg:gap-0">
+                    <h3 class="font-['Lato'] text-[39px] leading-[46px] font-bold text-white text-center ">Russell
+                        Bedford en
+                        Colombia</h3>
+                    <div class="flex flex-col lg:flex-row justify-between items-center gap-2 md:gap-4 lg:gap-[56px]">
+                        <div class="font-['Lato'] font-black text-white flex flex-col gap-[15px] items-center">
+                            <p class="text-[84px] leading-[101px]">+5</p>
+                            <span class="text-[24px] leading-[29px]">Oficinas</span>
+                        </div>
+                        <div class="font-['Lato'] font-black text-white flex flex-col gap-[15px] items-center">
+                            <p class="text-[84px] leading-[101px]">+1400</p>
+                            <span class="text-[24px] leading-[29px]">Clientes</span>
+                        </div>
+                        <div class="font-['Lato'] font-black text-white flex flex-col gap-[15px] items-center">
+                            <p class="text-[84px] leading-[101px]">#8</p>
+                            <span class="text-[24px] leading-[29px]">Ranking Colombia</span>
+                        </div>
+                        <div class="font-['Lato'] font-black text-white flex flex-col gap-[15px] items-center">
+                            <p class="text-[84px] leading-[101px]">+300</p>
+                            <span class="text-[24px] leading-[29px]">Profesionales</span>
+                        </div>
+                    </div>
+                    <a href="*"
+                        class="bg-[#00BFB3] rounded-[10px] py-[15px] px-[35px] w-[265px] font-['Lato'] text-[24px] leading-[29px] font-semibold text-white ">Quiero
+                        Saber Más</a>
+
+                </div>
+
+            </article>
+        </section>
+
+        <section class="bg-[#F2F2F3] ">
+            <article
+                class="max-w-[1300px] mx-auto flex flex-col md:flex-row justify-center items-center gap-4 lg:gap-[16px] p-8 lg:pt-[79px] lg:pb-[105px] md:p-8 lg:px-0">
+                <h4
+                    class="max-w-[628px] font-['Lato'] text-[63px] leading-[68px] font-semibold text-[#252B53] text-center">
+                    <span class="text-[#ED8B00]">Algunos de </span>nuestros clientes en Colombia
+                </h4>
+                <p
+                    class="max-w-[418px] font-['Lato'] text-[24px] leading-[29px] font-semibold text-[#252B53] text-center md:text-left">
+                    Invertimos tiempo en escucharlos, entender sus necesidades y brindarles la confianza que
+                    precisan.</p>
+            </article>
+            <article
+                class="max-w-[1300px] mx-auto flex flex-row justify-center items-center gap-[17px] px-8 lg:px-0 py-8 lg:pb-[138px] md:p-8">
+                <img src="" alt="comfama">
+                <img src="" alt="cosmo schools">
+                <img src="" alt="camara de comercio">
+                <img src="" alt="maria salomé">
+                <img src="" alt="el zarzal">
+                <img src="" alt="piccolo">
+                <img src="" alt="sary">
+            </article>
+        </section>
+
+        <section class="bg-white">
+            <article
+                class="max-w-[1300px] mx-auto pt-[30px] pb-[40px] lg:px-0 flex flex-col lg:flex-row gap-8 justify-center items-center p-8">
+                <div class="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start gap-[22px]">
+                    <h4
+                        class="max-w-[370px] font-['Lato'] text-[63px] leading-[68px] font-semibold text-[#252B53] text-center lg:text-left">
+                        La
+                        opinión <span class="text-[#ED8B00]">de nuestros clientes</span></h4>
+                    <p
+                        class="max-w-[352px] font-['Lato'] text-[24px] leading-[29px] font-semibold text-[#252B53] text-center lg:text-left">
+                        El
+                        éxito de nuestros clientes, es nuestro principal objetivo.</p>
+                    <a href="*"
+                        class="bg-[#00BFB3] rounded-[10px] py-[15px] px-[35px] w-[265px] font-['Lato'] text-[24px] leading-[29px] font-semibold text-white ">Quiero
+                        Saber Más</a>
+                </div>
+                <div class="w-full lg:w-2/3 bg-white" id="sliders-container">
+                    <div id="slider-1"
+                        class="bg-[#F2F2F3] rounded-[10px] h-[477px] max-w-[444px] p-6 lg:pt-[77px] lg:pb-[69px] lg:pl-[40px] lg:pr-[52px] mr-[20px] ">
+                        <p class="font-['Lato'] text-[36px] leading-[44px] font-semibold text-[#252B53] mb-[37px]">“La
+                            firma cuenta con asesores en todas las áreas lo cual es un apoyo muy importante”</p>
+                        <img src="" alt="sary logo">
+                    </div>
+                    <div id="slider-2"
+                        class="bg-[#F2F2F3] rounded-[10px] h-[477px] max-w-[444px] p-6 lg:pt-[77px] lg:pb-[69px] lg:pl-[40px] lg:pr-[52px] mr-[20px]">
+                        <p class="font-['Lato'] text-[36px] leading-[44px] font-semibold text-[#252B53] mb-[37px]">
+                            “Excelente disposición y compromiso del equipo de trabajo”</p>
+                        <img src="" alt="santiago corazón logo">
+                    </div>
+                    <div id="slider-3"
+                        class="bg-[#F2F2F3] rounded-[10px] h-[477px] max-w-[444px] p-6 lg:pt-[77px] lg:pb-[69px] lg:pl-[40px] lg:pr-[52px] mr-[20px]">
+                        <p class="font-['Lato'] text-[36px] leading-[44px] font-semibold text-[#252B53] mb-[37px]">“El
+                            personal es muy comprometido y atiende a nuestros requerimientos”</p>
+                        <img src="" alt="prove fábrica logo">
+                    </div>
+                    <div id="slider-4"
+                        class="bg-[#F2F2F3] rounded-[10px] h-[477px] max-w-[444px] p-6 lg:pt-[77px] lg:pb-[69px] lg:pl-[40px] lg:pr-[52px] mr-[20px]">
+                        <p class="font-['Lato'] text-[36px] leading-[44px] font-semibold text-[#252B53] mb-[37px]">
+                            “Gracias por el acompañamiento en la mejora de nuestra información y de nuestros procesos”
+                        </p>
+                        <img src="" alt="masaya logo">
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-[#ED8B00] h-[113px]">
+        <div class="max-w-[1300px] h-full m-auto flex flex-col md:flex-row justify-between items-center p-8 lg:p-0">
+            <img src="" alt="russell bedford logo">
+            <p class="font-['Lato'] text-[14px] leading-[17px] font-semibold text-white">Todos los derechos reservados ©
+                2024 - Russell Bedford</p>
+
+        </div>
+    </footer>
+</body>
+
+<!-- scrips para exportar -->
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- cdn slider -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $('#sliders-container').slick({
+        slidesToShow: 2,
+        centerMode: true,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+        ]
+    })
+
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+
+</html>

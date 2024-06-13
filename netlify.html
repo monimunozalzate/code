@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&family=Rajdhani:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Senix Form</title>
+    <style>
+      :root {
+        --senix-orange: #e24912;
+        --senix-blue-gray: #44687d;
+        --senix-light-gray: #959595;
+        --senix-gray: #575a5d;
+        --senix-black: #222325;
+        --senix-off-white: #f8f8f8;
+        --senix-white: #ffffff;
+        --senix-lighter-gray: #d9d9d9;
+
+        --senix-main-font-family: "Rajdhani", sans-serif;
+        --senix-secondary-font-family: "Arimo", sans-serif;
+
+        --senix-font-weight-400: 400;
+        --senix-font-weight-600: 600;
+
+        --senix-font-size-65px: 65px;
+        --senix-font-size-45px: 45px;
+        --senix-font-size-32px: 32px;
+        --senix-font-size-30px: 30px;
+        --senix-font-size-25px: 25px;
+        --senix-font-size-22px: 22px;
+        --senix-font-size-20px: 20px;
+        --senix-font-size-18px: 18px;
+        --senix-font-size-16px: 16px;
+        --senix-font-size-14px: 14px;
+        --senix-font-size-12px: 12px;
+
+        --senix-line-height-83px: 83px;
+        --senix-line-height-57px: 57px;
+        --senix-line-height-38px: 38px;
+        --senix-line-height-35px: 35px;
+        --senix-line-height-28px: 28px;
+        --senix-line-height-26px: 26px;
+        --senix-line-height-24px: 24px;
+        --senix-line-height-18px: 18px;
+        --senix-line-height-16px: 16px;
+      }
+
+      [class*="color-orange"] {
+        color: var(--senix-orange);
+      }
+
+      [class*="bg-off-white"] {
+        background-color: var(--senix-off-white) !important;
+      }
+
+      [class*="bg-white"] {
+        background-color: var(--senix-white) !important;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+        margin-top: 49px;
+        position: relative;
+        width: 100%;
+        height: 620px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      ::placeholder {
+        opacity: 0.5;
+      }
+
+      /* START TYPOGRAPHY */
+      .senix--heading {
+        color: var(--senix-light-gray);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-45px);
+        font-weight: var(--senix-font-weight-600);
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+      }
+      @media (max-width: 1024px) {
+        .senix--heading {
+          color: var(--senix-light-gray);
+          font-family: var(--senix-main-font-family);
+          font-size: var(--senix-font-size-32px);
+          font-weight: var(--senix-font-weight-600);
+          margin: 0;
+          padding: 0;
+          text-transform: none;
+        }
+      }
+
+      .senix--main-product-title {
+        color: var(--senix-blue-gray);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        font-size: 35px;
+        text-transform: capitalize;
+      }
+
+      .senix--sub-heading {
+        color: var(--senix-orange);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-30px);
+        font-weight: var(--senix-font-weight-600);
+        margin: 0;
+        padding-block: 0.5rem;
+        text-transform: none;
+      }
+      .senix--paragraph {
+        color: var(--senix-gray);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-16px);
+        line-height: var(--senix-line-height-26px);
+        padding: 0;
+        margin: 0;
+      }
+      .senix--button {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 4rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: fit-content;
+      }
+      .senix--button:hover {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 4rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .senix--button-submit {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 1rem 4rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        border: none;
+        width: fit-content;
+      }
+      .senix--button-submit:hover {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 1rem 4rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: fit-content;
+        border: none;
+      }
+
+      .senix--button-war {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-16px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: fit-content;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      .senix--button-add-to-cart {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: inherit;
+        border: none;
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: 100%;
+        align-self: end;
+      }
+
+      .senix--button-add-to-cart:hover {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        border-radius: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--senix-orange);
+        text-decoration: none;
+        width: 100%;
+      }
+
+      .senix--button-view-details {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: inherit;
+        border: none;
+        border-radius: 3px;
+        display: none;
+        position: absolute;
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--senix-blue-gray);
+        text-decoration: none;
+        width: 75%;
+        align-self: end;
+      }
+      .senix--button-view-details:hover {
+        color: var(--senix-white);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: inherit;
+        background-color: var(--senix-blue-gray);
+        text-decoration: none;
+        width: 75%;
+        align-self: end;
+      }
+
+      .senix--how-to-video-title {
+        color: var(--senix-orange);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: var(--senix-line-height-28px);
+      }
+      .senix--product-title {
+        color: var(--senix-gray);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: var(--senix-line-height-24px);
+      }
+      .senix--price {
+        color: var(--senix-gray);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-30px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-line-height-35px);
+      }
+      .senix--review-heading {
+        color: var(--senix-blue-gray);
+        font-size: var(--senix-font-size-30px);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        line-height: var(--senix-line-height-38px);
+        margin: 0;
+        text-transform: capitalize;
+      }
+      .senix--review-rating {
+        color: var(--senix-gray);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-65px);
+        font-weight: var(--senix-font-weight-600);
+        line-height: var(--senix-line-height-83px);
+      }
+      .senix--review-total {
+        color: var(--senix-orange);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-14px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-line-height-16px);
+        width: 100%;
+      }
+      .senix--review-average {
+        color: var(--senix-orange);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-14px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-line-height-18px);
+        padding: 0;
+        margin: 0;
+      }
+      .senix--helpful {
+        color: var(--senix-orange);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-16px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-line-height-18px);
+        margin: 0;
+        padding: 0;
+      }
+      .senix--report {
+        color: var(--senix-light-gray);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-16px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-line-height-18px);
+      }
+      .senix--post-date {
+        color: var(--senix-light-gray);
+        font-family: var(--senix-main-font-family);
+        font-size: var(--senix-font-size-12px);
+        font-weight: var(--senix-font-weight-400);
+        line-height: var(--senix-font-size-14px);
+        text-align: right;
+        padding-block: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .senix--post-date {
+          text-align: left;
+        }
+      }
+      .senix--review-pagination-count {
+        color: var(--senix-gray);
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-14px);
+        font-weight: var(--senix-font-weight-400);
+      }
+      .senix--faq-title {
+        color: var(--senix-gray);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        font-size: var(--senix-font-size-22px);
+        line-height: var(--senix-line-height-28px);
+      }
+      /* END TYPOGRAPHY */
+
+      /* START Side Nav */
+
+      .grid-container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        position: relative;
+
+        /* this breaks position sticky in Firefox */
+        /* overflow-x: hidden; */
+      }
+
+      .senix--side-nav {
+        display: none;
+        white-space: nowrap;
+        background-color: transparent;
+        position: absolute;
+        z-index: 9999;
+      }
+
+      .senix--side-nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: -9999px;
+        left: -9999px;
+      }
+      @media (min-width: 1440px) {
+        .senix--side-nav-list {
+          top: 100px;
+          left: 0;
+        }
+      }
+
+      .senix--side-nav-list-link {
+        display: block;
+        padding: 0 1.5rem;
+        color: var(--senix-blue-gray);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        font-size: var(--senix-font-size-16px);
+        text-decoration: none;
+      }
+      .senix--side-nav-list-link.current {
+        color: var(--senix-orange);
+        background-image: url("./sidenav-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: left -5px center;
+      }
+
+      /* END Side Nav */
+
+      /* START SPACING */
+      .mb-1 {
+        margin-bottom: 1rem;
+      }
+      .mb-2 {
+        margin-bottom: 2rem;
+      }
+      /* END SPACING */
+
+      .senix--content-container {
+        /* width: 80%;
+    margin: 0 auto; */
+      }
+
+      /* START Product Overview Section */
+      .senix--product-overview {
+        padding: 2rem;
+        background-color: var(--senix-off-white);
+      }
+
+      .senix--product-overview .senix--paragraph {
+        /* inline-size: clamp(400px, 80%, 1000px); */
+        overflow-wrap: break-word;
+      }
+      /* END Product Overview Section */
+
+      /* START Additional Info Section */
+      .senix--additional-info {
+        padding: 126px 0;
+      }
+
+      .senix--whats-included {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      /* START Tabs */
+      @media (min-width: 426px) {
+        .tabs {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .tabs label {
+          color: var(--senix-light-gray);
+          font-family: var(--senix-main-font-family);
+          font-size: var(--senix-font-size-25px);
+          font-weight: var(--senix-font-weight-600);
+          margin: 0;
+          padding-bottom: 1rem;
+          order: 1;
+          display: block;
+          padding: 1rem;
+          cursor: pointer;
+          background: transparent;
+
+          transition: background ease 0.2s;
+          border-bottom: 1px solid var(--senix-light-gray);
+        }
+
+        .tabs .tab {
+          order: 99;
+          flex-grow: 1;
+          width: 100%;
+          display: none;
+          padding: 1rem;
+          background: #fff;
+        }
+
+        .tab {
+          margin-top: 3rem;
+        }
+
+        .tabs input[type="radio"] {
+          display: none;
+        }
+
+        .tabs input[type="radio"]:checked + label {
+          background: #fff;
+          color: var(--senix-orange);
+          border-bottom: 11px solid var(--senix-orange);
+        }
+
+        .tabs input[type="radio"]:checked + label + .tab {
+          display: block;
+        }
+
+        .tab-contents {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .tabs {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .tabs label {
+          color: var(--senix-gray);
+          font-family: var(--senix-secondary-font-family);
+          font-size: var(--senix-font-size-14px);
+          font-weight: normal;
+          margin: 0;
+          padding-bottom: 1rem;
+          margin: 0.5rem;
+          order: 1;
+          display: block;
+          padding: 1rem;
+          cursor: pointer;
+          background: transparent;
+
+          transition: background ease 0.2s;
+          border: 1px solid var(--senix-gray);
+          border-radius: 3px;
+        }
+
+        .tabs .tab {
+          order: 99;
+          flex-grow: 1;
+          width: 100%;
+          display: none;
+          padding: 1rem;
+          background: #fff;
+        }
+
+        .tab {
+          margin-top: 3rem;
+        }
+
+        .tabs input[type="radio"] {
+          display: none;
+        }
+
+        .tabs input[type="radio"]:checked + label {
+          background: var(--senix-orange);
+          color: var(--senix-white);
+          border: none;
+        }
+
+        .tabs input[type="radio"]:checked + label + .tab {
+          display: block;
+        }
+
+        .tab-contents {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+      }
+
+      /* END Tabs */
+      /* END Additional Info Section */
+
+      /* START Specs Section */
+      .senix--specs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      @media (max-width: 425px) {
+        .senix--specs {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 0;
+        }
+      }
+      /* END Specs Section */
+
+      /* START Related Products Section */
+      .senix--related-products {
+        padding: 126px 0;
+      }
+
+      .senix--related-product:hover .senix--button-view-details {
+        display: inline-flex;
+      }
+
+      .senix--related-products-flex {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 1rem;
+      }
+
+      @media (max-width: 1024px) {
+        .senix--related-products-flex {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .senix--related-products-flex {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 425px) {
+        .senix--related-products-flex {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 1rem;
+        }
+      }
+      .senix--related-product {
+        display: grid;
+        position: relative;
+      }
+      /* END Related Products Section */
+
+      /* START Reviews Summary Section */
+      .senix--reviews {
+        padding: 1.5rem;
+        background-color: var(--senix-off-white);
+      }
+      .senix--reviews-heading {
+        margin-bottom: 2rem;
+      }
+
+      .senix--reviews-summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+        gap: 1rem;
+      }
+
+      .senix--review-rating-box {
+        padding: 2rem;
+        border: 1px solid var(--senix-light-gray);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+      }
+      .senix--review-quality-value-box {
+        padding: 2rem;
+        border: 1px solid var(--senix-light-gray);
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .senix--review-ratings-reviews-box {
+        padding: 2rem;
+        border: 1px solid var(--senix-light-gray);
+        border-radius: 3px;
+        display: flex;
+
+        flex-direction: column;
+      }
+
+      .senix--review-bars {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .senix--review-bars-grid {
+        display: flex;
+        align-items: center;
+      }
+
+      .senix--review-bar-container {
+        border-radius: 3px;
+        width: 100%;
+        height: 13px;
+        background-color: #eee;
+      }
+
+      .senix--review-bar {
+        border-radius: 3px;
+        width: 90%;
+        height: 13px;
+        background-color: var(--senix-orange);
+      }
+
+      /* END Reviews Summary Section */
+
+      /* START Review Section */
+
+      .senix--review-rating-filter-section {
+        padding: 1.5rem;
+      }
+
+      .senix--review-rating-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: baseline;
+      }
+
+      .senix--button-clear-filters {
+        display: inline-flex;
+        border-radius: 3px;
+        text-decoration: none;
+        color: var(--senix-gray);
+        font-family: var(--senix-secondary-font-family);
+        background-color: var(--senix-lighter-gray);
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .senix--button-clear-filters-x {
+        margin-right: 10px;
+      }
+
+      .senix--review {
+        background-color: var(--senix-off-white);
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem 2rem;
+        gap: 2rem;
+        display: flex;
+        flex-direction: row;
+      }
+      @media (max-width: 768px) {
+        .senix--review {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .senix--review-details {
+        grid-column: 2 / 9;
+      }
+
+      .senix--grid-item-rating-box {
+        margin: 1rem 0;
+        border: 1px solid var(--senix-light-gray);
+        padding: 1rem;
+        width: 100%;
+        max-width: 265px;
+      }
+
+      .senix--review-recommend {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 2rem;
+      }
+
+      .senix--flex-helpful-report {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      .senix--helpful-rating-container {
+        width: 45%;
+      }
+
+      @media (max-width: 425px) {
+        .senix--helpful-rating-container {
+          width: 100%;
+        }
+      }
+
+      .senix--recommend-container {
+        display: flex;
+      }
+
+      .senix--review-recommend-icon-text {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        align-items: center;
+      }
+
+      @media (max-width: 1024px) {
+        .senix--review-recommend-icon-text {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+      }
+
+      .senix--review-recommend-icon {
+        margin-inline: 1rem 0.7rem;
+      }
+
+      @media (max-width: 1024px) {
+        .senix--review-recommend-icon {
+          margin-inline: 0 0.7rem;
+        }
+      }
+
+      .senix--review-user-comment {
+        margin-bottom: 2rem;
+      }
+
+      .senix--review-user-images {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 2rem;
+        width: fit-content;
+      }
+      @media (max-width: 425px) {
+        .senix--review-user-images {
+          flex-direction: column;
+        }
+      }
+
+      .senix--review-footer {
+        border-top: 1px solid var(--senix-lighter-gray);
+        padding: 2rem 0;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .senix--review-footer-buttons {
+        place-self: center start;
+      }
+
+      .senix--review-footer-review-count {
+        place-self: start end;
+      }
+
+      /* END Review Section */
+
+      /* START Manual Parts List Section */
+
+      .senix--user-mannual-parts-list-section {
+        padding: 8rem 0;
+      }
+
+      .senix--manual-parts-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        width: fit-content;
+      }
+
+      .grid--item-quick-start-guide {
+        padding-right: 3rem;
+        border-right: 1px solid var(--senix-lighter-gray);
+      }
+
+      .grid--item-user-manual {
+        padding-inline: 3rem;
+        border-right: 1px solid var(--senix-lighter-gray);
+        padding-bottom: 1rem;
+      }
+
+      .grid--item-parts-list {
+        padding-left: 3rem;
+      }
+
+      @media (max-width: 1024px) {
+        .senix--manual-parts-list {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: fit-content;
+        }
+
+        .grid--item-quick-start-guide {
+          padding-right: 0;
+          border-right: none;
+          padding-block: 3rem;
+          border-bottom: 1px solid var(--senix-lighter-gray);
+        }
+
+        .grid--item-user-manual {
+          padding-block: 3rem;
+          padding-inline: 0;
+          border-right: none;
+          border-bottom: 1px solid var(--senix-lighter-gray);
+        }
+
+        .grid--item-parts-list {
+          padding-left: 0;
+          padding-block: 3rem;
+        }
+      }
+
+      .senix--download-button-group {
+        padding: 0;
+        margin: 0;
+        border-right: 1px solid var(--senix-light-gray);
+      }
+
+      @media (min-width: 425px) {
+        .senix--download-button-group {
+          padding: 0;
+          margin: 0;
+          border-right: 1px solid var(--senix-light-gray);
+        }
+      }
+
+      /* END Manual Parts List Section */
+
+      /* START Specs Section */
+      .senix--specs-tables {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      /* END Specs Section */
+
+      /* START Support Section */
+      .senix--support-wrapper {
+        background-color: var(--senix-off-white);
+      }
+
+      .senix--product-support {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .grid--item-warranty {
+        padding-right: 3rem;
+      }
+
+      .grid--item-support {
+        padding-left: 3rem;
+        border-top: none;
+        border-left: 1px solid var(--senix-lighter-gray);
+      }
+
+      @media (max-width: 425px) {
+        .grid--item-support {
+          padding-left: 0;
+          border-top: 1px solid var(--senix-lighter-gray);
+          border-left: none;
+          padding-top: 1.5rem;
+        }
+      }
+
+      /* END Support Section */
+
+      .icon-spacing {
+        margin-top: 5px;
+        margin-right: 18px;
+      }
+
+      .form-input-select {
+        border: unset;
+
+        color: var(--senix-gray);
+        font-family: var(--senix-secondary-font-family);
+        font-weight: var(--senix-font-weight-400);
+        font-size: var(--senix-form-select-input-font-size);
+        background-color: var(--senix-white);
+        padding: 1rem 4rem 1rem 1rem;
+        border: 1px solid var(--senix-gray);
+
+        appearance: none;
+        background-image: url("select-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem top 50%;
+        background-size: 0.65rem auto;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      /* START Table Styles */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #959595 !important;
+        font-family: var(--senix-secondary-font-family);
+        font-size: var(--senix-font-size-18px);
+        font-weight: var(--senix-font-weight-400);
+        color: #575a5d;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+      }
+
+      tr:nth-of-type(odd) {
+        background-color: #f8f8f8;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 16px;
+      }
+      /* END Table Styles */
+
+      /* START Accordion */
+      .grid--accordion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .grid--accordion {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .faqDealerAccordion {
+        background-color: #eee;
+        color: var(--senix-gray);
+        font-size: var(--senix-font-size-22px);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        cursor: pointer;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+
+        background-image: url(./accordion-arrow-closed.svg);
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+      }
+
+      .faqAccordion {
+        background-color: #eee;
+        color: var(--senix-gray);
+        font-size: var(--senix-font-size-22px);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        cursor: pointer;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+
+        background-image: url(./accordion-arrow-closed.svg);
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+      }
+
+      @media (min-width: 1024px) {
+        .faqAccordion {
+          height: 100px;
+          max-height: 100px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .faqAccordion {
+          background-image: url(./accordion-arrow-closed.svg);
+          background-repeat: no-repeat;
+          background-position: center right 10px;
+        }
+
+        .faqActive {
+          background-image: url(./accordion-arrow-open.svg);
+          background-repeat: no-repeat;
+          background-position: center right 10px;
+        }
+      }
+
+      .faqActive {
+        background-image: url(./accordion-arrow-open.svg);
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+      }
+
+      .faqActive,
+      .faqAccordion:hover {
+        background-color: #eee;
+      }
+
+      .faqDealerPanel {
+        padding: 1rem 2rem 2rem;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+      }
+
+      .faqPanel {
+        padding: 2rem 4rem;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+      }
+
+      .faqPanel.show {
+        display: block;
+      }
+
+      /* END Accordion */
+
+      .senix--title-line-size {
+        inline-size: 320px;
+        word-wrap: break-word;
+      }
+
+      @media (max-width: 1024px) {
+        .senix--title-line-size {
+          inline-size: 210px;
+          word-wrap: break-word;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .senix--title-line-size {
+          inline-size: 320px;
+          word-wrap: break-word;
+        }
+      }
+
+      .senix--how-to-videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+      }
+
+      .grid--full {
+        grid-column: 1 / -1;
+      }
+
+      /* IMAGE SIZING */
+
+      .senix--key-feature-image {
+        max-width: 340px;
+        max-height: 320px;
+      }
+
+      .senix--included-image {
+        max-width: 309px;
+        max-height: 232px;
+      }
+
+      .senix--platform-image {
+        max-width: 981px;
+        max-height: 327px;
+        margin-bottom: 2rem;
+      }
+
+      .senix--related-product-image {
+        max-width: 337px;
+        max-height: 250px;
+      }
+
+      .senix--how-to-placeholder {
+        max-width: 399px;
+        max-height: 231px;
+      }
+
+      .sidebar_mobile_wrapper {
+        display: none;
+      }
+
+      .senix--line-size-platform {
+        inline-size: 85%;
+      }
+
+      .senix--line-size-how-to-description {
+        inline-size: 400px;
+      }
+
+      @media (max-width: 425px) {
+        .senix--line-size-how-to-description {
+          inline-size: 100%;
+        }
+      }
+
+      .senix--included-inline-size {
+        inline-size: 300px;
+      }
+
+      @media (max-width: 375px) {
+        .senix--included-inline-size {
+          inline-size: 220px;
+        }
+      }
+
+      /* ACCORDION SWAP */
+
+      .section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .title-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+        padding: 1rem;
+        color: var(--senix-gray);
+        font-size: var(--senix-font-size-22px);
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        cursor: pointer;
+        width: 100%;
+
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+      }
+      .titleSectionActive {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+      }
+
+      @media (max-width: 1024px) {
+        .title-section {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          color: var(--senix-gray);
+          font-size: var(--senix-font-size-22px);
+          font-family: var(--senix-main-font-family);
+          font-weight: var(--senix-font-weight-600);
+          cursor: pointer;
+          width: 100%;
+
+          text-align: left;
+          border: none;
+          outline: none;
+          transition: 0.2s;
+
+          background-image: url(./accordion-arrow-closed.svg);
+          background-repeat: no-repeat;
+          background-position: center right 20px;
+        }
+        .titleSectionActive {
+          background-image: url(./accordion-arrow-open.svg);
+          background-repeat: no-repeat;
+          background-position: center right 20px;
+        }
+      }
+
+      .content-section {
+        display: none;
+        padding: 1rem 1rem 3rem 1rem;
+      }
+
+      @media (min-width: 1040px) {
+        .content-section {
+          display: block;
+        }
+        .section-wrapper {
+          padding: 126px 0;
+        }
+      }
+
+      .section-wrapper:nth-of-type(odd) {
+        background-color: var(--senix-off-white);
+      }
+
+      .social-icon {
+        background-color: var(--senix-orange) !important;
+        border-color: var(--senix-orange) !important;
+        width: 65px !important;
+        height: 65px !important;
+        line-height: 75px !important;
+      }
+
+      .fa-instagram:before {
+        content: "\f16d";
+        font-size: 30px;
+      }
+      .fa-youtube:before {
+        content: "\f167";
+        font-size: 30px;
+      }
+      .fa-twitter:before {
+        content: "\f099";
+        font-size: 30px;
+      }
+      .fa-facebook-f:before {
+        content: "\f39e";
+        font-size: 30px;
+      }
+
+      .product_shop .product_infor label {
+        min-width: auto;
+      }
+
+      .product_shop .product-form__item label {
+        display: block;
+        margin: 1rem 0;
+      }
+
+      .product_photos .product-slider .slider-nav .item.slick-current img {
+        opacity: 1 !important;
+        border: 2px solid var(--senix-orange);
+      }
+
+      .review-button-mobile {
+        display: none;
+      }
+
+      @media (max-width: 1024px) {
+        .review-button-desktop {
+          display: none;
+        }
+        .review-button-mobile {
+          display: block;
+        }
+      }
+
+      .add-to-cart-form {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .product_shop .product-price .price-item {
+        font-size: 30px !important;
+      }
+
+      .senix--quick-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-block: 1rem;
+      }
+      .senix--quick-link {
+        color: var(--senix-blue-gray);
+        font-size: var(--senix-font-size-22px);
+        font-weight: var(--senix-font-weight-600);
+        font-family: var(--senix-main-font-family);
+        text-decoration: underline;
+      }
+
+      .hide-back-link {
+        display: none;
+      }
+
+      @media (max-width: 425px) {
+        .hide-back-link {
+          display: block;
+        }
+      }
+
+      /* Dealer */
+
+      .tab-container {
+        width: 100%;
+        /* max-width: 1100px; */
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .tab-buttons {
+        display: flex;
+      }
+
+      .tab-button {
+        flex: 1;
+        background-color: #f8f8f8;
+        border: none;
+        padding: 30px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 30px;
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+        border-bottom: 1px solid #959595;
+        color: #959595;
+      }
+
+      .tab-button:hover {
+      }
+
+      .tab-button.active {
+        color: #e24912;
+        border-bottom: 11px solid #e24912;
+      }
+
+      @media (max-width: 768px) {
+        .tab-button {
+          flex: 1;
+          background-color: #f8f8f8;
+          border: none;
+          padding: 14px 0px;
+          cursor: pointer;
+          transition: 0.3s;
+          font-size: 14px;
+          font-family: var(--senix-secondary-font-family);
+          font-weight: var(--senix-font-weight-400);
+          border: 0.5px solid #959595;
+          color: #959595;
+        }
+
+        .tab-button:nth-of-type(1) {
+          border-top-left-radius: 10px;
+        }
+
+        .tab-button:nth-of-type(2) {
+          border-top-right-radius: 10px;
+        }
+
+        .tab-button:hover {
+        }
+
+        .tab-button.active {
+          color: #ffffff;
+          border-bottom: none;
+          background-color: var(--senix-orange);
+        }
+      }
+
+      .tab-content {
+        padding: 20px;
+        background-color: #f8f8f8;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+      }
+
+      .tab-description {
+        color: #e24912;
+        font-family: var(--senix-secondary-font-family);
+        font-weight: 400;
+        font-style: italic;
+        font-size: 18px;
+      }
+
+      .accordion-form-space {
+        padding-top: 114px;
+        margin-top: 87px;
+        border-top: 1px solid #575a5d;
+      }
+
+      /* FORM */
+
+      .senix--form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        .senix--form {
+          display: grid;
+        }
+      }
+      .senix--form-group {
+        flex-basis: 50%;
+        padding: 15px 15px 15px 0;
+        box-sizing: border-box;
+      }
+
+      .senix--form-group.flex-grow {
+        flex-basis: 100%;
+      }
+
+      .senix--form-label {
+        display: block;
+        font-family: var(--senix-secondary-font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--senix-gray);
+        margin-bottom: 8px;
+      }
+
+      .senix--form-input {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #959595;
+        background-color: #f8f8f8;
+        color: var(--senix-gray);
+      }
+
+      .senix--grid-flex {
+        display: flex;
+        gap: 30px;
+      }
+
+      @media (max-width: 768px) {
+        .senix--grid-flex {
+          display: grid;
+        }
+      }
+
+      .senix--form input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        min-height: 20px;
+        background-color: #f8f8f8;
+        border: 1px solid #e24912;
+        border-radius: 1px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .senix--form input[type="checkbox"]:checked {
+        background-color: #e24912;
+        background-image: url(./checkmark.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .senix--form-group label {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .senix--dealer-accordion {
+        padding: 25px 33px;
+        font-size: 22px;
+        font-family: var(--senix-main-font-family);
+        font-weight: var(--senix-font-weight-600);
+      }
+
+      .senix--multi-select-dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .senix--multi-select-dropdown-header {
+        font-family: var(--senix-secondary-font-family);
+        color: var(--senix-gray);
+        background-color: #f8f8f8;
+        border: 1px solid #959595;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        user-select: none;
+      }
+
+      .senix--multi-select-dropdown-header:hover {
+        background-color: #f8f8f8;
+      }
+
+      .chevron {
+        margin-left: 10px;
+      }
+
+      .senix--multi-select-dropdown-content {
+        font-family: var(--senix-secondary-font-family);
+        color: var(--senix-gray);
+        background-color: #f8f8f8;
+        border: 1px solid #959595;
+        display: none;
+        max-height: 100px;
+        width: 100%;
+        overflow-y: auto;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .senix--multi-select-dropdown-content label {
+        display: block;
+        padding: 8px 16px;
+        user-select: none;
+      }
+
+      .senix--multi-select-dropdown-content label:hover {
+        border: 1px solid #e24912;
+      }
+
+      .senix--multi-select-dropdown-content input[type="checkbox"] {
+        display: none;
+      }
+
+      .senix--multi-selected {
+        background-color: #e24912;
+        color: #ffffff;
+      }
+
+      .senix--required {
+        color: #ff0000;
+      }
+
+      .senix--acc-side-grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 58px;
+      }
+
+      @media (max-width: 768px) {
+        .senix--acc-side-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .senix--faq-contact-spacing {
+        margin-top: 64px;
+      }
+
+      /* MODAL */
+      .modal {
+        font-family: var(--senix-main-font-family);
+        display: none;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        font-family: var(--senix-secondary-font-family);
+        background-color: #fefefe;
+        margin: 25% auto;
+        width: 80%;
+        position: relative;
+        border-radius: 4px;
+      }
+
+      @media (max-width: 425px) {
+        .modal-content {
+          margin: 120% auto;
+        }
+      }
+
+      .modal-header {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      .modal-body {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .close {
+        color: #fff;
+        position: absolute;
+        top: -16px;
+        right: -16px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #000;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid white;
+      }
+
+      .close:hover,
+      .close:focus {
+        background-color: #444;
+        text-decoration: none;
+      }
+
+      /* ERRORs */
+      .error {
+        border-color: #d20000;
+      }
+
+      .error-message {
+        color: #d20000;
+        font-family: var(--senix-secondary-font-family);
+        font-style: italic;
+        margin-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab(0)">
+          Formulario para comerciantes
+        </button>
+        <button class="tab-button" onclick="showTab(1)">
+          Formulario para distribuidores
+        </button>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <p class="tab-description">
+            Por favor, llene el siguiente formulario:
+          </p>
+          <form id="dealerForm" class="senix--form validate">
+            <div class="senix--form-group">
+              <label for="nameDealer" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Nombre de la empresa/distribuidor:
+              </label>
+              <input
+                type="text"
+                id="nameDealer"
+                class="senix--form-input"
+                name="nameDealer"
+                placeholder="Dealer / Business Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="addressDealer" class="senix--form-label">
+                <span class="senix--required">*</span> Dirección de la empresa:
+              </label>
+              <input
+                type="text"
+                id="addressDealer"
+                class="senix--form-input"
+                name="addressDealer"
+                placeholder="Dealer / Business Address"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="firstNameDealer" class="senix--form-label">
+                <span class="senix--required">*</span> Nombre del contacto:
+              </label>
+              <input
+                type="text"
+                id="firstNameDealer"
+                class="senix--form-input"
+                name="firstNameDealer"
+                placeholder="First Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="lastNameDealer" class="senix--form-label">
+                <span class="senix--required">*</span> Apellido del contacto:
+              </label>
+              <input
+                type="text"
+                id="lastNameDealer"
+                class="senix--form-input"
+                name="lastNameDealer"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="phoneDealer" class="senix--form-label">
+                <span class="senix--required">*</span> Número de teléfono:
+              </label>
+              <input
+                type="tel"
+                id="phoneDealer"
+                class="senix--form-input"
+                name="phoneDealer"
+                placeholder="(###) ###-####"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="emailDealer" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Correo electrónico:
+              </label>
+              <input
+                type="email"
+                id="emailDealer"
+                class="senix--form-input"
+                name="emailDealer"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group flex-grow">
+              <label class="senix--form-label">
+                <span class="senix--required">*</span>
+                Productos en los que estás interesado (Selecciona 1 o más)
+              </label>
+              <br />
+              <div class="senix--grid-flex">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product"
+                    value="4QL Handheld"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    4QL Portátil
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product"
+                    value="Gas Mowers"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Podadoras a gasolina
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product"
+                    value="X2 20V Power Tools"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Herramientas eléctricas X2 20V
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product"
+                    value="20V OPE"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Herramientas para exterior (OPE) 20V
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product"
+                    value="X5 58V"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    X5 58V
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <input class="senix--button-submit" type="submit" value="Submit" />
+          </form>
+        </div>
+
+        <div class="tab-pane" id="tab2">
+          <p class="tab-description">
+            Por favor, llene el siguiente formulario:
+          </p>
+
+          <form id="distroForm" class="senix--form validate">
+            <div class="senix--form-group">
+              <label for="nameDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Nombre del distribuidor:
+              </label>
+              <input
+                type="text"
+                id="nameDistro"
+                class="senix--form-input"
+                name="nameDistro"
+                placeholder="Distributor Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="addressDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Direccion del distribuidor:
+              </label>
+              <input
+                type="text"
+                id="addressDistro"
+                class="senix--form-input"
+                name="addressDistro"
+                placeholder="Distributor Address"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="firstNameDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Nombre del contacto:
+              </label>
+              <input
+                type="text"
+                id="firstNameDistro"
+                class="senix--form-input"
+                name="firstNameDistro"
+                placeholder="First Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="lastNameDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Apellido del contacto:
+              </label>
+              <input
+                type="text"
+                id="lastNameDistro"
+                class="senix--form-input"
+                name="lastNameDistro"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="phoneDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Número de teléfono:
+              </label>
+              <input
+                type="tel"
+                id="phoneDistro"
+                class="senix--form-input"
+                name="phoneDistro"
+                placeholder="(###) ###-####"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group">
+              <label for="emailDistro" class="senix--form-label">
+                <span class="senix--required">*</span>
+                Correo electrónico:
+              </label>
+              <input
+                type="email"
+                id="emailDistro"
+                class="senix--form-input"
+                name="emailDistro"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div class="senix--form-group flex-grow">
+              <label class="senix--form-label">
+                <span class="senix--required">*</span>
+                Productos en los que estás interesado: (Selecciona 1 o más)
+              </label>
+              <br />
+              <div class="senix--grid-flex">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product-d"
+                    value="4QL Handheld"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    4QL Portátil
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product-d"
+                    value="Gas Mowers"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Podadoras a gasolina
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product-d"
+                    value="X2 20V Power Tools"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Herramientas eléctricas X2 20V
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product-d"
+                    value="20V OPE"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    Herramientas para exterior (OPE) 20V
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="product-d"
+                    value="X5 58V"
+                    id="product"
+                    name="product"
+                  />
+                  <label class="senix--form-label" for="product">
+                    X5 58V
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="senix--form-group">
+              <label class="senix--form-label">
+                <span class="senix--required">*</span>
+                Estados en los que está interesado en ofrecer cobertura
+              </label>
+              <div class="senix--multi-select-dropdown" tabindex="0">
+                <select
+                  multiple
+                  multiselect-search="true"
+                  multiselect-select-all="true"
+                  multiselect-max-items="3"
+                  multiselect-hide-x="false"
+                  id="state-select"
+                  name="state-select"
+                >
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="BajaCalifornia">Baja California</option>
+                  <option value="BajaCalifornia Sur">
+                    Baja California Sur
+                  </option>
+                  <option value="Campeche">Campeche</option>
+                  <option value="Coahuila">Coahuila</option>
+                  <option value="Colima">Colima</option>
+                  <option value="Chiapas">Chiapas</option>
+                  <option value="Chihuahua">Chihuahua</option>
+                  <option value="Durango">Durango</option>
+                  <option value="DistritoFederal">Distrito Federal</option>
+                  <option value="Guanajuato">Guanajuato</option>
+                  <option value="Guerrero">Guerrero</option>
+                  <option value="Hidalgo">Hidalgo</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="México">México</option>
+                  <option value="Michoacán">Michoacán</option>
+                  <option value="Morelos">Morelos</option>
+                  <option value="Nayarit">Nayarit</option>
+                  <option value="León">León</option>
+                  <option value="Oaxaca">Oaxaca</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Querétaro">Querétaro</option>
+                  <option value="QuintanaRoo">Quintana Roo</option>
+                  <option value="SanLuisPotosí">San Luis Potosí</option>
+                  <option value="Sinaloa">Sinaloa</option>
+                  <option value="Sonora">Sonora</option>
+                  <option value="Tabasco">Tabasco</option>
+                  <option value="Tamaulipas">Tamaulipas</option>
+                  <option value="Tlaxcala">Tlaxcala</option>
+                  <option value="Veracruz">Veracruz</option>
+                  <option value="Yucatán">Yucatán</option>
+                  <option value="Zacatecas">Zacatecas</option>
+                </select>
+
+              </div>
+            </div>
+
+            <div class="senix--form-group">
+              <label class="senix--form-label">
+                <span class="senix--required">*</span>
+                Categorías que distribuyes actualmente:
+              </label>
+              <div class="senix--multi-select-dropdown" tabindex="0">
+                <select
+                  multiple
+                  multiselect-search="true"
+                  multiselect-select-all="true"
+                  multiselect-max-items="3"
+                  multiselect-hide-x="false"
+                  id="categories-select"
+                  name="categories-select"
+                >
+                  <option>Herramientas para exterior (OPE)</option>
+                  <option>Herramientas eléctricas</option>
+                </select>
+
+              </div>
+            </div>
+            <input class="senix--button-submit" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <div id="successModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>¡Envío exitoso!</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              Gracias por ponerte en contacto con nosotros. Nos pondremos en
+              contacto contigo lo antes posible.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="errorModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>¡Error!</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              Se ha producido un error en el envío. Comprueba los datos e
+              inténtalo de nuevo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // FORM TABS
+      function showTab(index) {
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabPanes = document.querySelectorAll(".tab-pane");
+
+        tabButtons.forEach((btn, i) => {
+          if (i === index) {
+            btn.classList.add("active");
+            tabPanes[i].classList.add("active");
+          } else {
+            btn.classList.remove("active");
+            tabPanes[i].classList.remove("active");
+          }
+        });
+      }
+
+      // input masking phone on dealer
+      document
+        .getElementById("phoneDealer")
+        .addEventListener("input", function (e) {
+          var x = e.target.value
+            .replace(/\D/g, "")
+            .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+          e.target.value = !x[2]
+            ? x[1]
+            : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+        });
+
+      // input masking phone on distro
+      document
+        .getElementById("phoneDistro")
+        .addEventListener("input", function (e) {
+          var x = e.target.value
+            .replace(/\D/g, "")
+            .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+          e.target.value = !x[2]
+            ? x[1]
+            : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+        });
+
+      //  remove all characters from a string
+      function removeAllCharacters(str) {
+        return str.replace(/[^a-zA-Z0-9]/g, "");
+      }
+
+      // modal display logic
+
+      const modal = document.getElementById("successModal");
+      const error = document.getElementById("errorModal");
+      const closeButtons = document.getElementsByClassName("close");
+
+      function showModal() {
+        modal.style.display = "block";
+      }
+
+      function showError() {
+        error.style.display = "block";
+      }
+
+      // Hide the modal
+      function closeModal() {
+        modal.style.display = "none";
+        error.style.display = "none";
+      }
+
+      // Close the modal when the close button is clicked
+      for (const closeButton of closeButtons) {
+        closeButton.addEventListener("click", closeModal);
+      }
+
+      // Close the modal when clicking outside of the modal content
+      window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      });
+
+    
+
+       var style = document.createElement("style");
+       style.setAttribute("id", "multiselect_dropdown_styles");
+       style.innerHTML = `
+  .multiselect-dropdown{
+    display: inline-block;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http:www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    width: 100% !important;
+    font-family: var(--senix-secondary-font-family);
+    color: var(--senix-gray);
+    background-color: #f8f8f8;
+    border: 1px solid #959595;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    padding: 13px;
+    user-select: none
+  }
+  .multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
+    margin-right:0.5em; 
+    margin-bottom:2px;
+    padding:1px 0; 
+    border-radius: 4px; 
+    display:inline-block;
+  }
+  .multiselect-dropdown span.optext{
+    background-color:lightgray;
+    padding:1px 0.75em; 
+  }
+  .multiselect-dropdown span.optext .optdel {
+    float: right;
+    margin: 0 -6px 1px 5px;
+    font-size: 0.7em;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #666;
+  }
+  .multiselect-dropdown span.optext .optdel:hover { color: #c66;}
+  .multiselect-dropdown span.placeholder{
+    color:#ced4da;
+  }
+  .multiselect-dropdown-list-wrapper{
+    box-shadow: gray 0 3px 8px;
+    z-index: 100;
+    padding:2px;
+    border-radius: 4px;
+    border: solid 1px #ced4da;
+    display: none;
+    margin: -1px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    background: white;
+  }
+  .multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
+    margin-bottom:5px;
+  }
+  .multiselect-dropdown-list{
+    padding:2px;
+    height: 15rem;
+    overflow-y:auto;
+    overflow-x: hidden;
+  }
+  .multiselect-dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  .multiselect-dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #bec4ca;
+    border-radius:3px;
+  }
+
+  .multiselect-dropdown-list div{
+    padding: 5px;
+  }
+  .multiselect-dropdown-list input{
+    height: 1.15em;
+    width: 1.15em;
+    margin-right: 0.35em;  
+  }
+  .multiselect-dropdown-list div.checked{
+  }
+  .multiselect-dropdown-list div:hover{
+    background-color: #ced4da;
+  }
+  .multiselect-dropdown span.maxselected {width:100%;}
+  .multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}
+  `;
+       document.head.appendChild(style);
+
+       function MultiselectDropdown(options) {
+         var config = {
+           search: true,
+           height: "15rem",
+           placeholder: "select",
+           txtSelected: "selected",
+           txtAll: "All",
+           txtRemove: "Remove",
+           txtSearch: "search",
+           ...options,
+         };
+         function newEl(tag, attrs) {
+           var e = document.createElement(tag);
+           if (attrs !== undefined)
+             Object.keys(attrs).forEach((k) => {
+               if (k === "class") {
+                 Array.isArray(attrs[k])
+                   ? attrs[k].forEach((o) => (o !== "" ? e.classList.add(o) : 0))
+                   : attrs[k] !== ""
+                   ? e.classList.add(attrs[k])
+                   : 0;
+               } else if (k === "style") {
+                 Object.keys(attrs[k]).forEach((ks) => {
+                   e.style[ks] = attrs[k][ks];
+                 });
+               } else if (k === "text") {
+                 attrs[k] === ""
+                   ? (e.innerHTML = "&nbsp;")
+                   : (e.innerText = attrs[k]);
+               } else e[k] = attrs[k];
+             });
+           return e;
+         }
+
+         document.querySelectorAll("select[multiple]").forEach((el, k) => {
+           var div = newEl("div", {
+             class: "multiselect-dropdown",
+             style: {
+               width: config.style?.width ?? el.clientWidth + "px",
+               padding: config.style?.padding ?? "",
+             },
+           });
+           el.style.display = "none";
+           el.parentNode.insertBefore(div, el.nextSibling);
+           var listWrap = newEl("div", {
+             class: "multiselect-dropdown-list-wrapper",
+           });
+           var list = newEl("div", {
+             class: "multiselect-dropdown-list",
+             style: { height: config.height },
+           });
+           var search = newEl("input", {
+             class: ["multiselect-dropdown-search"].concat([
+               config.searchInput?.class ?? "form-control",
+             ]),
+             style: {
+               width: "100%",
+               display:
+                 el.attributes["multiselect-search"]?.value === "true"
+                   ? "block"
+                   : "none",
+             },
+             placeholder: config.txtSearch,
+           });
+           listWrap.appendChild(search);
+           div.appendChild(listWrap);
+           listWrap.appendChild(list);
+
+           el.loadOptions = () => {
+             list.innerHTML = "";
+
+             if (el.attributes["multiselect-select-all"]?.value == "true") {
+               var op = newEl("div", {
+                 class: "multiselect-dropdown-all-selector",
+               });
+               var ic = newEl("input", { type: "checkbox" });
+               op.appendChild(ic);
+               op.appendChild(newEl("label", { text: config.txtAll }));
+
+               op.addEventListener("click", () => {
+                 op.classList.toggle("checked");
+                 op.querySelector("input").checked =
+                   !op.querySelector("input").checked;
+
+                 var ch = op.querySelector("input").checked;
+                 list
+                   .querySelectorAll(
+                     ":scope > div:not(.multiselect-dropdown-all-selector)"
+                   )
+                   .forEach((i) => {
+                     if (i.style.display !== "none") {
+                       i.querySelector("input").checked = ch;
+                       i.optEl.selected = ch;
+                     }
+                   });
+
+                 el.dispatchEvent(new Event("change"));
+               });
+               ic.addEventListener("click", (ev) => {
+                 ic.checked = !ic.checked;
+               });
+               el.addEventListener("change", (ev) => {
+                 let itms = Array.from(
+                   list.querySelectorAll(
+                     ":scope > div:not(.multiselect-dropdown-all-selector)"
+                   )
+                 ).filter((e) => e.style.display !== "none");
+                 let existsNotSelected = itms.find(
+                   (i) => !i.querySelector("input").checked
+                 );
+                 if (ic.checked && existsNotSelected) ic.checked = false;
+                 else if (ic.checked == false && existsNotSelected === undefined)
+                   ic.checked = true;
+               });
+
+               list.appendChild(op);
+             }
+
+             Array.from(el.options).map((o) => {
+               var op = newEl("div", {
+                 class: o.selected ? "checked" : "",
+                 optEl: o,
+               });
+               var ic = newEl("input", {
+                 type: "checkbox",
+                 checked: o.selected,
+               });
+               op.appendChild(ic);
+               op.appendChild(newEl("label", { text: o.text }));
+
+               op.addEventListener("click", () => {
+                 op.classList.toggle("checked");
+                 op.querySelector("input").checked =
+                   !op.querySelector("input").checked;
+                 op.optEl.selected = !!!op.optEl.selected;
+                 el.dispatchEvent(new Event("change"));
+               });
+               ic.addEventListener("click", (ev) => {
+                 ic.checked = !ic.checked;
+               });
+               o.listitemEl = op;
+               list.appendChild(op);
+             });
+             div.listEl = listWrap;
+
+             div.refresh = () => {
+               div
+                 .querySelectorAll("span.optext, span.placeholder")
+                 .forEach((t) => div.removeChild(t));
+               var sels = Array.from(el.selectedOptions);
+               if (
+                 sels.length >
+                 (el.attributes["multiselect-max-items"]?.value ?? 5)
+               ) {
+                 div.appendChild(
+                   newEl("span", {
+                     class: ["optext", "maxselected"],
+                     text: sels.length + " " + config.txtSelected,
+                   })
+                 );
+               } else {
+                 sels.map((x) => {
+                   var c = newEl("span", {
+                     class: "optext",
+                     text: x.text,
+                     srcOption: x,
+                   });
+                   if (el.attributes["multiselect-hide-x"]?.value !== "true")
+                     c.appendChild(
+                       newEl("span", {
+                         class: "optdel",
+                         text: "X",
+                         title: config.txtRemove,
+                         onclick: (ev) => {
+                           c.srcOption.listitemEl.dispatchEvent(
+                             new Event("click")
+                           );
+                           div.refresh();
+                           ev.stopPropagation();
+                         },
+                       })
+                     );
+
+                   div.appendChild(c);
+                 });
+               }
+               if (0 == el.selectedOptions.length)
+                 div.appendChild(
+                   newEl("span", {
+                     class: "placeholder",
+                     text:
+                       el.attributes["placeholder"]?.value ?? config.placeholder,
+                   })
+                 );
+             };
+             div.refresh();
+           };
+           el.loadOptions();
+
+           search.addEventListener("input", () => {
+             list
+               .querySelectorAll(
+                 ":scope div:not(.multiselect-dropdown-all-selector)"
+               )
+               .forEach((d) => {
+                 var txt = d.querySelector("label").innerText.toUpperCase();
+                 d.style.display = txt.includes(search.value.toUpperCase())
+                   ? "block"
+                   : "none";
+               });
+           });
+
+           div.addEventListener("click", () => {
+             div.listEl.style.display = "block";
+             search.focus();
+             search.select();
+           });
+
+           document.addEventListener("click", function (event) {
+             if (!div.contains(event.target)) {
+               listWrap.style.display = "none";
+               div.refresh();
+             }
+           });
+         });
+       }
+
+       window.addEventListener("load", () => {
+         MultiselectDropdown(window.MultiselectDropdownOptions);
+       });
+
+//         // --------------- dealer info ----------------------------
+
+         $(document).ready(function () {
+         $("#dealerForm").submit(function (event) {
+           event.preventDefault();
+
+           // Resto del código para enviar el formulario si la validación es exitosa
+           console.log("Formulario válido, enviando datos...");
+
+           // Obtener los datos del formulario
+           var formData = $(this).serialize()
+
+
+           // Enviar los datos del formulario a la URL especificada
+           $.post(
+             "https://hooks.zapier.com/hooks/catch/463986/3isnoq6/",
+             formData,
+             function (data) {
+               if (data.status === "success") {
+                 console.log(formData)
+                 console.log("Envío exitoso");
+                 showModal();
+                 event.target.reset();
+               } else {
+                 console.log(data);
+                 showError();
+               }
+
+               // Reactivar el botón de envío después de la respuesta del servidor (éxito o error)
+               $("#myForm button").prop("disabled", false);
+             }
+           );
+         });
+       });
+
+      // --------------------- distribuidor form --------------
+
+
+   let stateElements = document.getElementById("state-select").selectedOptions;
+   console.log(stateElements)
+   let stateValues = [];
+   for(let option of stateElements){
+       stateValues.push(option.value);
+   }
+
+   let categoryElements = document.getElementById("categories-select").selectedOptions;
+   console.log(categoryElements)
+   let categoryValues = [];
+   for(let option of categoryElements){
+     categoryValues.push(option.value);
+   }
+
+       $(document).ready(function () {
+         $("#distroForm").submit(function (event) {
+           event.preventDefault();
+
+           // Resto del código para enviar el formulario si la validación es exitosa
+          console.log("Formulario válido, enviando datos...");
+
+          // Obtener los datos del formulario
+           var formData = $(this).serialize();
+
+           // Enviar los datos del formulario a la URL especificada
+           $.post(
+             "https://hooks.zapier.com/hooks/catch/463986/3i8ykvy/",
+             formData,
+             function (data) {
+               if (data.status === "success") {
+                 console.log(formData)
+                 console.log("Envío exitoso");
+                 showModal();
+                 event.target.reset();
+               } else {
+                 console.log(data);
+                 showError();
+               }
+
+               // Reactivar el botón de envío después de la respuesta del servidor (éxito o error)
+               $("#myForm button").prop("disabled", false);
+             }
+           );
+         });
+       });
+    </script>
+  </body>
+</html>

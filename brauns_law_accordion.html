@@ -1,0 +1,220 @@
+<style>
+        
+    #section {
+        display: flex;
+        flex-direction: row;
+      height:154px;
+        width: 1300px !important;
+      max-width:100%;
+        justify-content: space-around;
+        align-items: flex-start;
+      background-color: #0000 !important;
+    }
+
+    article {
+        width: 330px
+    }
+
+    .accordion {
+        background-color: #FFFFFF;
+        color: #003462;
+        cursor: pointer;
+        padding: 12px;
+        width: 330px;
+        height: 45px;
+        border-radius: 25px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 23px;
+        font-family: 'Poppins', sans-serif;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .panel {
+        padding: 8px 16px;
+        margin: 0;
+        display: none;
+        background-color: #FFFFFF;
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 400;
+      text-align:left;
+      border-radius: 8px;
+    }
+.panel ul{
+margin:8px 0 0 16px
+}
+    .panel ul li{
+        list-style:disc;
+    }
+
+@media (max-width:900px) {
+        #section{
+            flex-direction: column;
+            align-items: center;
+          gap:16px;
+          margin:Auto;
+          height:auto;
+        }
+  article{
+      margin-bottom: 16px;
+    width:250px;
+  }
+  #container{
+      display:flex;
+      flex-direction:column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    margin:auto !important;
+  }
+  .accordion{width:250px;}
+    
+</style>
+
+<div id="container">
+<section id="section">
+    <article>
+    <button class="accordion active">
+        <img src="https://app.unbouncepreview.com/publish/assets/52fec43e-2fc4-41a4-85cb-6ca4ed6b965c/22b664c8-brauns-law-personal-injury.svg"
+            alt="personal Injury">
+        <p>Personal Injury</p>
+        <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+            alt="down">
+    </button>
+    <div class="panel" style="display: block;">
+        <p>Depending on your case, we might be able to claim compensation for:</p>
+        <ul>
+            <li>Medical expenses</li>
+            <li>Property damage</li>
+            <li>Pain and suffering</li>
+        </ul>
+    </div>
+</article>
+    <article>
+        <button class="accordion">
+            <img src="https://app.unbouncepreview.com/publish/assets/7bd3071d-fd2d-4662-9861-b7a424da3c27/48d3e070-brauns-law-car-accident.svg"
+                alt="Car Accident">
+            <p>Car Accident</p>
+            <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+                alt="down">
+        </button>
+        <div class="panel">
+            <p>We guide you through the claims process when injured in:</p>
+            <ul>
+                <li>Head-on collision</li>
+                <li>Sideswipe crash</li>
+                <li>T-bone accident</li>
+            </ul>
+        </div>
+    </article>
+    <article>
+        <button class="accordion">
+            <img src="https://app.unbouncepreview.com/publish/assets/d312969b-afaa-4dd6-958f-0bd0fd576e00/1188abd6-brauns-law-motorcicly-accident.svg"
+                alt="Motorcycle Accident">
+            <p>Motorcycle Accident</p>
+            <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+                alt="down">
+        </button>
+        <div class="panel">
+            <p>Common injuries clients seek compensation for include:</p>
+            <ul>
+                <li>Broken bones</li>
+                <li>Brain injuries</li>
+                <li>Spinal injuries</li>
+            </ul>
+        </div>
+    </article>
+</section>
+
+<section id="section">
+    <article>
+        <button class="accordion">
+            <img src="https://app.unbouncepreview.com/publish/assets/a642dbb0-1c7d-4e14-9144-2dbcb11dc015/a108385d-brauns-law-truck-accident.svg"
+                alt="Truck Accident">
+            <p>Truck Accident</p>
+            <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+                alt="down">
+        </button>
+        <div class="panel">
+            <p>Truck accidents often result in severe injuries. We can help with:
+            </p>
+            <ul>
+                <li>Commercial trucks</li>
+                <li>Tractor-tailer</li>
+                <li>Truck rollover</li>
+                <li>Wide turn crash</li>
+            </ul>
+        </div>
+    </article>
+    <article>
+        <button class="accordion">
+            <img src="https://app.unbouncepreview.com/publish/assets/b8251c87-c259-4f9a-aedf-551b6b5907f0/980999c4-brauns-law-pedestrian-accident.svg"
+                alt="Pedestrian Accident">
+            <p>Pedestrian Accident</p>
+            <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+                alt="down">
+        </button>
+        <div class="panel">
+            <p>Pedestrian accidents usually involve driver negligence:</p>
+            <ul>
+                <li>DUI</li>
+                <li>Speeding</li>
+                <li>Distracted driving</li>
+                <li>Failure to yield</li>
+            </ul>
+        </div>
+    </article>
+    <article>
+        <button class="accordion">
+            <img src="https://app.unbouncepreview.com/publish/assets/8bc16a5a-eb1a-4452-bb0f-9d878d273c1e/91e2a938-brauns-law-premises-liability.svg"
+                alt="Premises Liability">
+            <p>Premises Liability</p>
+            <img src="https://app.unbouncepreview.com/publish/assets/f9e8936b-54e1-4df7-9f69-a06e82929cd6/65c655db-brauns-law-display.svg"
+                alt="down">
+        </button>
+        <div class="panel">
+            <p>When injured on someone else’s property, we can help with:</p>
+            <ul>
+                <li>Slips and falls</li>
+                <li>Criminal assaults</li>
+                <li>Pool accidents</li>
+                <li>Dog bites</li>
+            </ul>
+        </div>
+    </article>
+</section>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>

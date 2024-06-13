@@ -1,0 +1,106 @@
+<style>
+    .accordion {
+        font-family: Poppins, sans-serif;
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #FFFFFF;
+    }
+    .question {
+      background-color: transparent;
+      border-bottom: 1px solid #FA8517;
+      padding: 8px 0;
+      cursor: pointer;
+      user-select: none;
+      font-size: 18px; /* Tamaño de fuente para preguntas */
+      font-weight: 700;
+      line-height: 50px;
+      /* transition: background-color 0.3s ease, font-size 0.3s ease; */
+    }
+    /* .question:hover {
+      background-color: #ddd;
+    } */
+    .answer {
+        padding: 16px 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .answer.show {
+      max-height: 1000px; /* Ajusta según sea necesario */
+    }
+    .question.large-font {
+      font-size: 25px; /* Tamaño de fuente mayor para la pregunta clicada */
+    }
+  </style>
+
+<div class="accordion">
+  <div class="question show" onclick="toggleAnswer(1)">Vacuna antineumocócica:</div>
+  <div class="answer show" id="answer1">La vacuna antineumocócica protege contra el neumococo, una bacteria que puede causar infecciones graves en los pulmones (neumonía), el revestimiento del cerebro y la médula espinal (meningitis), la sangre (bacteriemia) y sepsis. Cualquier persona puede contraer la enfermedad neumocócica, y la previa infección no garantiza protección futura. La vacunación es la mejor forma de prevenir la enfermedad neumocócica. Los Centros para el Control y la Prevención de Enfermedades (CDC) recomiendan la vacunación, incluso si se ha tenido esta enfermedad en el pasado. Conozca más sobre las vacunas contra el PCV</div>
+
+  <div class="question" onclick="toggleAnswer(2)">Vacuna Shingrix (culebrilla)</div>
+  <div class="answer" id="answer2">Respuesta 2.</div>
+
+  <div class="question" onclick="toggleAnswer(3)">Vacuna TdAP</div>
+  <div class="answer" id="answer3">Respuesta 3.</div>
+
+  <div class="question" onclick="toggleAnswer(4)">Vacuna contra la hepatitis</div>
+  <div class="answer" id="answer4">Respuesta 4.</div>
+
+  <div class="question" onclick="toggleAnswer(5)">Vacuna contra la hepatitis B</div>
+  <div class="answer" id="answer5">Respuesta 5.</div>
+  
+  <div class="question" onclick="toggleAnswer(6)">Vacuna contra la varicela</div>
+  <div class="answer" id="answer6">Respuesta 6.</div>
+  
+  <div class="question" onclick="toggleAnswer(7)">Vacuna contra el VPH</div>
+  <div class="answer" id="answer7">Respuesta 7.</div>
+  
+  <div class="question" onclick="toggleAnswer(8)">Vacuna contra la fiebre tifoidea</div>
+  <div class="answer" id="answer8">Respuesta 8.</div>
+  
+  <div class="question" onclick="toggleAnswer(9)">Vacuna meningocócica</div>
+  <div class="answer" id="answer9">Respuesta 9.</div>
+  
+  <div class="question" onclick="toggleAnswer(10)">Vacuna MMR</div>
+  <div class="answer" id="answer10">Respuesta 10.</div>
+</div>
+
+<script>
+  // Mostrar la respuesta por defecto para la primera pregunta
+  document.querySelector('.question.show + .answer').style.maxHeight = '1000px';
+
+  function toggleAnswer(questionNumber) {
+    // Obtener el elemento de la respuesta correspondiente a la pregunta clicada
+    const clickedAnswerId = 'answer' + questionNumber;
+    const clickedAnswer = document.getElementById(clickedAnswerId);
+
+    // Obtener la pregunta correspondiente a la respuesta clicada
+    const clickedQuestion = document.querySelector('.question.show');
+
+    // Obtener todas las respuestas
+    const allAnswers = document.querySelectorAll('.answer');
+
+    // Ocultar todas las respuestas y restablecer la altura máxima
+    allAnswers.forEach(answer => {
+      answer.classList.remove('show');
+      answer.style.maxHeight = '0';
+    });
+
+    // Mostrar la respuesta correspondiente a la pregunta clicada
+    clickedAnswer.classList.add('show');
+    clickedAnswer.style.maxHeight = clickedAnswer.scrollHeight + 'px';
+
+    // Restablecer el tamaño de fuente de la pregunta anteriormente abierta
+    if (clickedQuestion) {
+      clickedQuestion.classList.remove('large-font');
+    }
+
+    // Agregar la clase de tamaño de fuente grande a la pregunta abierta actualmente
+    const currentClickedQuestion = document.querySelector('.question.show');
+    if (currentClickedQuestion) {
+      currentClickedQuestion.classList.add('large-font');
+    }
+  }
+</script>
+
+</body>

@@ -1,0 +1,395 @@
+<style>
+  * {
+    margin: 0%;
+    font-family: Poppins, sans-serif;
+  }
+  .main-container {
+    margin: auto;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .frequent-question {
+    display: flex;
+    flex-direction: column;
+  }
+  .question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    background-image: url("https://user-assets-unbounce-com.s3.amazonaws.com/0a28f5c7-4f1f-43f1-9929-96a442fe9e6e/31a0bd3a-49d7-465f-9ab7-a10a6dc35c0d/group-2045.original.svg");
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 99% 50%;
+    color: #0b1e31 !important;
+    word-break: break-word;
+  }
+  hr {
+    border-top: 1px solid #fa8517;
+    width: 100%;
+  }
+  .question p {
+    font-weight: bolder;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    padding: 16px 10% 0 0;
+  }
+
+  .answer {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0 26px;
+    width: 100%;
+    border-top: 1px solid #fa8517;
+  }
+
+  .answer p {
+    margin: 0;
+    font-size: 20px;
+    color: #0b1e31;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    width: 90%;
+  }
+  .show-flex {
+    display: flex;
+  }
+
+  .show-none {
+    display: none;
+  }
+  .answer a {
+    color: #0b1e31;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .question p {
+      padding-left: 0;
+      padding-right: 5rem;
+    }
+    .answer {
+      padding-left: 0;
+    }
+  }
+</style>
+<div class="main-container" id="main-container">
+  <div class="frequent-question">
+    <div class="question open">
+      <p>PCV Vaccine:</p>
+    </div>
+
+    <div class="answer show-flex" id="answer1">
+      <p>
+        The pneumococcal vaccine protects people against pneumococcal, a
+        contagious disease caused by a type of bacteria that can lead to serious
+        infections in the lungs (pneumonia), lining of the brain and spinal cord
+        (meningitis), blood (bacteremia), and sepsis.<br /><br />
+        Anyone can get diagnosed with pneumococcal disease, and people can get
+        pneumococcal disease more than once. A previous pneumococcal infection
+        will not protect you from future infections. Getting vaccinated is the
+        best way to prevent pneumococcal disease, and the CDC recommends
+        vaccination even if you've had the disease in the past.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/pneumococcal/vaccination.html"
+        >View the latest PCV vaccines
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Shingrix (Shingles) Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer2">
+      <p>
+        The Shingrix (Shingles) vaccine protects against shingles and PHN. This
+        vaccine lasts for about 7 years after its required dosage. According to
+        the CDC, about 1 out of every 3 people develop shingles in their
+        lifetime in the United States. As the risk of shingles increases as you
+        age, the need increases for you to receive a shingles vaccine.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/vpd/shingles/public/shingrix/"
+        >Vea lo último sobre las vacunas contra la culebrilla
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Tdap Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer3">
+      <p>
+        The Tdap vaccine is meant to protect against tetanus, diphtheria, and
+        pertussis. These are spreadable diseases that can cause tremendous pain
+        and serious health problems like heart failure, whooping cough, and
+        paralysis. According to TheTdapGAP, only 31.2% of adults older than 19
+        have received the vaccination. That’s why it is so important to
+        encourage adults to roll up their sleeves and protect themselves from
+        these diseases. <br /><br />CDC recommends diphtheria, tetanus, and
+        whooping cough (pertussis) vaccination for everyone, but you should talk
+        with your doctor if you have questions about diphtheria, tetanus, and
+        whooping cough vaccines.
+      </p>
+      <a href="https://www.cdc.gov/vaccines/hcp/vis/vis-statements/tdap.html">
+        View the latest on Tdap vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Hepatitis A Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer4">
+      <p>
+        The Hepatitis A vaccine protects against hepatitis A virus which is a
+        liver disease. This virus is spread through close contact with someone
+        infected as well as digesting or drinking things contaminated with it.
+        Adults who haven’t received this vaccine are strongly encouraged to get
+        this immunization. According to the CDC, Georgia is in an ongoing
+        outbreak with about 2113 cases.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/hcp/vis/vis-statements/hep-a.html"
+        >View the latest on Hepatitis A vaccines
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Hepatitis B Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer5">
+      <p>
+        Hepatitis B is a serious disease caused by the hepatitis B virus (HBV)
+        that attacks the liver; it can lead to lifelong infection, liver cancer,
+        liver failure, and death. Pregnant women diagnosed with hepatitis B can
+        pass the virus to their children. There is no cure, but vaccination
+        prevents HBV infection as well as the chronic liver damage and cancer
+        that hepatitis B can cause. Hepatitis B vaccine is available for all age
+        groups, and the CDC recommends that adults aged 19 through 59 years, and
+        adults age 60 years or older with risk factors for hepatitis B
+        infection, get the vaccine.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/hepatitis/hbv/bfaq.htm#bFAQd04"
+        >View the latest on Hepatitis B vaccines
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Varicella Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer6">
+      <p>
+        The Varicella vaccine protects individuals from chickenpox, which is a
+        disease that appears as a blister-like rash on the body. Adults are
+        recommended to receive this immunization if they never had chickenpox
+        and did not receive a vaccine as a child. According to the CDC, 90%
+        become infected if they never had chickenpox before and were close to
+        someone with the disease.
+      </p>
+      <a href="https://www.cdc.gov/vaccines/vpd/hpv/public/index.html">
+        View the latest on HPV vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>HPV Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer7">
+      <p>
+        HPV vaccine keeps you from being infected with the Human papillomavirus,
+        a leading cause of cervical cancer that can cause other cancers in both
+        women and men. Getting vaccinated for HPV can protect you and your loved
+        ones from the immediate effects of the virus, as well as from the
+        various cancers it can trigger.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/vpd/hpv/public/index.html"
+      >
+        View the latest on HPV vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Typhoid Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer8">
+      <p>
+        The Typhoid vaccine protects against typhoid fever which causes a high
+        fever, stomach pain, and loss of appetite, among other symptoms. There
+        are two types of vaccines for typhoid, which include inactivated and
+        live typhoid vaccines. It’s strongly recommended that adults who travel
+        outside of the U.S. get this vaccine.
+      </p>
+      <a
+        href="https://www.cdc.gov/vaccines/hcp/vis/vis-statements/typhoid.html"
+      >
+        View the latest on Typhoid vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>Meningococcal Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer9">
+      <p>
+        Meningococcal disease refers to any illness caused by bacteria called
+        Neisseria meningitidis. These illnesses are often severe, can be deadly,
+        and include infections of the lining of the brain and spinal cord
+        (meningitis) and bloodstream. Keeping up to date with recommended
+        vaccines is the best protection against meningococcal disease.<br /><br />
+        There are two types of Meningococcal vaccines in the U.S., including
+        MenACWY and MenB. Talk to your doctor to find out which vaccine is right
+        for you.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/vpd/mening/public/index.html"
+      >
+        View the latest on Meningococcal vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+  <div class="frequent-question">
+    <div class="question">
+      <p>MMR Vaccine:</p>
+    </div>
+
+    <div class="answer" id="answer10">
+      <p>
+        MMR vaccines offer powerful protection against measles, mumps, and
+        rubella diseases. According to the CDC:
+      </p>
+      <br />
+      <ul style="font-size: 18px; line-height: 22px">
+        <li>
+          <b>MEASLES (M)</b> causes fever, cough, runny nose, and red watery
+          eyes. It is also commonly followed by a rash that covers the whole
+          body. It can lead to seizures, ear infections, diarrhea, and
+          pneumonia. People with measles are also at risk of brain damage or
+          death.
+        </li>
+        <br />
+        <li>
+          <b>MUMPS (M)</b> causes fever, headache, muscle aches, tiredness, loss
+          of appetite, and swollen and tender salivary glands. It can lead to
+          deafness, swelling of the brain and/or spinal cord covering, painful
+          swelling of the testicles or ovaries, and, very rarely, death.
+        </li>
+        <br />
+        <li>
+          <b>RUBELLA (R)</b> causes fever, sore throat, rash, headache, and eye
+          irritation. It can cause arthritis in up to half of teenage and adult
+          women. If a person gets rubella while pregnant, they could have a
+          miscarriage, or the baby could be born with serious birth defects.
+        </li>
+      </ul>
+      <br />
+      <p>
+        The CDC also states MMR vaccination is 97% effective against measles,
+        88% effective against mumps, 97% effective against rubella, and most
+        people who are vaccinated with MMR will be protected for life.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.cdc.gov/vaccines/vpd/mmr/public/index.html"
+      >
+        View the latest on MMR vaccines</a
+      >
+    </div>
+  </div>
+  <hr />
+</div>
+
+<script>
+  let faqContainer = document.querySelector("#main-container");
+  let openElem = null;
+
+  // Función para abrir el answer1 por defecto
+  function openDefault() {
+    const defaultElement = document.querySelector("#answer1");
+    const defaultQuestion = document.querySelector(".open");
+
+    defaultElement.classList.remove("show-none");
+    defaultElement.classList.add("show-flex");
+    defaultQuestion.querySelector("p").style.fontSize = "40px";
+    defaultQuestion.querySelector("p").style.lineHeight = "50px";
+    defaultQuestion.querySelector("p").style.maxWidth = "90%";
+    defaultQuestion.querySelector("p").style.maxHeight = "170px";
+
+    defaultQuestion.classList.remove("open");
+
+    openElem = defaultQuestion;
+  }
+
+  // Llamar a la función para abrir el answer1 por defecto
+  openDefault();
+
+  faqContainer.addEventListener("click", (e) => {
+    if (e.target.parentElement.classList.contains("question")) {
+      const clickedElement = e.target.parentElement;
+      const nextElement = clickedElement.nextElementSibling;
+
+      if (openElem !== null && openElem !== clickedElement) {
+        openElem.nextElementSibling.classList.add("show-none");
+        openElem.nextElementSibling.classList.remove("show-flex");
+        openElem.querySelector("p").style.fontSize = "";
+        openElem.style.lineHeight = ""; // Restaura el line-height del elemento anteriormente abierto
+      }
+
+      if (openElem === clickedElement) {
+        nextElement.classList.add("show-none");
+        nextElement.classList.remove("show-flex");
+        clickedElement.querySelector("p").style.fontSize = "";
+        clickedElement.style.lineHeight = ""; // Restaura el line-height del elemento actualmente clicado
+        openElem = null;
+      } else {
+        nextElement.classList.remove("show-none");
+        nextElement.classList.add("show-flex");
+        clickedElement.querySelector("p").style.fontSize = "40px";
+        clickedElement.style.lineHeight = "50px"; // Aplica el line-height al elemento clicado
+        openElem = clickedElement;
+      }
+    }
+  });
+</script>

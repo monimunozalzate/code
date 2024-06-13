@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    header {
+      background-color: #fff;
+    }
+    header section {
+      max-width: 1300px;
+      height: 125px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+    }
+    header section img {
+      height: 45.3px;
+    }
+    #btn {
+      font-family: Forza, sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #fff;
+      background-color: #e04403;
+      padding: 20px 33px;
+      text-decoration: none;
+      width: auto;
+    }
+    /* ---------------------------------------- */
+    #banner {
+      background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/BannerLP_2x_f2bbbf66-1387-4acd-aac2-44ae9ae8f085.jpg?v=1718296417");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 644px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    #banner article {
+      max-width: 1300px;
+      margin: auto;
+      width: 100%;
+    }
+    #banner article div {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 23px;
+    }
+    #banner article div h1 {
+      font-family: "Druk Cond Super", sans-serif !important;
+      font-size: 92px;
+      line-height: 90px;
+      letter-spacing: 0.92px;
+      color: #fff;
+      margin: 0;
+    }
+    #banner article div p {
+      font-size: Forza, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: 0.24px;
+      color: #fff;
+      max-width: 536px;
+      margin: 0;
+    }
+    #banner article div #btn {
+      width: 190px;
+    }
+    /* --------------------------------- */
+    #services {
+      background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/Group_95.png?v=1718294289");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left;
+      height: 620px;
+    }
+    #services article {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+    }
+    #container {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 41px 51px;
+    }
+    #container div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 45%;
+    }
+    #container div img {
+      width: 58px;
+      margin-bottom: 7px;
+    }
+    #container div h3,
+    #container div p {
+      font-family: Forza, sans-serif;
+      margin: 0;
+      color: #53575a;
+      font-weight: 500;
+    }
+    #container div h3 {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 0.4px;
+      text-transform: none;
+    }
+    #container div p {
+      font-size: 16px;
+      line-height: 21px;
+      letter-spacing: 0.16px;
+    }
+    #container div hr {
+      width: 77px;
+      border-top: 6px solid #e04403;
+      margin: 16px 0 0;
+    }
+    /* --------------------------------------- */
+    #levels {
+      background-color: #003a4f;
+      height: auto;
+    }
+    #levels article {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 58px 0;
+    }
+    #level {
+      background-color: #fff;
+      height: 510px;
+      width: 257px;
+      border-radius: 5px;
+      padding: 30px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #levels article div #upper {
+      height: 100%;
+      width: 100%;
+      align-items: flex-start;
+    }
+    #levels article div h4 {
+      color: #e04403;
+      font-family: Forza, sans-serif;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 700;
+      letter-spacing: 0.16px;
+      margin: 0 0 4px;
+      text-transform: none;
+    }
+    #levels article div h2 {
+      color: #53575a;
+      font-family: Forza, sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: 0.32px;
+      margin: 0;
+      text-transform: none;
+    }
+    #upper hr {
+      border: 1px solid #e04403;
+      margin: 13px 0 16px;
+    }
+    #levels article div ul {
+      padding: 0;
+      margin: 0;
+    }
+    #levels article div li {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    #levels article div span {
+      height: 9px;
+      width: 9px;
+      margin: 5px 0 0;
+      background-color: #e04403;
+    }
+    #levels article div p {
+      font-family: Forza, sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.14px;
+      list-style-type: none;
+      margin: 0;
+      width: 190px;
+      font-weight: 300;
+    }
+    #levels article #btn {
+      width: 168px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    /* ---------------------------- */
+    #questions {
+      background-color: #fff;
+      padding: 60px 0;
+    }
+    #questions h2 {
+      font-family: Forza, sans-serif;
+      font-size: 40px;
+      line-height: 56px;
+      font-weight: 700;
+      color: #e04403;
+      margin: 0%;
+    }
+    #questions hr {
+      border: 1px solid #e04403;
+      width: 100%;
+      margin: 16px 0;
+    }
+    /* --------------------------------------------- */
+    #innovation {
+      background-color: #e04403;
+      height: 539px;
+      background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-innovacion-mexicana.webp?v=1718133372");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    #innovation article {
+      max-width: 1300px;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #innovation article div {
+      width: 600px;
+    }
+    #innovation article h2 {
+      font-family: "Druk Cond Super", sans-serif !important;
+      font-size: 100px;
+      line-height: 70px;
+      letter-spacing: 1px;
+      color: #fff;
+      margin: 0% 0 20px;
+    }
+    #innovation article span {
+      font-size: 69px;
+      line-height: 78px;
+      letter-spacing: 0.69px;
+    }
+    #innovation article p {
+      color: #fff;
+      max-width: 536px;
+      font-family: "Forza", sans-serif;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 33px;
+      margin: 0%;
+    }
+    #items {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 34px;
+    }
+    #items div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    #items img {
+      height: 72px;
+    }
+    #items p {
+      color: #fff;
+      font-family: "Forza", sans-serif;
+      font-weight: 500;
+      font-size: 16px !important;
+      line-height: 18px !important;
+      margin: 0%;
+      text-align: center;
+    }
+    /* --------------------------------------------- */
+    #distribuidor {
+      background-color: #fff;
+    }
+    #distribuidor article {
+      max-width: 1300px;
+      margin: auto;
+      padding: 63px 0 51px;
+    }
+    #distribuidor article h3 {
+      margin: 0%;
+      font-family: "Forza", sans-serif;
+      font-size: 40px;
+      line-height: 45px;
+      font-weight: 700;
+      color: #e04403;
+    }
+    #distribuidor article hr {
+      margin: 12px 0 30px;
+      border: 1px solid #e04403;
+    }
+    #contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #53575a;
+      font-family: "Forza", sans-serif;
+    }
+    #contact form h2 {
+      max-width: 518px;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 35px;
+      margin: 0% 0 12px;
+    }
+    #contact form p {
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: 500;
+      margin: 0 0 32px;
+    }
+
+    #contact img {
+      height: 536px;
+    }
+    /* --------------------------------------------- */
+    footer {
+      background-color: #003a4f;
+      height: 276px;
+      padding-top: 77.5px;
+    }
+    footer section {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+    }
+    footer #left {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 50%;
+    }
+    footer #right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 27px;
+      width: 50%;
+    }
+    footer #right div {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    footer #right div span {
+      margin-top: -7px !important;
+      font-size: 14px;
+      line-height: 24px;
+      color: #fff;
+    }
+    footer #right img {
+      height: 45px;
+    }
+    footer div p,
+    footer div h4 {
+      max-width: 444px;
+      margin: 0;
+      color: #fff;
+      font-family: Forza, sans-serif;
+    }
+    footer div h4 {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 35px;
+    }
+    footer div p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    footer div a {
+      color: #e04403;
+      text-decoration: underline;
+    }
+
+    /* ====================tabs================= */
+
+    .main-container {
+      margin: auto !important;
+      max-width: 1300px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #ffffff;
+      gap: 16px;
+      padding: 60px 0;
+    }
+    .frequent-question {
+      display: flex;
+      flex-direction: column;
+      width: 880px;
+    }
+    .question {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-pqr-open.svg?v=1718222727");
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 97% 50%;
+      color: #53575a !important;
+      background-color: #f2f2f2 !important;
+      height: auto;
+      padding: 17px 36px;
+    }
+
+    .question p {
+      font-family: Forza, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 34px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .answer {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .answer p {
+      margin: 0;
+      font-size: 18px;
+      color: #53575a;
+      font-weight: 300;
+      line-height: 26px;
+      text-align: left;
+      padding: 15px 36px;
+    }
+    .show-flex {
+      display: flex;
+    }
+
+    .show-none {
+      display: none;
+    }
+    #senix-landing-form {
+      width: 50%;
+    }
+    #senix-landing-form div {
+      display: flex;
+      flex-direction: column;
+      color: #53575a;
+      gap: 4px;
+      margin: 0 0 20px;
+    }
+    #senix-landing-form div label {
+      font-family: Forza, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    #senix-landing-form div input {
+      padding: 0%;
+      border: 1px solid #f2f2f2;
+      height: 32px;
+      width: 444px;
+    }
+    #senix-landing-form button {
+      border: none !important;
+      padding: 15px 33px !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+    /* ------------------- small desktop -------------------------------- */
+    @media (max-width: 1300px) {
+      header section{
+        padding: 0 30px;
+      }
+      #banner article, #services article, #levels article, #questions .main-container, #innovation article, #distribuidor article {
+        padding: 70px 30px;
+      }
+      #levels article{
+        gap: 20px;        
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #innovation{
+        height: auto;
+      }
+      #contact{
+        gap: 20px;
+      }
+      #container div {
+        width: 42%;
+      }
+      #container div p {
+        width: auto !important;
+      }
+      #contact {
+        align-items: center;
+      }
+      #contact img {
+        width: 450px;
+      }
+    }
+
+    /* ----------tablet----------- */
+    @media (max-width: 900px) {
+      header {
+        padding: 0 30px;
+      }
+      /* --------------------------- */
+      #banner {
+        height: auto;
+        padding: 70px 30px;
+      }
+      #banner article {
+        margin: 0%;
+      }
+      #banner article div {
+        max-width: 70%;
+        align-items: flex-start;
+        gap: 25px;
+      }
+      #banner article div h1 {
+        font-size: 51px;
+        line-height: 58px;
+        letter-spacing: 0.51px;
+      }
+      #banner article div p {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.18px;
+      }
+      /* --------------------------- */
+      #services {
+        background-size: 50%;
+        background-position: left bottom;
+        height: auto;
+      }
+      #services article {
+        padding: 70px 30px;
+      }
+      #container {
+        width: 55%;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      /* --------------------------- */
+      #levels {
+        height: auto;
+      }
+      #levels article {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 70px 0;
+        gap: 30px;
+      }
+
+      /* --------------------------- */
+      #innovation {
+        background-size: 35%;
+      }
+      #innovation article {
+        padding: 70px 30px;
+      }
+      /* --------------------------- */
+      #distribuidor article {
+        padding: 70px 30px;
+      }
+      #distribuidor article h3 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      #contact form {
+        width: 50%;
+      }
+      #contact form h2 {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      #contact form p {
+        font-size: 18px;
+        line-height: 21px;
+      }
+      #senix-landing-form div input {
+        width: 100%;
+      }
+      #contact img {
+        height: 50%;
+      }
+      /* --------------------------- */
+      .main-container {
+        padding: 70px 30px;
+      }
+      .frequent-question {
+        width: 100%;
+      }
+      .question {
+        height: auto;
+      }
+      .question p {
+        width: 85%;
+      }
+      /* --------------------------- */
+      footer {
+        padding: 70px 30px;
+        height: auto;
+      }
+      footer section {
+        gap: 37px;
+      }
+      footer #right {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      footer #right img {
+        height: 45.3px;
+      }
+    }
+
+    /* --------mobile---------------- */
+    @media (max-width: 600px) {
+      header section img {
+        height: 28px;
+      }
+      /* --------------------------- */
+      #banner {
+        height: 741px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-BannerLP_Mobile.webp?v=1718121831");
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      #banner article div {
+        max-width: 100%;
+        align-items: center;
+      }
+      #banner article div h1,
+      #banner article div p {
+        text-align: center;
+      }
+      #btn {
+        font-size: 17px;
+        line-height: 23px;
+      }
+      /* --------------------------- */
+      #services {
+        background-size: 100%;
+        background-position: center bottom;
+        height: 1490px;
+      }
+      #services article {
+        align-items: flex-start;
+      }
+      #container {
+        width: 100%;
+        flex-direction: column;
+      }
+      #container div {
+        align-items: center;
+      }
+      #container div p {
+        text-align: center;
+      }
+      /* --------------------------- */
+      #innovation {
+        background-size: 100%;
+        background-position: bottom;
+        height: 1210px;
+      }
+      #innovation article {
+        justify-content: flex-start;
+      }
+
+      #innovation article div {
+        width: 100% !important;
+      }
+      #innovation article div h2 {
+        font-size: 63px;
+        line-height: 45px;
+        letter-spacing: 0.63px;
+        width: 315px;
+        text-align: center;
+        margin: auto;
+      }
+      #innovation article span {
+        font-size: 42px;
+        line-height: 47px;
+        letter-spacing: 0.42px;
+      }
+      #innovation article p {
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+      }
+      #items {
+        width: 100% !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 44px;
+      }
+      /* --------------------------- */
+      #contact {
+        flex-direction: column;
+        gap: 36px;
+      }
+      #contact form {
+        width: 100%;
+      }
+      /* --------------------------------------- */
+
+      .answer {
+        padding-left: 0;
+      }
+      .answer p {
+        padding: 15px 0;
+      }
+      /* --------------------------- */
+      footer section {
+        flex-direction: column;
+      }
+      footer #left,
+      footer #right {
+        width: 100%;
+      }
+      footer #right {
+        align-items: center;
+        gap: 57px;
+      }
+      footer #right div {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <body>
+    <header>
+      <section>
+        <a href="https://senixtools.com.mx/">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/Senix_Logo.jpg?v=1690988727"
+            alt="senix-tools-logo"
+          />
+        </a>
+
+        <a id="btn" href="#distribuidor">CONTÁCTANOS</a>
+      </section>
+    </header>
+
+    <main>
+      <section id="banner">
+        <article>
+          <div>
+            <h1>ÚNETE COMO DISTRIBUIDOR Y VENDE LA POTENCIA SENIX!</h1>
+            <p>
+              Amplía tu oferta con nuestras herramientas de poder para
+              jardinería que combinan innovación y durabilidad.
+            </p>
+            <a id="btn" href="#distribuidor">ÚNETE AQUÍ</a>
+          </div>
+        </article>
+      </section>
+      <section id="services">
+        <article>
+          <div id="container">
+            <div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-acceso.svg?v=1718124154"
+                alt="acceso"
+              />
+              <h3>Acceso</h3>
+              <p style="width: 235px">
+                a una amplia variedad de herramientas de última generación.
+              </p>
+              <hr />
+            </div>
+            <div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-precios.svg?v=1718124271"
+                alt="precios"
+              />
+              <h3>Precios</h3>
+              <p style="width: 160px">competitivos como distribuidor.</p>
+              <hr />
+            </div>
+            <div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-soporte.svg?v=1718124486"
+                alt="Soporte"
+              />
+              <h3>Soporte</h3>
+              <p style="width: 173px">de garantía y servicio post-venta.</p>
+              <hr />
+            </div>
+            <div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-apoyo.svg?v=1718124388"
+                alt="Apoyo"
+              />
+              <h3>Apoyo</h3>
+              <p style="width: 233px">
+                con materiales de marketing y promocionales.
+              </p>
+              <hr />
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="levels">
+        <article>
+          <div id="level">
+            <div id="upper">
+              <h4>Nivel 1:</h4>
+              <h2>Distribuidores Aliados</h2>
+              <hr />
+              <ul>
+                <li>
+                  <span></span>
+                  <p>Precios de introducción competitivos.</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Materiales de marketing iniciales gratuitos.</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Acceso a capacitaciones online sobre el uso y mantenimiento
+                    de productos.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <a id="btn" href="#distribuidor">REGÍSTRATE</a>
+          </div>
+          <div id="level">
+            <div id="upper">
+              <h4>Nivel 2:</h4>
+              <h2>Distribuidores Pro</h2>
+              <hr />
+              <ul>
+                <li>
+                  <span></span>
+                  <p>
+                    Márgenes de ganancia mejorados para incrementar la
+                    rentabilidad.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Material promocional y apoyo en campañas de
+                    marketing.Materiales de marketing iniciales gratuitos.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Soporte técnico.</p>
+                </li>
+              </ul>
+            </div>
+
+            <a id="btn" href="#distribuidor">REGÍSTRATE</a>
+          </div>
+          <div id="level">
+            <div id="upper">
+              <h4>Nivel 3:</h4>
+              <h2>Distribuidores VIP</h2>
+              <hr />
+              <ul>
+                <li>
+                  <span></span>
+                  <p>
+                    Condiciones exclusivas de compra y máximos beneficios en
+                    márgenes de ganancia.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Material promocional personalizado y apoyo en campañas de
+                    marketing.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Soporte técnico prioritario.</p>
+                </li>
+              </ul>
+            </div>
+
+            <a id="btn" href="#distribuidor">REGÍSTRATE</a>
+          </div>
+          <div id="level">
+            <div id="upper">
+              <h4>Nivel 4:</h4>
+              <h2>Distribuidores Elite</h2>
+              <hr />
+              <ul>
+                <li>
+                  <span></span>
+                  <p>
+                    Condiciones exclusivas de compra y máximos beneficios en
+                    márgenes de ganancia.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Material promocional personalizado y apoyo en campañas de
+                    marketing.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Oportunidades de co-branding y patrocinios para eventos.
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Soporte técnico prioritario y acceso a nuevos lanzamientos.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <a id="btn" href="#distribuidor">REGÍSTRATE</a>
+          </div>
+        </article>
+      </section>
+      <section id="questions">
+        <div class="main-container" id="main-container">
+          <h2>Preguntas frecuentes</h2>
+          <hr />
+          <div class="frequent-question">
+            <div class="question open">
+              <p>1. ¿Cómo puedo convertirme en distribuidor de SENIX?</p>
+            </div>
+
+            <div class="answer show-flex" id="answer1">
+              <p>
+                Para convertirte en distribuidor, simplemente completa el
+                formulario de solicitud en nuestra página web. Un representante
+                de SENIX se pondrá en contacto contigo para discutir los
+                detalles y los próximos pasos del proceso de asociación.
+              </p>
+            </div>
+          </div>
+
+          <div class="frequent-question">
+            <div class="question">
+              <p>
+                2. ¿Existen requisitos mínimos de compra para los
+                distribuidores?
+              </p>
+            </div>
+
+            <div class="answer" id="answer2">
+              <p>
+                Sí, establecemos un mínimo de compra inicial que varía según la
+                categoría de distribuidor. Estos requisitos están diseñados para
+                asegurar un compromiso mutuo hacia el éxito de nuestra
+                asociación.
+              </p>
+            </div>
+          </div>
+
+          <div class="frequent-question">
+            <div class="question">
+              <p>3. ¿Qué tipo de soporte ofrece SENIX a sus distribuidores?</p>
+            </div>
+
+            <div class="answer" id="answer3">
+              <p>
+                Ofrecemos soporte integral que incluye material de marketing,
+                capacitaciones sobre nuestros productos y técnicas de venta,
+                soporte técnico continuo y promociones exclusivas para ayudar a
+                maximizar tus ventas.
+              </p>
+            </div>
+          </div>
+
+          <div class="frequent-question">
+            <div class="question">
+              <p>
+                4. ¿Cuáles son las ventajas de ser distribuidor de SENIX en
+                comparación con otras marcas?
+              </p>
+            </div>
+
+            <div class="answer" id="answer4">
+              <p>
+                Como distribuidor de SENIX, tendrás acceso a productos de alta
+                calidad y alta demanda, márgenes de ganancia competitivos, apoyo
+                constante en marketing y ventas, y la flexibilidad de trabajar
+                con una marca que se adapta a las necesidades del mercado y sus
+                distribuidores.
+              </p>
+            </div>
+          </div>
+
+          <div class="frequent-question">
+            <div class="question">
+              <p>
+                5. ¿Cómo maneja SENIX las garantías y las devoluciones de
+                productos?
+              </p>
+            </div>
+
+            <div class="answer" id="answer5">
+              <p>
+                Ofrecemos una garantía limitada en todos nuestros productos, y
+                tenemos un proceso claro y sencillo para devoluciones y
+                reclamaciones de garantía, asegurando que tanto tú como tus
+                clientes estén satisfechos con nuestro servicio posventa.
+              </p>
+            </div>
+          </div>
+
+          <div class="frequent-question">
+            <div class="question">
+              <p>6. ¿SENIX ofrece capacitación sobre nuevos productos?</p>
+            </div>
+
+            <div class="answer" id="answer6">
+              <p>
+                Absolutamente. Proporcionamos sesiones regulares de capacitación
+                sobre nuevos productos y actualizaciones de los existentes,
+                tanto de forma virtual como presencial, para asegurar que
+                nuestros distribuidores estén bien informados y preparados para
+                ofrecer la mejor experiencia posible a los clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="innovation">
+        <article>
+          <div>
+            <h2>
+              INNOVACIÓN MEXICANA
+              <span>EN CADA HERRAMIENTA</span>
+            </h2>
+            <p>
+              Cada herramienta SENIX es el resultado de la ingeniería y
+              creatividad mexicanas.
+            </p>
+            <div id="items">
+              <div>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-diseno-innovador.svg?v=1718132914"
+                  alt="diseño-innovador"
+                />
+                <p style="width: 106px">Diseño innovador.</p>
+              </div>
+              <div>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-tecnologia.svg?v=1718133163"
+                  alt="Tecnología"
+                />
+                <p style="width: 202px">
+                  Tecnología avanzada para máximo rendimiento y durabilidad.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-calidad.svg?v=1718133258"
+                  alt="Calidad"
+                />
+                <p style="width: 98px">Calidad superior.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="distribuidor">
+        <article>
+          <h3>Únete a la red de distribuidores SENIX</h3>
+          <hr />
+          <div id="contact">
+            <form
+              id="senix-landing-form"
+              action="/procesar-formulario"
+              method="POST"
+            >
+              <h2>Empieza tu viaje hacia el éxito como distribuidor.</h2>
+              <p>Completa el formulario y te contactaremos.</p>
+              <div>
+                <label for="nombre">Nombre y apellido de contacto</label>
+                <input type="text" name="nombre" id="nombre" />
+              </div>
+              <div>
+                <label for="empresa">Nombre de la empresa</label>
+                <input type="text" name="empresa" id="empresa" />
+              </div>
+              <div>
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo" id="cargo" />
+              </div>
+              <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <label for="direccion"
+                  >Dirección de tu empresa o lugar de operaciones</label
+                >
+                <input type="text" name="direccion" id="direccion" />
+              </div>
+              <button id="btn" type="submit">ENVIAR</button>
+            </form>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/Cortasetos.png?v=1718296497"
+              alt="distribuidor"
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <div id="left">
+          <h4>ESTAMOS AQUÍ PARA TI</h4>
+          <p>
+            Si tienes una pregunta, sugerencia, o simplemente quieres hablar
+            sobre tus herramientas, ponte en contacto con nuestro equipo de
+            SENIX, y te responderemos a través de tu método de contacto
+            preferido entre 24-48 horas.
+          </p>
+        </div>
+        <div id="right">
+          <div>
+            <h4>CONTÁCTANOS</h4>
+            <p>
+              Teléfono: (81) 31477166 ext. 8641<br />
+              Lunes a Viernes, 9am - 5pm
+            </p>
+            <p>
+              Correo electrónico:
+              <a href="mailto: contacto@senixtools.com.mx">
+                contacto@senixtools.com.mx</a
+              >
+            </p>
+            <span>Recibirás una respuesta dentro de 24-48 horas.</span>
+          </div>
+          <a href="https://senixtools.com.mx/">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-logo-nobg.svg?v=1718134139"
+              alt="senix-tools-logo"
+            />
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+<script>
+  let faqContainer = document.querySelector("#main-container");
+  let openElem = null;
+
+  // Función para abrir el answer1 por defecto
+  function openDefault() {
+    const defaultElement = document.querySelector("#answer1");
+    const defaultQuestion = document.querySelector(".open");
+
+    defaultElement.classList.remove("show-none");
+    defaultElement.classList.add("show-flex");
+
+    defaultQuestion.classList.remove("open");
+
+    openElem = defaultQuestion;
+  }
+
+  // Llamar a la función para abrir el answer1 por defecto
+  openDefault();
+
+  faqContainer.addEventListener("click", (e) => {
+    if (e.target.parentElement.classList.contains("question")) {
+      const clickedElement = e.target.parentElement;
+      const nextElement = clickedElement.nextElementSibling;
+
+      if (openElem !== null && openElem !== clickedElement) {
+        openElem.nextElementSibling.classList.add("show-none");
+        openElem.nextElementSibling.classList.remove("show-flex");
+      }
+
+      if (openElem === clickedElement) {
+        nextElement.classList.add("show-none");
+        nextElement.classList.remove("show-flex");
+        openElem = null;
+      } else {
+        nextElement.classList.remove("show-none");
+        nextElement.classList.add("show-flex");
+        openElem = clickedElement;
+      }
+    }
+  });
+
+  document
+    .getElementById("senix-landing-form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Obtener los datos del formulario
+      const formData = new FormData(this);
+
+      // Crear una solicitud POST
+      fetch("https://hooks.zapier.com/hooks/catch/463986/3ru2dj3/", {
+        method: "POST",
+        body: formData,
+      })
+        .then(function (response) {
+          // Manejar la respuesta de Zapier si es necesario
+          if (response.ok) {
+            // Hacer algo después de enviar los datos con éxito
+            console.log("Datos enviados con éxito a Zapier");
+            // Redirigir a la página de Google después del envío exitoso
+            window.location.href = "https://senixtools.com.mx/pages/thank-you";
+          } else {
+            // Manejar un error si ocurre
+            console.error("Error al enviar datos a Zapier");
+          }
+        })
+        .catch(function (error) {
+          console.error("Error de red:", error);
+        });
+    });
+</script>

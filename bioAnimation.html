@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style" />
+    <style>
+      body {
+        padding: 0%;
+        box-sizing: border-box;
+        margin: auto;
+        max-width: 1300px;
+      }
+      .bio {
+        background-color: #5f4b9e;
+      }
+      /* library */
+      @import "https://unpkg.com/transition-style";
+
+      .hover-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background-image: url("https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-bg-grey.png");
+        transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      }
+
+      .hover-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Color oscuro de la capa */
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        pointer-events: none;
+      }
+
+      .hover-container:hover {
+        background-color: rgba(128, 0, 128, 0.5);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          129deg,
+          #5f4b9e 0%,
+          #ae68f3 50%,
+          #5f4b9e 100%
+        );
+        mix-blend-mode: multiply;
+        /* background-color: rgba(102, 1, 102, 0.55); */
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        pointer-events: none;
+      }
+
+      .hover-container:hover .overlay {
+        opacity: 0.9;
+      }
+
+      .text-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        display: none;
+      }
+
+      .hover-container:hover .text-container {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+    id="modulo"
+    class="grid grid-cols-2  md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+  ></div>
+  
+  <script>
+   
+    // array
+    let Leadership = [
+      {
+        id: 1,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-homero.png",
+        name: "homero gonzalez",
+        position: "president-CEO",
+        linkedin: "https://www.linkedin.com/in/homero-gonz%C3%A1lez-44567841/",
+        biography:
+          "Homero González, Co-Founder, President, and CEO of ULTIM Marketing, is a visionary leader with over twelve years of experience in strategic marketing consulting and directing branding efforts. His exceptional achievements include 20 Emmy® awards and a strong presence on the Southeast NATAS Board of Governors.<br><br>Homero's deep understanding of the Hispanic market allows him to bridge the gap between US businesses and the Hispanic community, empowering companies to expand their reach. With a diverse client portfolio, he has collaborated with pharmaceutical, sports, legal, and automotive companies, among others. Homero has had the opportunity to collaborate with actors, athletes, and renowned celebrities, greatly enriching his expertise and expanding his professional network.<br><br>Beyond his professional accomplishments, Homero delivers inspiring speeches and actively supports higher education students. With an entrepreneurial spirit, he envisioned ULTIM Marketing as a full-service agency with branches in Latin America, fostering growth and employment opportunities in countries like Mexico and Colombia.<br><br>In his leisure time, Homero enjoys family moments, cycling, reading, and exploring thought-provoking documentaries. His leadership, dedication, and commitment to excellence have earned him immense respect in the marketing industry.",
+  
+        biographyES: "Homero González, cofundador, presidente y CEO de ULTIM Marketing, es un líder visionario con más de doce años de experiencia en consultoría estratégica de marketing y dirección de branding. Entre sus excepcionales logros se incluyen 20 premios Emmy® y una destacada presencia en la Junta de Gobernadores del Sureste de NATAS.<br><br>La profunda comprensión de Homero del mercado hispano le permite conectar a las empresas estadounidenses con la comunidad hispana, capacitándolas para ampliar su alcance. Con una diversa cartera de clientes, ha colaborado con empresas farmacéuticas, deportivas, legales y automotrices, entre otras. Asimismo, Homero ha tenido la oportunidad de trabajar con actores, atletas y reconocidas celebridades, enriqueciendo enormemente su experiencia y expandiendo su red profesional.      <br><br>Además de sus logros profesionales, Homero ofrece discursos motivacionales y apoya activamente a estudiantes de educación superior. Con un espíritu emprendedor, concibió ULTIM Marketing como una agencia de servicios completos con sucursales en América Latina, fomentando el crecimiento y oportunidades laborales en países como México y Colombia.<br><br>En su tiempo libre, Homero disfruta de pasar momentos en familia, el ciclismo, la lectura y explorar documentales que despierten su interés. Su liderazgo, dedicación y compromiso con la excelencia le han valido un inmenso respeto en la industria del marketing."
+      },
+      {
+        id: 2,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-pablo.png",
+        name: "pablo morales",
+        position: "branch director-Partner",
+        linkedin: "https://www.linkedin.com/in/pablomorales92/",
+        biography:
+          "Pablo Morales is one of the visionary founders behind ULTIM Marketing; with a career spanning 12 years, including six years dedicated to ULTIM, Pablo has played a pivotal role in shaping the company. His skills in team development have fueled the exponential expansion of ULTIM's locations and B2B portfolio, establishing the company as a data-driven force.<br><br>Pablo's innovation has set ULTIM apart, enabling brands like Pirelli to entrust the development of their campaigns to the team. His proficiency in programming enhances ULTIM's ability to deliver cutting-edge solutions. Pablo enjoys diverse hobbies, such as video game streaming, playing music, and engaging in tennis and golf. <br><br>Pablo has been honored as a Young Entrepreneur and has received accolades from Google and two Emmy® awards nominations. Notably, he was awarded the Leader Entrepreneur Award from Fenalco & Chambers of Commerce in Colombia, further solidifying his status as an influential figure in the business community.",
+        biographyES: "Pablo Morales es uno de los visionarios fundadores de ULTIM Marketing. Con una carrera de 12 años, incluyendo seis años dedicados a ULTIM, Pablo ha desempeñado un papel fundamental en la formación de la compañía. Sus habilidades en el desarrollo de equipos han sido clave para impulsar la expansión exponencial de las ubicaciones de ULTIM y su cartera de clientes B2B, consolidando así a la compañía como líder en el mercado, impulsada por datos.<br><br>La innovación de Pablo ha sido clave en el crecimiento de ULTIM, permitiendo que marcas como Pirelli confíen el desarrollo de sus campañas. Su destreza en la programación mejora la capacidad de ULTIM para ofrecer soluciones de vanguardia. Fuera del trabajo, Pablo disfruta de diversos pasatiempos, como el streaming de videojuegos, tocar música y practicar tenis y golf.<br><br>Pablo ha sido galardonado como Joven Empresario y ha recibido reconocimientos de Google, así como dos nominaciones a los premios Emmy®. Del mismo modo, recibió el premio Líder Empresarial de Fenalco y la Cámara de Comercio de Colombia, consolidando aún más su estatus como una figura influyente en la comunidad empresarial."
+  
+      },
+      {
+        id: 3,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-santiago.png",
+        name: "santiago guerra",
+        position: "branch director-Partner",
+        linkedin: "https://www.linkedin.com/in/santiago-guerra-saenz-3875b2214/",
+        biography:
+          "Santiago Guerra is the Branch Director of ULTIM Marketing in Mexico. With a tenure of 2.5 years at ULTIM and five years of industry experience, Santiago has proven himself as a valuable leader. His strong team leadership, problem-solving, client communication, and management skills make him an organized and efficient professional.<br><br>Outside of work, Santiago enjoys sports such as padel and golf and exploring new destinations through travel. His commitment to continuous learning is evident through his participation in seminars and the attainment of accolades. He has completed seminars on Infosel Financial, Stock Market Basics, and Ethics and Best Practices for the Stock Markets. Also, Santiago has participated in the Faculty of Business, Law, and Politics Summer Programme.<br><br>Santiago's dedication, leadership abilities, and passion for personal growth contribute to his success as the Branch Director of ULTIM Marketing in Mexico.",
+        biographyES: "Santiago Guerra es el Director de la Sede de ULTIM Marketing en México. Con 2.5 años en ULTIM y cinco años de experiencia en la industria, Santiago se ha destacado como un valioso líder. Su sólido liderazgo de equipo, habilidades para resolver problemas, comunicación efectiva con los clientes y gestión organizada lo convierten en un profesional eficiente. Fuera del trabajo, Santiago disfruta practicando deportes como el pádel y el golf, así como explorando nuevos destinos a través de los viajes. Su compromiso con el aprendizaje continuo se refleja en su participación en seminarios y la obtención de reconocimientos. Ha completado seminarios sobre Infosel Financial, Conceptos Básicos del Mercado de Valores y Ética y Mejores Prácticas para los Mercados de Valores. Además, Santiago ha participado en el Programa de Verano de la Facultad de Negocios, Derecho y Política. La dedicación, liderazgo y pasión de Santiago por el crecimiento personal son fundamentales para su éxito como Director de ULTIM Marketing en México."
+   
+      },
+      {
+        id: 4,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-miguel.png",
+        name: "miguel jaramillo",
+        position: "Legal & Commercial director",
+        linkedin:
+          "https://www.linkedin.com/in/miguel-jaramillo-v%C3%A9lez-2a125318a/",
+        biography:
+          "Miguel Jaramillo is the Legal & Commercial Director at ULTIM Marketing. With his master's in Commercial and Labor Relations, Miguel brings vast expertise to his role. His remarkable career spans seven years, including positions at Bancolombia, the General Prosecutor's Office, and the Ministry of Labor.<br><br>During his five-year tenure at ULTIM, Miguel has consistently demonstrated his commitment to integrity in all his relationships. He approaches challenges with respect, attentiveness, and diligence, effectively managing his time to achieve optimal outcomes. Miguel takes pride in addressing the needs of daily business operations, offering support to the Management and Human Resources departments in making informed decisions.<br><br>Outside of work, Miguel finds fulfillment in spending time with his family, writing, reading, and his vinyl music collection. His skill set encompasses problem-solving, leadership, humanity, and critical thinking. As the Legal & Commercial Director, Miguel Jaramillo's remarkable experience, unwavering dedication, and well-rounded skill set contribute to the success and growth of ULTIM Marketing.",
+        biographyES:
+        "Miguel Jaramillo is the Legal & Commercial Director at ULTIM Marketing. With his master's in Commercial and Labor Relations, Miguel brings vast expertise to his role. His remarkable career spans seven years, including positions at Bancolombia, the General Prosecutor's Office, and the Ministry of Labor.<br><br>During his five-year tenure at ULTIM, Miguel has consistently demonstrated his commitment to integrity in all his relationships. He approaches challenges with respect, attentiveness, and diligence, effectively managing his time to achieve optimal outcomes. Miguel takes pride in addressing the needs of daily business operations, offering support to the Management and Human Resources departments in making informed decisions.<br><br>Outside of work, Miguel finds fulfillment in spending time with his family, writing, reading, and his vinyl music collection. His skill set encompasses problem-solving, leadership, humanity, and critical thinking. As the Legal & Commercial Director, Miguel Jaramillo's remarkable experience, unwavering dedication, and well-rounded skill set contribute to the success and growth of ULTIM Marketing."
+      },
+      {
+        id: 5,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-mariela.png",
+        name: "mariela tejada",
+        position: "project manager",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Mariela Tejada is an experienced Project Manager with six years of industry expertise. Throughout her career, she has become proficient in project planning, client management, and ensuring high-quality results. Mariela’s meticulous approach guarantees the successful execution of projects from start to finish. Apart from work, she finds joy in exploring new places and reading.",
+        biographyES: 
+        "Con seis años de experiencia en la industria, Mariela Tejada es una experimentada Project Manager. Ha demostrado habilidades destacadas en la planificación de proyectos, el manejo de clientes y la obtención de resultados de alta calidad. Su enfoque meticuloso garantiza la exitosa ejecución de proyectos de principio a fin. Fuera del trabajo, encuentra felicidad en la exploración de nuevos lugares y en la lectura."
+      },
+      {
+        id: 6,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-isabella.png",
+        name: "isabella restrepo",
+        position: "project manager",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Isabella Restrepo is a dedicated Project Manager with four years of industry experience, including two years at ULTIM. She has established herself as a valuable leader. Isabella's expertise lies in team leadership, problem-solving, and effective communication. She excels in managing projects and ensuring their successful completion. Beyond her professional pursuits, Isabella finds joy in cooking and traveling, which bring a creative and adventurous spirit to her life.",
+        biographyES: "Isabella Restrepo es una dedicada Gerente de Proyecto con cuatro años de experiencia en la industria, incluyendo dos años en ULTIM. Se ha consolidado como una líder valiosa en la compañía. Su experiencia y habilidades destacan en el liderazgo de equipos, la resolución de problemas y la comunicación efectiva. Es excelente en la gestión de proyectos, asegurando su exitosa conclusión. Más allá de sus logros profesionales, Isabella disfruta cocinar y viajar, lo que aporta un espíritu creativo y aventurero a su vida."
+  
+      },
+      {
+        id: 7,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-estephany.png",
+        name: "estephany flores",
+        position: "project manager",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Estephany Flores is a dedicated Jr. Project Manager at ULTIM, bringing a year of experience to her role. With 1.5 years of industry experience, she has developed valuable skills in client communications, planning, organization, and problem-solving. Outside work, she finds joy in traveling, reading, and immersing herself in new experiences. ",
+          biographyES: "Estephany Flores es una dedicada Gerente de Proyecto Jr. en ULTIM, con un año de experiencia en su rol y 1.5 años en la industria. Ha desarrollado valiosas habilidades en la comunicación con los clientes, planificación, organización y resolución de problemas. Fuera del trabajo, disfruta viajar, leer y vivir nuevas experiencias."
+  
+      },
+      {
+        id: 8,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-paola.png",
+        name: "paola rios",
+        position: "Human Resources Director",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Paola Rios is the dedicated Human Resources Leader with two and a half years of experience at ULTIM and a total of 10 years in the field. Known for her organizational skills and active listening abilities, she excels in maintaining efficient HR processes and fostering a positive work environment. Paola's productivity and effectiveness contribute to the smooth operation of the department. Outside of work, she finds joy in traveling and hiking.",
+          biographyES: "Paola Ríos, líder de Recursos Humanos en ULTIM, con 10 años de experiencia en el campo. Se destaca por su organización y habilidad de escucha, lo que optimiza nuestros procesos de Recursos Humanos. Disfruta pasear y caminar, encontrando equilibrio en la naturaleza."
+      },
+      {
+        id: 9,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-esteban.png",
+        name: "esteban martinez",
+        position: "copywriting leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Esteban Martínez is an accomplished journalist with an extensive track record of over a decade. He has played a vital role at ULTIM Marketing for the past year as the dynamic leader of the Copy department. Esteban's expertise encompasses various areas such as content creation, content strategy, UX Writing, and exceptional leadership abilities. Beyond his professional pursuits, he enjoys reading and cooking during leisure hours.",
+        biographyES: "Esteban Martínez es un destacado periodista con una extensa trayectoria de más de una década. Ha desempeñado un papel fundamental en ULTIM durante el último año como el líder del Departamento de Copy. La experiencia de Esteban abarca diversas áreas como la estrategia y la creación de contenidos, la escritura UX, así como el liderazgo. Más allá de sus logros profesionales, en sus horas de ocio disfruta de la lectura y la cocina."
+  
+      },
+      {
+        id: 10,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-edwin.png",
+        name: "edwin osorio",
+        position: "multimedia leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Edwin Osorio is a skilled Senior Multimedia Producer with 12 years of experience, including four years in his current role. He possesses a creative mindset, meticulous attention to detail, and excellent organizational skills. Outside of work, Edwin enjoys traveling, engaging in street and portrait photography, as well as hunting and grilling.",
+        biographyES: "Edwin Osorio ha sido galardonado con el premio Emmy® y es un hábil Productor Multimedia Senior con 12 años de experiencia, incluyendo cuatro años en ULTIM. Su mente creativa, meticulosa atención al detalle y excelentes habilidades organizativas lo destacan en su campo. Fuera del trabajo, Edwin disfruta viajar, la fotografía callejera y de retratos, así como practicar la caza y el arte de la parrilla."
+      },
+      {
+        id: 11,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-ana.png",
+        name: "ana garcia",
+        position: "design leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Ana Garcia is an accomplished Graphic Designer with over ten years of industry experience, including four years at ULTIM. Known for her creativity and expertise in digital strategy and branding, Ana brings a fresh and innovative approach to her designs. Outside of her professional pursuits, she finds solace and inspiration in reading, listening to music, and practicing yoga.",
+        biographyES: "Ana García es una talentosa diseñadora gráfica con más de diez años de experiencia en la industria, incluyendo cuatro años como líder de Diseño en ULTIM. Es reconocida por su creatividad y experiencia en estrategia digital y branding, aportando un enfoque fresco e innovador a sus diseños. En su tiempo libre, encuentra inspiración en la lectura, la música y practicar yoga."
+      },
+      {
+        id: 12,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-daniel.png",
+        name: "daniel mora",
+        position: "development leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Daniel Mora is a highly skilled Web Developer with eight years of experience, including six years at Ultim. Proficient in HTML, CSS, and JavaScript, he creates dynamic web solutions. Daniel's expertise extends to process automation between platforms and web server management, optimizing efficiency. Outside work, he enjoys playing video games, watching anime, and exploring different cuisines.",
+        biographyES:"Daniel Mora es un talentoso Desarrollador Web con ocho años de experiencia, incluyendo seis años en Ultim como líder de Desarrollo. Es un experto en HTML, CSS y JavaScript, creando soluciones web dinámicas. Su experiencia se extiende a la automatización de procesos entre plataformas y la gestión de servidores web. En su tiempo libre, disfruta jugando videojuegos, viendo anime y explorando diversas experiencias culinarias."
+      },
+      {
+        id: 13,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-kate.png",
+        name: "Catherine cadavid",
+        position: "marketing leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Catherine Cadavid is a skilled Digital Marketing Manager with five years of industry experience. Although she has been with ULTIM for just four months, she has quickly made an impact in her role. Catherine's expertise lies in digital marketing strategy, paid media, and social media. She is adept at developing effective campaigns and utilizing various digital platforms to drive results. Outside work, Catherine finds relaxation and fulfillment in practicing yoga and exploring new destinations by traveling.",
+        biographyES: "Catherine Cadavid es la talentosa líder de Marketing Digital con cinco años de experiencia en la industria. Aunque lleva solo cuatro meses en ULTIM, ha tenido un impacto significativo en su rol. Es especialista en estrategia de marketing digital, medios pagados y redes sociales. Desarrolla campañas efectivas en diversas plataformas digitales y obtiene resultados sobresalientes. Fuera del trabajo, practica yoga y explora nuevos destinos a través de sus viajes."
+      },
+      {
+        id: 14,
+        imgUrl:
+          "https://3065714.fs1.hubspotusercontent-na1.net/hubfs/3065714/ultim-about/ultim-elizabeth.png",
+        name: "elizabeth lozano",
+        position: "call center leader",
+        linkedin: "https://www.linkedin.com/company/ultim-marketing/mycompany/",
+        biography:
+          "Elizabeth Lozano is an accomplished professional with 18 years of experience in customer service. As the Head of Customer Service at ULTIM, she brings expertise in Customer Experience Optimization, Data-Driven Decision Making, and Strategic Planning. In just over a year and five months, Elizabeth has significantly enhanced the customer experience through her strategic approach and informed decision-making. Beyond work, she finds relaxation in solving jigsaw puzzles and movies.",
+        biographyES: "Elizabeth Lozano es una profesional destacada con 18 años de experiencia en servicio al cliente. Como líder de Servicio al Cliente en ULTIM, aporta una amplia experiencia en optimización de la experiencia de los consumidores, la toma de decisiones basada en datos y la planificación estratégica. En poco más de un año y cinco meses, Elizabeth ha logrado mejorar significativamente la experiencia de los clientes a través de su enfoque estratégico y toma de decisiones informada. Suele pasar su tiempo libre armando rompecabezas y viendo películas."
+  
+      },
+    ];
+  
+    // console.log(Leadership);
+    let modulo = document.getElementById("modulo");
+    let openBiographyId = null;
+  
+     // Get the user's selected language from localStorage
+     const userLanguage = localStorage.getItem("userLanguage");
+  
+     // Check if the user selected Spanish language
+     const isSpanishLanguage = userLanguage === "es";
+  
+    // map array
+    const mappedMembers = Leadership.map((member) => {
+      return `
+      <div class="relative w-full cursor-pointer" onclick="toggleBiographySection(${member.id})">
+        <section id="picture" class="hover-container" >
+          <div class="overlay"></div>
+          <img src="${member.imgUrl}" alt="man-3-1" class="w-full h-full object-cover" />
+          <div class="text-container">
+            <div id="member-name" class="text-[12px] lg:text-[16px] font-bold uppercase text-white">
+              ${member.name}
+            </div>
+            <div id="member-role" class="text-[12px] lg:text-[16px] text-white capitalize">
+              ${member.position}
+            </div>
+            <div id="member-link" class="text-[12px] lg:text-[16px] font-bold underline text-white">
+              <a target="_blank" href="${member.linkedin}">LinkedIn</a>
+            </div>
+          </div>
+        </section>
+        <section id="${member.id}" class="w-[100%] hidden bg-[#5F4B9E] py-[70px] md:px-0 px-8 flex-col bio">
+          <h4 id="member-name" class="m-auto mb-[9px] w-[590px] text-[16px] leading-[13px] font-bold uppercase text-white">
+              ${member.name}
+            </h4>
+          <h5 id="member-role" class="m-auto mb-4 w-[590px] text-[20px] lg:text-[16px] leading-[15px] font-normal  text-white capitalize">
+              ${member.position}
+            </h5>
+          <p class="m-auto max-w-[590px] text-white text-[18px] font-normal leading-7">
+              ${isSpanishLanguage ? member.biographyES : member.biography}
+          </p>
+        </section>
+        
+      </div>`;
+    });
+  
+    modulo.innerHTML = mappedMembers.join("");
+  
+    function toggleBiographySection(id) {
+      let biographySection = document.getElementById(id);
+  
+      if (openBiographyId === id) {
+        biographySection.style.display = "none";
+        openBiographyId = null;
+      } else {
+        if (openBiographyId !== null) {
+          let openSection = document.getElementById(openBiographyId);
+          openSection.style.display = "none";
+        }
+  
+        biographySection.style.display = "flex";
+  
+        const viewportWidth = window.visualViewport.width;
+        {
+          viewportWidth >= 768
+            ? (biographySection.style.width = "400%")
+            : (biographySection.style.width = "200%");
+        }
+  
+        biographySection.style.position = "relative";
+        openBiographyId = id;
+      }
+  
+      const biographyLeftMap = {
+        2: "-100%",
+        3: "-200%",
+        4: "-300%",
+        6: "-100%",
+        7: "-200%",
+        8: "-300%",
+        10: "-100%",
+        11: "-200%",
+        12: "-300%",
+        14: "-100%",
+      };
+      const mobileBiographyMap = {
+        1: "0%",
+        2: "-100%",
+        3: "0%",
+        4: "-100%",
+        5: "0%",
+        6: "-100%",
+        7: "0%",
+        8: "-100%",
+        9: "0%",
+        10: "-100%",
+        11: "0%",
+        12: "-100%",
+        13: "0%",
+        14: "-100%",
+      };
+  
+      const viewportWidth = window.visualViewport.width;
+      {
+        viewportWidth >= 768
+          ? (biographySection.style.left = biographyLeftMap[openBiographyId])
+          : (biographySection.style.left = mobileBiographyMap[openBiographyId]);
+      }
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,640 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- {% if content.html_title %} -->
+    <title>{{ content.html_title }}</title>
+    <!-- {% endif %} -->
+    <meta name="description" content="{{ content.meta_description }}" />
+    <!-- {% if brand_settings.primaryFavicon.src %} -->
+    <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+    <!-- {% endif %} {{ standard_header_includes }} -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One8 Freight</title>
+
+    <!-- tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- slides -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <style>
+    * {
+      font-family: Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+    #boxContainer {
+      background: linear-gradient(180deg, #021e4c 55%, #f3f5ff 55%);
+    }
+  </style>
+
+  <body>
+    <header
+      class="mx-auto w-full h-screen bg-cover bg-[url('https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-BG.png')] overflow-hidden flex flex-col justify-between items-center"
+    >
+      <section class="flex flex-row justify-between items-start w-full">
+        <img
+          src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-logo.svg"
+          alt="one8-logo"
+          class="m-4 lg:mt-8 xl:mt-8 w-1/4 md:w-1/3 max-h-16"
+        />
+        <div
+          class="flex flex-col-reverse lg:flex-row xl:flex-row w-3/4 md:w-1/3 lg:w-2/4 xl:w-1/3"
+        >
+          <p
+            class="text-3xl font-bold text-white max-w-xs hidden lg:block mt-4 mr-4 lg:mt-8 xl:mt-8"
+          >
+            Going The Extra Mile For Our
+            <span id="truckBlue" class="text-[#26a7df]">Truck Drivers</span>
+          </p>
+          <p
+            class="bg-[#26a7df] text-lg font-bold text-white py-9 pl-9 w-[352px]"
+          >
+            Call now! <a href="tel=915-400-8140">915-400-8140</a>
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="text-white text-center flex flex-col items-center overflow-hidden"
+      >
+        <p class="text-2xl font-bold">Now Hiring Owner Operators</p>
+        <h1 class="text-6xl font-bold max-w-4xl" style="overflow: hidden">
+          Partner with One8 Freight for reliable and consistent freight
+        </h1>
+        <p class="font-normal text-3xl hidden lg:block">
+          that will keep your trucking business profitable for the long haul.
+        </p>
+      </section>
+
+      <section
+        class="flex flex-col md:flex-row items-center justify-around gap-2 lg:gap-12 mb-4 lg:mb-8"
+      >
+        <div
+          class="bg-[#f4f4f440] p-4 w-72 font-bold text-white flex gap-9 items-center"
+        >
+          <img
+            src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/clock.svg"
+            alt="one8-clock"
+          />
+          <p>
+            Optimized<br />
+            Hours of Service
+          </p>
+        </div>
+        <div
+          class="bg-[#f4f4f440] p-4 w-72 font-bold text-white flex gap-9 items-center"
+        >
+          <img
+            src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-price.svg"
+            alt="one8-price"
+          />
+          <p>
+            Consistent<br />
+            Income
+          </p>
+        </div>
+        <div
+          class="bg-[#f4f4f440] p-4 w-72 font-bold text-white flex gap-9 items-center"
+        >
+          <img
+            src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-up.svg"
+            alt="one8-up"
+          />
+          <p>
+            Competitive<br />
+            Pay
+          </p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <article
+          class="flex flex-col lg:flex-row xl:flex-row justify-center items-center w-full bg-[#F3F5FF]"
+        >
+          <img
+            class="w-full lg:w-2/4 xl:w-2/4"
+            src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-card1.png"
+            alt="card1"
+          />
+          <div
+            class="flex flex-col justify-center items-start md:items-center lg:items-start xl:items-start w-full lg:w-2/4 xl:w-2/4 px-4 py-10 lg:px-32 xl:px-32 lg:px-20 xl:px-20"
+          >
+            <h2
+              class="text-3xl font-normal text-[#26a7df] md:max-w-md lg:max-w-[336px] xl:max-w-[336px]"
+            >
+              One8 Freight is where owner operator truck drivers come first,
+            </h2>
+            <p
+              id="cardP"
+              class="text-lg text-[191c1d] md:max-w-md lg:max-w-[429px] xl:max-w-[429px]"
+            >
+              with a focus on competitive pay and personalized support. Join our
+              team and experience a freight company that values you as an
+              individual, optimizes your earnings, and appreciates your hard
+              work.
+            </p>
+          </div>
+        </article>
+        <article class="flex flex-col-reverse w-full lg:flex-row xl:flex-row">
+          <section
+            class="flex flex-col justify-center items-center w-full lg:w-2/4 xl:w-2/4 px-4 py-10 lg:px-32 xl:px-32 lg:px-20 xl:px-20"
+          >
+            <h2 class="text-3xl font-normal full max-w-md">
+              Tired of financial unpredictability in the world of trucking?<span
+                class="text-[#26A7DF] font-bold"
+              >
+                Join One8 Freight</span
+              >
+            </h2>
+
+            <section class="flex flex-col my-10">
+              <div class="flex flex-row gap-4">
+                <div class="flex flex-col items-center w-1/4">
+                  <p
+                    class="text-[#26A7DF] font-normal text-2xl rounded-full border-[#26A7DF] border-[1px] w-11 h-11 p-1 md:mx-2 md:mx-2 text-center"
+                  >
+                    1
+                  </p>
+                  <span
+                    class="grow h-auto border-[#26A7DF] border-solid border-[1px]"
+                  ></span>
+                </div>
+                <div class="flex flex-col w-3/4 mb-7 md:mb-4">
+                  <h3 class="text-[#26A7DF] font-bold text-2xl">
+                    Get in touch with us:
+                  </h3>
+                  <p class="text-lg text-[#191C1D] font-normal max-w-[372px]">
+                    Let’s talk about your operational and financial
+                    expectations. We have OTR, regional, and local routes
+                    available.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-4">
+                <div class="flex flex-col items-center w-1/4">
+                  <p
+                    class="text-[#26A7DF] font-normal text-2xl rounded-full border-[#26A7DF] border-[1px] w-11 h-11 p-1 md:mx-2 md:mx-2 text-center"
+                  >
+                    2
+                  </p>
+                  <span
+                    class="grow h-auto border-[#26A7DF] border-solid border-[1px]"
+                  ></span>
+                </div>
+                <div class="flex flex-col w-3/4 mb-7 md:mb-4">
+                  <h3 class="text-[#26A7DF] font-bold text-2xl">
+                    Let’s collaborate:
+                  </h3>
+                  <p class="text-lg text-[#191C1D] font-normal max-w-[372px]">
+                    We believe in building strong partnerships with our owner
+                    operators to help them achieve their financial goals.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-4">
+                <div class="flex flex-col items-center w-1/4">
+                  <p
+                    class="text-[#26A7DF] font-normal text-2xl rounded-full border-[#26A7DF] border-[1px] w-11 h-11 p-1 md:mx-2 md:mx-2 text-center"
+                  >
+                    3
+                  </p>
+                </div>
+                <div class="flex flex-col w-3/4 mb-7 md:mb-4">
+                  <h3 class="text-[#26A7DF] font-bold text-2xl">
+                    Let’s get started:
+                  </h3>
+                  <p class="text-lg text-[#191C1D] font-normal max-w-[372px]">
+                    Join our team and unlock your earning potential like never
+                    before.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <button
+              class="text-[#26a7df] font-bold outline outline-[1px] outline-[#26a7df] w-80 h-16 rounded-lg mx-auto"
+            >
+              Apply Now
+            </button>
+          </section>
+          <img
+            class="w-full lg:w-2/4 xl:w-2/4"
+            src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-card2.png"
+            alt="card1"
+          />
+        </article>
+      </section>
+      <section
+        class="bg-[#021E4C] bg-cover flex flex-col overflow-hidden gap-7"
+      >
+        <div
+          class="flex flex-col justify-center items-center text-center gap-10 py-12 px-4 lg:pt-40 xl:pt-40"
+        >
+          <h3 class="text-white font-bold text-3xl">GET TO KNOW US</h3>
+          <p class="text-white font-normal max-w-2xl text-lg">
+            At One8 Freight, we understand that being a CDL driver, especially
+            an owner operator in today’s market can be challenging and
+            demanding– and we want to ensure you feel valued and appreciated for
+            your hard work.
+          </p>
+          <p class="text-[#26a7df] font-bold max-w-xl text-xl">
+            With 20+ years of industry experience, we connect businesses and
+            drivers - offering a unique partnership opportunity for
+            owner-operators looking for reliable and consistent freight.
+          </p>
+        </div>
+        <div
+          id="boxContainer"
+          class="flex flex-col lg:flex-row xl:flex-row justify-center items-center p-4 gap-4 lg:gap-16 xl:gap-16 border-none"
+        >
+          <article
+            class="flex flex-col justify-center items-center bg-white max-w-sm p-8 text-center border-solid border-[#26A7DF] border-b-8 h-80"
+          >
+            <img
+              src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-check.svg"
+              alt="one8-check"
+            />
+            <ul
+              class="text-lg font-bold text-left max-w-72 list-outside "
+            >
+              <li class="flex items-center gap-2">
+                <img
+                  src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-dot%204.svg"
+                  alt="one8-dot"
+                  class=" min-w-[7px] min-h-[7px]"
+                />
+                Must be 21 years or older.
+              </li>
+              <li class="flex flex-row items-start gap-2">
+                <img
+                  src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-dot%204.svg"
+                  alt="one8-dot"
+                  class="mt-3 min-w-[7px] min-h-[7px]"
+                />
+                <p>12+ Months of driving experience.</p>
+                
+              </li>
+              <li class="flex flex-row items-start gap-2">
+                <img
+                  src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-dot%204.svg"
+                  alt="one8-dot"
+                  class="mt-3 min-w-[7px] min-h-[7px]"
+                />
+                <p>No drug/alcohol violations in the last 5 years.</p>
+                
+              </li>
+            </ul>
+          </article>
+          <article
+            class="flex flex-col justify-center items-center bg-white max-w-sm p-8 text-center border-solid border-[#26A7DF] border-b-8 h-80"
+          >
+            <img
+              src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-check.svg"
+              alt="one8-check"
+            />
+            <p
+              class="text-lg font-bold max-w-72 list-outside "
+            >
+              We optimize drivers’ earning potential by working hand in hand with owner operators to pre-book loads as much as possible.
+            </p>
+            
+          </article>
+          <article
+            class="flex flex-col justify-center items-center bg-white max-w-sm p-8 text-center border-solid border-[#26A7DF] border-b-8 h-80"
+          >
+            <img
+              src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-check.svg"
+              alt="one8-check"
+            />
+            <ul
+              class="text-lg font-bold text-left max-w-72 list-outside "
+            >
+              <li class="flex items-start gap-2">
+                <img
+                  src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-dot%204.svg"
+                  alt="one8-dot"
+                  class="mt-3 min-w-[7px] min-h-[7px]"
+                />
+                <p>53’ refrigerated and dry van.</p>
+                
+              </li>
+              <li class="flex items-start gap-2">
+                <img
+                  src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-dot%204.svg"
+                  alt="one8-dot"
+                  class="mt-3 min-w-[7px] min-h-[7px]"
+                />
+               <p> Trailer, eld unit, plates, and decals provided.</p> 
+               
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section
+        class="bg-[#F3F5FF] flex flex-col justify-center items-center px-4 py-16 gap-8"
+      >
+        <button
+          class="text-[#26a7df] font-bold outline outline-[1px] outline-[#26a7df] w-80 h-16 rounded-lg xl:mb-24 lg:mb-24"
+        >
+          Join our team of owner operators
+        </button>
+        <img
+          src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-ei.png"
+          alt="one8-ei"
+        />
+        <h3 class="text-[#191C1D] font-bold text-3xl text-center max-w-2xl">
+          AT ONE8 FREIGHT, WE BELIEVE IN KEEPING OUR PROMISES TO OUR DRIVERS.
+        </h3>
+        <button class="text-white font-bold bg-[#26a7df] w-80 h-16 rounded-lg">
+          Call Now
+        </button>
+      </section>
+      <section
+        class="relative bg-[url('https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-bg.png')] bg-cover xl:pt-16 lg:pt-16 flex flex-col"
+      >
+        <!-- slides -->
+        <div id="container" class="flex flex-col justify-center items-center">
+          <div class="w-[759px] h-[429px] mr-8">
+            <iframe
+              style="border: none; width: 100%; height: 100%"
+              src="https://www.youtube.com/embed/wdbY6tsNM9U"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              scrolling:no
+            ></iframe>
+          </div>
+
+          <div class="w-[759px] h-[429px] mr-8">
+            <iframe
+              style="border: none; width: 100%; height: 100%"
+              src="https://www.youtube.com/embed/mpCPjxuEK2k"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              scrolling:no
+            ></iframe>
+          </div>
+
+          <div class="w-[759px] h-[429px] mr-8">
+            <iframe
+              style="border: none; width: 100%; height: 100%"
+              src="https://www.youtube.com/embed/uHdS43ur2vU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              scrolling:no
+            ></iframe>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center gap-8 my-10 lg:my-28 xl:my-28 mx-8"
+        >
+          <h3 class="font-bold text-center text-[#191C1D] text-3xl max-w-xs">
+            HEAR FROM OUR <span class="text-[#25A3D9]">OWNER OPERATORS</span>
+          </h3>
+          <p class="text-[#191C1D] font-normal text-center max-w-2xl">
+            Our owner operators are not just truck drivers on the road or a
+            number to us. They are our valued partners and the lifeblood of our
+            company. Read on to hear about their experience working with us!
+          </p>
+        </div>
+        <div
+          class="grid gap-4 grid-cols-1 md:grid-cols-2 text-white px-8 lg:grid-cols-4"
+        >
+          <article
+            class="italic w-auto p-11 overflow-hidden rounded-3xl bg-[#021E4C] h-80 flex flex-col justify-end items-start gap-14"
+          >
+            <small class="text-lg"
+              >“Office personnel works hard for you here.”</small
+            >
+            <p class="text-2xl">George Hess</p>
+          </article>
+          <article
+            class="italic w-full p-11 overflow-hidden rounded-3xl bg-[#021E4C] h-80 flex flex-col justify-end items-start gap-14"
+          >
+            <small class="text-lg"
+              >“Recruiting was very quick to qualify me… everybody seems very
+              professional.”</small
+            >
+            <p class="text-2xl">Ramon Rivas</p>
+          </article>
+          <article
+            class="italic w-full p-11 overflow-hidden rounded-3xl bg-[#021E4C] h-80 flex flex-col justify-end items-start gap-14"
+          >
+            <small class="text-lg"
+              >“Orientation was quick and painless, everyone has been very
+              professional.”</small
+            >
+            <p class="text-2xl">Raneka Lewis</p>
+          </article>
+          <article
+            class="italic w-full p-11 overflow-hidden rounded-3xl bg-[#021E4C] h-80 flex flex-col justify-end items-start gap-14"
+          >
+            <small class="text-lg"
+              >“This company will set you up for success and allow you to grow
+              without restrictions. No forced dispatch. Make as much as you
+              want.”</small
+            >
+            <p class="text-2xl">Chris Marin</p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="bg-[#F3F5FF] flex flex-col justify-center items-center gap-8 py-8 md:py-12 lg:py-2 xl:py-2"
+      >
+        <h3
+          class="font-bold text-center text-[#191C1D] text-3xl xl:mt-28 lg:mt-28 max-w-md"
+        >
+          DRIVERS ARE OUR #1 CUSTOMER AT
+          <span class="text-[#25A3D9]">ONE8 FREIGHT.</span>
+        </h3>
+        <button class="text-white font-bold bg-[#26a7df] w-80 h-16 rounded-lg">
+          Join us now! 915-400-8140
+        </button>
+      </section>
+      <section class="bg-[#F3F5FF]">
+        <div class="flex flex-col xl:px-36 lg:px-36 xl:py-24 lg:py-24 p-8">
+          <article
+            class="text-[#191C1D] font-normal flex flex-col gap-5 xl:w-1/3 lg:w-1/3 w-full"
+          >
+            <h3 class="w-3/4 text-3xl">FREQUENTLY ASKED QUESTIONS</h3>
+            <p class="text-lg mb-8">
+              Discover the answers to common questions regarding our services
+              and the owner-operator trucking industry.
+            </p>
+          </article>
+          <hr class="border-[1px] border border-solid border-[#707070] my-8" />
+          <div
+            class="flex flex-col lg:flex-row xl:flex-row justify-center items-start gap-4 lg:gap-12"
+          >
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            >
+              <h3
+                class="text-2xl font-bold w-full md:w-1/3 lg:w-full xl:w-full"
+              >
+                What do I need to partner with One8 Freight?
+              </h3>
+              <p
+                class="text-lg font-normal w-full md:w-2/3 lg:w-full xl:w-full"
+              >
+                To partner with One8 Freight, please give us a call. Our team
+                will be happy to guide you through the process and answer any
+                questions you may have. <br /><br />We work with different
+                trailer types and are actively hiring CDL drivers for Dry van
+                and Reefer or refrigerated loads.
+              </p>
+            </article>
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            >
+              <h3
+                class="text-2xl font-bold w-full md:w-1/3 lg:w-full xl:w-full"
+              >
+                What are the benefits of working with One8 Freight?
+              </h3>
+              <p
+                class="text-lg font-normal w-full md:w-2/3 lg:w-full xl:w-full"
+              >
+                As a partner with One8 Freight, you can benefit from choosing
+                your routes, which allows for better time management, less
+                waiting time for loads, and the ability to customize routes
+                based on your geographical preferences. We value and respect our
+                truck drivers, and we are committed to helping you grow your
+                business.
+              </p>
+            </article>
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            >
+              <h3
+                class="text-2xl font-bold w-full md:w-1/3 lg:w-full xl:w-full"
+              >
+                How long will the hiring process take?
+              </h3>
+              <p
+                class="text-lg font-normal w-full md:w-2/3 lg:w-full xl:w-full"
+              >
+                The hiring process for truck driving jobs at One8 Freight
+                typically takes a few days. We understand the importance of
+                getting you on the road and will work diligently to get you
+                started as soon as possible.
+              </p>
+            </article>
+          </div>
+          <hr
+            class="border-[1px] border border-solid border-[#707070] opacity-40 my-8"
+          />
+          <div
+            class="flex flex-col lg:flex-row-reverse xl:flex-row-reverse justify-center items-start gap-4 lg:gap-12"
+          >
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            >
+              <h3
+                class="text-2xl font-bold w-full md:w-1/3 lg:w-full xl:w-full"
+              >
+                How often do I get loads assigned?
+              </h3>
+              <p
+                class="text-lg font-normal w-full md:w-2/3 lg:w-full xl:w-full"
+              >
+                After you deliver your assignment, we will assign a new load as
+                soon as possible. Our dispatch team works hard to ensure that
+                our CDL drivers have consistent truck loads and are never
+                without a job for an extended period of time.
+              </p>
+            </article>
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            >
+              <h3
+                class="text-2xl font-bold w-full md:w-1/3 lg:w-full xl:w-full"
+              >
+                How can I customize my routes?
+              </h3>
+              <p
+                class="text-lg font-normal w-full md:w-2/3 lg:w-full xl:w-full"
+              >
+                At One8 Freight, we understand that customization is key. Each
+                owner operator can customize their routes based on geographical
+                preferences, allowing for flexibility and optimal efficiency.
+              </p>
+            </article>
+            <article
+              class="text-[#191C1D] flex flex-col w-full md:flex-row gap-5 lg:flex-col xl:flex-col lg:w-1/3 xl:w-1/3"
+            ></article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-[#F3F5FF] flex flex-col justify-center items-center gap-16 py-12"
+    >
+      <img
+        src="https://7014578.fs1.hubspotusercontent-na1.net/hubfs/7014578/one8-images/one8-logo-footer.png"
+        alt="one8-logo-footer"
+      />
+      <p>© 2023 One8 Freight. All rights reserved.</p>
+    </footer>
+    <!-- scrips para exportar -->
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- cdn slider -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- my script -->
+    <script>
+      $("#container").slick({
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        centerMode: true,
+        // centerPadding: '80px',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        variableWidth: true,
+        dots: false,
+        arrows: false,
+      });
+    </script>
+    <!-- {{ standard_footer_includes }} -->
+  </body>
+</html>

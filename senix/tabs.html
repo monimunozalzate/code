@@ -1,0 +1,211 @@
+<style>
+  .main-container {
+    margin: auto;
+    max-width: 812px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    gap: 16px;
+  }
+  .frequent-question {
+    display: flex;
+    flex-direction: column;
+  }
+  .question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    background-image: url("https://cdn.shopify.com/s/files/1/0785/4745/2189/files/senix-pqr-open.svg?v=1718222727");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 96% 50%;
+    color: #53575a !important;
+    background-color: #f2f2f2 !important;
+    height: 58px;
+    padding: 17px 36px;
+  }
+
+  .question p {
+    font-family: Forza, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .answer {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .answer p {
+    margin: 0;
+    font-size: 18px;
+    color: #53575a;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: left;
+    padding: 15px 36px;
+  }
+  .show-flex {
+    display: flex;
+  }
+
+  .show-none {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .answer {
+      padding-left: 0;
+    }
+    .answer p {
+      padding: 15px 0;
+    }
+  }
+</style>
+<div class="main-container" id="main-container">
+  <div class="frequent-question">
+    <div class="question open">
+      <p>1. ¿Cómo puedo convertirme en distribuidor de SENIX?</p>
+    </div>
+
+    <div class="answer show-flex" id="answer1">
+      <p>
+        Para convertirte en distribuidor, simplemente completa el formulario de
+        solicitud en nuestra página web. Un representante de SENIX se pondrá en
+        contacto contigo para discutir los detalles y los próximos pasos del
+        proceso de asociación.
+      </p>
+    </div>
+  </div>
+
+  <div class="frequent-question">
+    <div class="question">
+      <p>2. ¿Existen requisitos mínimos de compra para los distribuidores?</p>
+    </div>
+
+    <div class="answer" id="answer2">
+      <p>
+        Sí, establecemos un mínimo de compra inicial que varía según la
+        categoría de distribuidor. Estos requisitos están diseñados para
+        asegurar un compromiso mutuo hacia el éxito de nuestra asociación.
+      </p>
+    </div>
+  </div>
+
+  <div class="frequent-question">
+    <div class="question">
+      <p>3. ¿Qué tipo de soporte ofrece SENIX a sus distribuidores?</p>
+    </div>
+
+    <div class="answer" id="answer3">
+      <p>
+        Ofrecemos soporte integral que incluye material de marketing,
+        capacitaciones sobre nuestros productos y técnicas de venta, soporte
+        técnico continuo y promociones exclusivas para ayudar a maximizar tus
+        ventas.
+      </p>
+    </div>
+  </div>
+
+  <div class="frequent-question">
+    <div class="question">
+      <p>
+        4. ¿Cuáles son las ventajas de ser distribuidor de SENIX en comparación
+        con otras marcas?
+      </p>
+    </div>
+
+    <div class="answer" id="answer4">
+      <p>
+        Como distribuidor de SENIX, tendrás acceso a productos de alta calidad y
+        alta demanda, márgenes de ganancia competitivos, apoyo constante en
+        marketing y ventas, y la flexibilidad de trabajar con una marca que se
+        adapta a las necesidades del mercado y sus distribuidores.
+      </p>
+    </div>
+  </div>
+
+  <div class="frequent-question">
+    <div class="question">
+      <p>
+        5. ¿Cómo maneja SENIX las garantías y las devoluciones de productos?
+      </p>
+    </div>
+
+    <div class="answer" id="answer5">
+      <p>
+        Ofrecemos una garantía limitada en todos nuestros productos, y tenemos
+        un proceso claro y sencillo para devoluciones y reclamaciones de
+        garantía, asegurando que tanto tú como tus clientes estén satisfechos
+        con nuestro servicio posventa.
+      </p>
+    </div>
+  </div>
+
+  <div class="frequent-question">
+    <div class="question">
+      <p>6. ¿SENIX ofrece capacitación sobre nuevos productos?</p>
+    </div>
+
+    <div class="answer" id="answer6">
+      <p>
+        Absolutamente. Proporcionamos sesiones regulares de capacitación sobre
+        nuevos productos y actualizaciones de los existentes, tanto de forma
+        virtual como presencial, para asegurar que nuestros distribuidores estén
+        bien informados y preparados para ofrecer la mejor experiencia posible a
+        los clientes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  let faqContainer = document.querySelector("#main-container");
+  let openElem = null;
+
+  // Función para abrir el answer1 por defecto
+  function openDefault() {
+    const defaultElement = document.querySelector("#answer1");
+    const defaultQuestion = document.querySelector(".open");
+
+    defaultElement.classList.remove("show-none");
+    defaultElement.classList.add("show-flex");
+
+    defaultQuestion.classList.remove("open");
+
+    openElem = defaultQuestion;
+  }
+
+  // Llamar a la función para abrir el answer1 por defecto
+  openDefault();
+
+  faqContainer.addEventListener("click", (e) => {
+    if (e.target.parentElement.classList.contains("question")) {
+      const clickedElement = e.target.parentElement;
+      const nextElement = clickedElement.nextElementSibling;
+
+      if (openElem !== null && openElem !== clickedElement) {
+        openElem.nextElementSibling.classList.add("show-none");
+        openElem.nextElementSibling.classList.remove("show-flex");
+      }
+
+      if (openElem === clickedElement) {
+        nextElement.classList.add("show-none");
+        nextElement.classList.remove("show-flex");
+        openElem = null;
+      } else {
+        nextElement.classList.remove("show-none");
+        nextElement.classList.add("show-flex"); 
+        openElem = clickedElement;
+      }
+    }
+  });
+</script>

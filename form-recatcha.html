@@ -1,0 +1,188 @@
+<style>/* Styles for the contact form container */
+    #contact-form {
+        width: 100%;
+        height: 100%;
+        max-width: 584px;
+        margin: 0 auto;
+        padding-top: 3px;
+        padding-left: 5px;
+        border-radius: 8px;
+        font-family: 'Lato', sans-serif;
+        display: flex;
+    }
+    
+    /* Styles for the form inside the contact form container */
+    form {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 8px;
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Styles for input fields and select dropdowns */
+    input,
+    select {
+        width: 100%;
+        max-width: 584px;
+        height: 38px;
+        margin-top: 15px;
+        padding-left: 14px;
+        border-radius: 22px;
+        border: 1px solid #37993B;
+        color: #707070 !important;
+        font-size: 17px !important;
+    }
+    
+    /* Styles for textareas */
+    textarea {
+        width: 100%;
+        max-width: 584px;
+        height: 100px;
+        margin-top: 15px;
+        padding-left: 14px;
+        padding-top: 4px;
+        border-radius: 22px;
+        border: 1px solid #37993B;
+    }
+    
+    /* Styles for the 'schnyder-btn' class (Button) */
+    .schnyder-btn {
+        display: block;
+        width: 306px;
+        height: 54px;
+        border-radius: 31px;
+        border: 1px solid #37993B;
+        background: rgba(55, 153, 59, 1);
+        color: #fff;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        align-self: flex-start;
+    }
+    
+    /* Styles for labels */
+    label {
+        font-size: 17px;
+        color: #707070;
+        margin-top: 15px;
+        display: block;
+        align-self: flex-start;
+    }
+    
+    /* Styles for Google reCAPTCHA */
+    .g-recaptcha {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        align-self: flex-start;
+    }
+    
+    /* Media query for screens with a maximum width of 768px */
+    /* Media query para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+#contact-form {
+    max-width: 280px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+}
+
+input,
+select {
+    max-width: 280px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+textarea {
+    max-width: 280px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.schnyder-btn {
+    max-width: 280px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+label {
+    max-width: 280px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.g-recaptcha {
+    max-width: 280px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+}
+
+    </style>
+<div id="contact-form">
+    <form id="myForm" onsubmit="return validateForm();"
+        action="https://hooks.zapier.com/hooks/catch/463986/31a3xgn/" method="post">
+        <input placeholder="Name" type="text" id="name" name="name" required>
+        <input placeholder="Email" type="email" id="email" name="email" required>
+        <input placeholder="Phone Number" type="tel" id="phone" name="phone" required>
+        <select id="accident-type" name="accident-type" required>
+            <option value="" disabled selected hidden>What type of accident did you suffer?</option>
+            <option value="Personal Injury">Personal Injury</option>
+            <option value="Work Accident">Work Accident</option>
+            <option value="Auto Accident">Auto Accident</option>
+            <option value="Truck Accident">Truck Accident</option>
+            <option value="Premises Liability">Premises Liability</option>
+            <option value="Other">Other</option>
+        </select>
+        <label for="case-description">Tell us about your case*</label>
+        <textarea id="case-description" name="case-description" required></textarea>
+        <!-- Aquí se agregará el reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="6Ldg6HEnAAAAAHY0evvbd7I9-Kg98onhn2-NewaZ"></div>
+        <button class="schnyder-btn" type="submit">Request a free consultation</button>
+    </form>
+</div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Agregar el siguiente script para validar y enviar el formulario -->
+<script type="text/javascript">
+function validateForm() {
+
+
+    // Si todos los campos obligatorios están completos, permitir el envío del formulario
+    return true;
+}
+
+// Agregar el siguiente bloque para enviar el formulario cuando se haga clic en el botón de "submit"
+$(document).ready(function () {
+    $("#myForm").submit(function (event) {
+        console.log("funciono perros")
+        event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+        // Validar el reCAPTCHA
+        
+
+        // Disable the submit button to prevent multiple submissions
+        $("#myForm button").prop("disabled", true);
+
+        // Obtener los datos del formulario
+        var formData = $(this).serialize();
+
+        // Enviar los datos del formulario a la URL especificada
+        $.post('https://hooks.zapier.com/hooks/catch/463986/31a3xgn/', formData, function (data) {
+            if (data.status === "success") {
+                // Redirigir a la página de agradecimiento en caso de envío exitoso
+                window.location.href = 'https://www.schnyderlawfirm.com/thank-you-en/';
+            } else {
+                console.log(data);
+                alert("Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo más tarde.");
+            }
+        });
+    });
+});
+</script>
+</html>

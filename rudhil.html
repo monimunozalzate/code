@@ -1,0 +1,79 @@
+<section id="organization">
+  <a id="box" class="one" href="https://www.rudhil.net/">
+    <p>RudHil Academy</p>
+  </a>
+
+  <a
+    id="box"
+    class="two"
+    href="https://rudhil.com/newpage/construction-services/"
+  >
+    <p>Construction</p>
+  </a>
+
+  <a id="box" class="three" href="*">
+    <p>Landscaping</p>
+  </a>
+
+  <a class="four" id="box" href="https://rudhil.com/newpage/about/">
+    <p>Agent <br />Training</p>
+  </a>
+</section>
+
+<style>
+  #organization {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: poppins;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto !important;
+  }
+  #box {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+ #box p {
+    font-family: poppins;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 46px;
+    color: #ffffff !important;
+    text-align: center;
+  }
+  .one {
+    background-image: url("https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-academy.webp");
+  }
+  .two {
+    background-image: url("https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-construction.webp");
+  }
+  .three {
+    background-image: url("https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-landscaping.webp");
+  }
+  .four {
+    background-image: url("https://rudhil.com/newpage/wp-content/uploads/2023/09/rudhil-agent-training.webp");
+  }
+  @media (max-width: 800px) {
+    #organization {
+      flex-wrap: wrap;
+    }
+    section #box {
+      width: 48%;
+    }
+  }
+  @media (max-width: 600px) {
+    section #box {
+      width: 100%;
+    }
+  }
+</style>

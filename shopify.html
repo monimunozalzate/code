@@ -1,0 +1,125 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const freeProductId_1 = "gid://shopify/Product/8455687045405"; // ID del producto gratuito
+    const freeProductId_2 = "gid://shopify/Product/8455680885021"; // ID del producto gratuito
+    const cartEndpoint = "/cart";
+    const promoCollection = "X2 Cordless";
+    const api = 'https://senixtools.com.mx/api/2021-07/graphql.json';
+
+    function addToCart() {
+      fetch(cartEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Shopify-Storefront-Access-Token": "56737366764eb6b41222da5d4a718094",
+        },
+        body: JSON.stringify({
+          items: [
+            {
+              id: freeProductId_1,
+              quantity: 1,
+            },
+            {
+              id: freeProductId_2,
+              quantity: 1,
+            },
+          ],
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Producto gratuito añadido", data);
+          alert("Producto gratuito añadido al carrito!");
+        })
+        .catch((error) => {
+          console.error("Error al agregar producto gratuito:", error);
+        });
+    }
+
+    document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Obtener el ID del formulario
+        let formId = form.getAttribute('id');
+
+        // Cortar y obtener solo el número del ID del formulario
+        let productId = formId.slice(13); // Cortar desde el caracter en la posición 13 hasta el final
+        //console.log(productId);
+
+
+        // Fetch product details to check if it belongs to promoCollection
+        fetch(
+          api,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Shopify-Storefront-Access-Token":
+                "56737366764eb6b41222da5d4a718094",
+            },
+            body: JSON.stringify({
+              query: `
+          {
+            collectionByHandle(handle: "x2-inalambrico-1") {
+              products(first: 50) {
+                edges {
+                  node {
+                    id
+                    title
+                    handle
+                    tags
+                  }
+                }
+              }
+            }
+          }
+          `,
+            }),
+          }
+        )
+
+          .then((response) => response.json())
+          .then((data) => {
+            const products = data.data.collectionByHandle.products.edges;
+            products.map((product) => {
+              const cargador = 'gid://shopify/Product/8455687045405';
+              const bateria = 'gid://shopify/Product/8455680885021';
+              if (product.node.id === `gid://shopify/Product/${productId}`) {
+                const tag = product.node.tags;
+                const isX2Cordless = tag.includes('X2 Cordless');
+                if (isX2Cordless) {
+                  const isX2Cordless = 'X2 Cordless';
+                  if (isX2Cordless === promoCollection) {
+                    fetch(cartEndpoint)
+                      .then((response) => response.json())
+                      .then((cart) => {
+                        let productInCart = cart.items.find((item) => {
+                          console.log(item, 'item')
+                          if ((item.product_id === bateria) || (item.product_id === cargador)) {
+                            console.log('algo pasa')
+                          } else {
+                            addToCart(productInCart);
+                            console.log('se supone que tienes que agregar algo')
+                          }
+                        }
+                        );
+                      }
+                     )
+                      .catch((error) => {
+                        console.error("Error al obtener el carrito:", error);
+                      });
+                  }
+                }
+              }
+            });
+
+
+          })
+          .catch((error) => {
+            console.error("Error al obtener detalles del producto:", error);
+          });
+      });
+    });
+  });
+</script>
